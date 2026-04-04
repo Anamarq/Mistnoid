@@ -1,0 +1,79 @@
+using UnityEngine;
+using static ShopPanel;
+
+/// <summary>
+/// Controls Block data
+/// </summary>
+public class Block : MonoBehaviour
+{
+    [SerializeField] private BlockData data;
+
+    private int currentHealth;
+    private SpriteRenderer sr;
+    private float currentPowerUpChance;
+
+    private void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+        if (sr == null)
+            Debug.LogError("<color=red>SpriteRenderer es nulo</color>");
+        currentHealth = data.maxHealth;
+
+        if (data.sprite != null && data.sprite.Length > 0)
+            sr.sprite = data.sprite[data.sprite.Length - 1];
+
+        sr.color = data.color;
+
+
+        currentPowerUpChance = data.powerUpChance;
+        currentPowerUpChance += UpgradeManager.Instance.GetLevel(UpgradeType.PowerUpChance) * 0.05f;
+    }
+
+    //Destroy block and add points to the score manager
+    void DestroyBlock(BallController ball)
+    {
+        if (ball != null)
+        {
+            int pointsEarned = data.points * ball.GetMultiplier();
+            Debug.Log("Multiplier: " + ball.GetMultiplier());
+            ScoreManager.Instance.AddScore(pointsEarned);
+            ball.IncreaseMultiplier();
+        }
+        else
+        {
+            ScoreManager.Instance.AddScore(data.points);
+        }
+        if (Random.value < currentPowerUpChance)
+        {
+            Debug.Log("currentPowerUpChance " + currentPowerUpChance);
+            PowerUpManager.Instance.TrySpawnPowerUp(transform.position);
+        }
+        LevelController.Instance.BlockDestroyed();
+        Destroy(gameObject);
+    }
+    //----------------------------------------- external calls
+    public bool IsIndestructible()
+    {
+        return data.indestructible;
+    }
+    public void TakeHit(BallController ball = null)
+    {
+        
+        if (data.indestructible)
+            return;
+        currentHealth--;
+
+        if (currentHealth <= 0)
+        {
+            DestroyBlock(ball);
+        }
+        else
+            sr.sprite = data.sprite[currentHealth - 1];
+
+    }
+
+    public void SetBlockData(BlockData newData)
+    {
+        data = newData;
+    }
+}

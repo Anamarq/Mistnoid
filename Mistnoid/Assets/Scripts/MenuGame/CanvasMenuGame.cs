@@ -1,0 +1,70 @@
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+
+public class CanvasMenuGame : MonoBehaviour
+{
+    [SerializeField] private GameObject mainPanel, bookPanel, shopPanel;
+    [SerializeField]
+    private TextMeshProUGUI soulsText, pointTe, timeText, fragmentText;
+
+    
+
+    void Start()
+    {
+        soulsText.text = ScoreManager.Instance.Souls.ToString();
+        fragmentText.text = ScoreManager.Instance.Fragments.ToString();
+        pointTe.text = "Mejor puntuación: " + ScoreManager.Instance.HighScore.ToString();
+        float _time = ScoreManager.Instance.BestTime;
+        int minutes = Mathf.FloorToInt(_time / 60);
+        int seconds = Mathf.FloorToInt(_time % 60);
+        timeText.text = "Mejor tiempo: " + $"{minutes:00}:{seconds:00}";
+    }
+
+    
+
+    //MainPanel -> ButtonPlay
+    public void LoadGame()
+    {
+        GameManager.Instance.SetState(GameManager.StateMachine.Game);
+    }
+
+    //MainPanel -> ButtonMainMenu
+    public void ReturnToMenu()
+    {
+        GameManager.Instance.SetState(GameManager.StateMachine.Menu);
+    }
+
+    //MainPanel -> Buttonbook
+    public void LoadBook()
+    {
+        mainPanel.SetActive(false);
+        bookPanel.SetActive(true);
+        //pages[actualPage].SetActive(false);
+        //actualPage = 0;
+        //pages[actualPage].SetActive(true);
+    }
+
+    
+
+    //MainPanel -> ButtonShop
+    public void LoadShop()
+    {
+        mainPanel.SetActive(false);
+        shopPanel.SetActive(true);
+    }
+
+    //ShopPanel -> ButtonReturn
+    public void ReturnShop()
+    {
+        mainPanel.SetActive(true);
+        shopPanel.SetActive(false);
+    }
+
+    //BookPanel -> ButtonReturn
+    public void ReturnBook()
+    {
+        mainPanel.SetActive(true);
+        bookPanel.SetActive(false);
+    }
+}
