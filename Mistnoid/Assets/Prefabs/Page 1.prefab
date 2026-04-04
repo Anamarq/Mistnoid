@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e163549a63be60e43b7504a063b45a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BookPage
-  pageIndex: 0
+  pageIndex: 1
   isUnlocked: 1
   pieces:
   - {fileID: 7429585786458318804}
@@ -380,8 +380,8 @@ MonoBehaviour:
   abilityToggle: {fileID: 2416575926000648556}
   abilityType: 2
   imgToggle: {fileID: 1774586995609528892}
-  spriteSelected: {fileID: 8137955173826623314, guid: d3a7480bebeed1543a8edcb13b2f6ff9, type: 3}
-  spriteUnselected: {fileID: -1179297276305794913, guid: d3a7480bebeed1543a8edcb13b2f6ff9, type: 3}
+  spriteSelected: {fileID: 5190512577366058442, guid: f859f06419761da46b74ad386586dbc6, type: 3}
+  spriteUnselected: {fileID: -7711929626625529646, guid: fd30773944f342b4cb8c900b6946720a, type: 3}
 --- !u!1 &4763177934261758051
 GameObject:
   m_ObjectHideFlags: 0

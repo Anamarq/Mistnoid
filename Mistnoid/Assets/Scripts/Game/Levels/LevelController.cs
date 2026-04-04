@@ -22,6 +22,7 @@ public class LevelController : MonoBehaviour
         RunTimer.Instance.StartRun();
         PlayCanvas.Instance.UpdatePhase(0);
         AbilityManager.Instance.ResetUses();
+        ScoreManager.Instance.StartRun();
     }
 
     void GenerateLevel(LevelData level)

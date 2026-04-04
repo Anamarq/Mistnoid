@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class CanvasMenuGame : MonoBehaviour
 {
+    public static CanvasMenuGame Instance;
     [SerializeField] private GameObject mainPanel, bookPanel, shopPanel;
     [SerializeField]
     private TextMeshProUGUI soulsText, pointTe, timeText, fragmentText;
 
-    
+    void Awake()
+    {
+        Instance = this;
+    }
+
 
     void Start()
     {
@@ -21,8 +26,21 @@ public class CanvasMenuGame : MonoBehaviour
         timeText.text = "Mejor tiempo: " + $"{minutes:00}:{seconds:00}";
     }
 
-    
-
+    public void ChangeTextSouls()
+    {
+        soulsText.text = ScoreManager.Instance.Souls.ToString();
+    }
+    public void ChangeTextFragments()
+    {
+        fragmentText.text = ScoreManager.Instance.Fragments.ToString();
+    }
+    public void ChangeTextTime()
+    {
+        float _time = ScoreManager.Instance.BestTime;
+        int minutes = Mathf.FloorToInt(_time / 60);
+        int seconds = Mathf.FloorToInt(_time % 60);
+        timeText.text = "Mejor tiempo: " + $"{minutes:00}:{seconds:00}";
+    }
     //MainPanel -> ButtonPlay
     public void LoadGame()
     {

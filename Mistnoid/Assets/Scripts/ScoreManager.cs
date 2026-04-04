@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
-    private int score, highScore, souls, fragments;
+    private int score, highScore, souls, fragments, soulsRun = 0;
      public int Fragments { get { return fragments; } }
      public int Souls { get { return souls; } }
      public int HighScore { get { return highScore; } }
@@ -13,7 +13,11 @@ public class ScoreManager : MonoBehaviour
     public float BestTime { get { return bestTime; } }
 
 
+
     // Ajustable (balance)
+    [Header("Limits")]
+    [SerializeField] private int maxSouls = 9999;
+    [SerializeField] private int maxFragments = 9999;
     [SerializeField] private int pointsPerFragment = 100;
     [SerializeField] private int pointsTime = 5000;
     void Awake()
@@ -58,35 +62,47 @@ public class ScoreManager : MonoBehaviour
 
     public void AddSouls(int _souls)
     {
-        souls += _souls;   
-        PlayCanvas.Instance?.UpdateSouls(souls);
+        souls += _souls;
+        soulsRun += souls;
+        souls = Mathf.Clamp(souls, 0, maxSouls);
+
+        PlayCanvas.Instance?.UpdateSouls(soulsRun);
+        CanvasMenuGame.Instance.ChangeTextSouls();
+        PlayerPrefs.SetInt("Souls", souls);
+        PlayerPrefs.Save();
     }
 
     public void AddFragments(int _fragments)
     {
         fragments += _fragments;
+        fragments = Mathf.Clamp(fragments, 0, maxFragments);
+        CanvasMenuGame.Instance.ChangeTextFragments();
+        PlayerPrefs.SetInt("Fragments", fragments);
+        PlayerPrefs.Save();
+    }
 
+    public void StartRun()
+    {
+        score = 0;
+        soulsRun = 0;
     }
 
     public void LoseRun()
     {
-        // Guardar almas
-        int prevSouls = PlayerPrefs.GetInt("Souls", 0);
-        PlayerPrefs.SetInt("Souls", souls + prevSouls);
+        //// Guardar almas
+        //int prevSouls = PlayerPrefs.GetInt("Souls", 0);
+        //int totalSouls = Mathf.Clamp(prevSouls + souls, 0, maxSouls);
+        //PlayerPrefs.SetInt("Souls", totalSouls);
 
-        int fragments = score / pointsPerFragment;
+        int _fragments = score / pointsPerFragment;
         // Guardar fragmentos
-        int prevFragments = PlayerPrefs.GetInt("Fragments", 0);
-        PlayerPrefs.SetInt("Fragments", prevFragments + fragments);
+        AddFragments(_fragments);
 
-        PlayerPrefs.Save();
+        
 
         // UI GAME OVER
-        PlayCanvas.Instance.ShowGameOver(souls, score, fragments);
+        PlayCanvas.Instance.ShowGameOver(soulsRun, score, _fragments);
 
-        // Reset run
-        score = 0;
-        souls = 0;
     }
     public void WinRun()
     {
@@ -104,15 +120,16 @@ public class ScoreManager : MonoBehaviour
         int finalScore = score + timeBonus;
 
         // Calcular fragmentos
-        int fragments = finalScore / pointsPerFragment;
+        int _fragments = finalScore / pointsPerFragment;
 
-        // Guardar almas
-        int prevSouls = PlayerPrefs.GetInt("Souls", 0);
-        PlayerPrefs.SetInt("Souls", souls + prevSouls);
+        //// Guardar almas
+        //int prevSouls = PlayerPrefs.GetInt("Souls", 0);
+        //int totalSouls = Mathf.Clamp(prevSouls + souls, 0, maxSouls);
+        
 
         // Guardar fragmentos
-        int prevFragments = PlayerPrefs.GetInt("Fragments", 0);
-        PlayerPrefs.SetInt("Fragments", prevFragments + fragments);
+        AddFragments(_fragments);
+        
 
         // Guardar highscore
         int highScore = PlayerPrefs.GetInt("HighScore", 0);
@@ -129,13 +146,11 @@ public class ScoreManager : MonoBehaviour
             score,
             time,
             timeBonus,
-            fragments,
-            souls
+            _fragments,
+            soulsRun
         );
 
-        // Reset run
-        score = 0;
-        souls = 0;
+       
     }
 
 }
