@@ -11,7 +11,12 @@ public class Block : MonoBehaviour
     private int currentHealth;
     private SpriteRenderer sr;
     private float currentPowerUpChance;
+    Collider2D col;
 
+    private void Awake()
+    {
+        col = GetComponent<Collider2D>();
+    }
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -71,9 +76,35 @@ public class Block : MonoBehaviour
             sr.sprite = data.sprite[currentHealth - 1];
 
     }
+    public void TakeHitInvincible(BallController ball = null)
+    {
+        if (data.indestructible)
+            return;
+        currentHealth = 0;
+        DestroyBlock(ball);
+
+    }
 
     public void SetBlockData(BlockData newData)
     {
         data = newData;
+    }
+
+    //Power up invencible
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!col.isTrigger) return;
+        if (collision.CompareTag("Ball"))
+        {
+            BallController ball = collision.GetComponent<BallController>();
+            if (ball != null)
+            {
+                TakeHitInvincible(ball);
+            }
+        }
+    }
+    public void SetTriggerMode(bool state)
+    {
+        col.isTrigger = state;
     }
 }

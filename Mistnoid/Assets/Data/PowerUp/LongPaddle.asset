@@ -16,7 +16,7 @@ MonoBehaviour:
   sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   fallSpeed: 2
   duration: 10
-  weight: 90
+  weight: 10
   type: 0
   value: 0
   speedMultiplier: 0

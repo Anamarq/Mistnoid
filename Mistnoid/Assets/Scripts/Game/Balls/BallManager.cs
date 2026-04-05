@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,9 @@ public class BallManager : MonoBehaviour
     //Power up fast/slow ball
     private float speedMultiplier = 1f;
     public float SpeedMultiplier => speedMultiplier;
+
+    //power up invincible
+    private Coroutine invincibleCoroutine;
 
     void Awake()
     {
@@ -95,6 +99,34 @@ public class BallManager : MonoBehaviour
     {
         speedMultiplier *= multiplier;
         speedMultiplier = Mathf.Clamp(speedMultiplier, 0.5f, 3f);// Clamp
+    }
+
+    //invencible powr up
+
+    public void ActivateInvincible(float duration)
+    {
+        if (invincibleCoroutine != null)
+            StopCoroutine(invincibleCoroutine);
+        invincibleCoroutine = StartCoroutine(InvincibleRoutine(duration));
+    }
+
+    IEnumerator InvincibleRoutine(float duration)
+    {
+        SetBlocksTrigger(true);
+        foreach (var ball in activeBalls)
+            ball.SetInvincibleVisual(true);
+        yield return new WaitForSeconds(duration);
+        SetBlocksTrigger(false);
+        foreach (var ball in activeBalls)
+            ball.SetInvincibleVisual(false);
+    }
+    public void SetBlocksTrigger(bool state)
+    {
+        Block[] blocks = FindObjectsByType<Block>(FindObjectsSortMode.None);
+        foreach (var block in blocks)
+        {
+            block.SetTriggerMode(state);
+        }
     }
 
     #endregion

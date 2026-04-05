@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Invencible
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpData
   powerUpName: 
-  sprite: {fileID: 0}
+  sprite: {fileID: -7232521027535748977, guid: 515e10304545c144b96c699bf70ce44c, type: 3}
   fallSpeed: 2
   duration: 10
-  weight: 10
-  type: 0
+  weight: 90
+  type: 9
   value: 0
   speedMultiplier: 0

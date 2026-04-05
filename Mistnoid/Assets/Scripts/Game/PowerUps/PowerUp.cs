@@ -80,6 +80,9 @@ public class PowerUp : MonoBehaviour
             case PowerUpType.Shot:
                 PlayerController.Instance.EnableShoot(data.duration);
                 break;
+            case PowerUpType.InvincibleBall:
+                BallManager.Instance.ActivateInvincible(data.duration);
+                break;
             default:
                 break;
         }

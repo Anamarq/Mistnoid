@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 //Controller of each ball
@@ -8,6 +9,7 @@ public class BallController : MonoBehaviour
     [SerializeField] private float speed = 8f;
 
     private Rigidbody2D rb;
+    
     private bool isLaunched = false;
     [SerializeField] private Vector3 offset;
     [SerializeField] private float scaleSpeed;
@@ -15,11 +17,18 @@ public class BallController : MonoBehaviour
     //score. the multiplier increases with every block broken
     [SerializeField] private int multiplier = 1, multiplierIncrease = 1, maxMultiplier = 5;
 
+    [Header("Invincible Mode")]
+    [SerializeField] private Sprite invincibleSprite;
+    private Sprite normalSprite;
+    private SpriteRenderer sr;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        sr = GetComponent<SpriteRenderer>();
         
+        normalSprite = sr.sprite;
+
     }
 
     void Start()
@@ -132,4 +141,11 @@ public class BallController : MonoBehaviour
     {
         return multiplier;
     }
+
+    // invincible mode
+    public void SetInvincibleVisual(bool state)
+    {
+        sr.sprite = state ? invincibleSprite : normalSprite;
+    }
+
 }

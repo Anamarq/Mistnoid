@@ -175,3 +175,4 @@ MonoBehaviour:
   multiplier: 1
   multiplierIncrease: 1
   maxMultiplier: 5
+  invincibleSprite: {fileID: 21300000, guid: b28d159951c2bc94ca1397c54813776d, type: 3}
