@@ -57,6 +57,10 @@ public class Block : MonoBehaviour
         Destroy(gameObject);
     }
     //----------------------------------------- external calls
+    public BlockData GetBlockData()
+    {
+        return data;
+    }
     public bool IsIndestructible()
     {
         return data.indestructible;
