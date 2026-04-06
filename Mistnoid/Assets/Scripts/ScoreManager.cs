@@ -44,15 +44,6 @@ public class ScoreManager : MonoBehaviour
         PlayCanvas.Instance?.UpdateSouls(souls);
     }
 
-    //void AddTimeBonus(float time)
-    //{
-    //    int bonus = Mathf.Max(0, pointsTime - Mathf.RoundToInt(time * 50));
-    //    AddScore(bonus);
-    //}
-    //int CalculateEssence(int finalScore)
-    //{
-    //    return finalScore / pointsPerFragment;
-    //}
     // External calls
     public void AddScore(int points)
     {
@@ -89,16 +80,9 @@ public class ScoreManager : MonoBehaviour
 
     public void LoseRun()
     {
-        //// Guardar almas
-        //int prevSouls = PlayerPrefs.GetInt("Souls", 0);
-        //int totalSouls = Mathf.Clamp(prevSouls + souls, 0, maxSouls);
-        //PlayerPrefs.SetInt("Souls", totalSouls);
-
         int _fragments = score / pointsPerFragment;
         // Guardar fragmentos
         AddFragments(_fragments);
-
-        
 
         // UI GAME OVER
         PlayCanvas.Instance.ShowGameOver(soulsRun, score, _fragments);
@@ -122,10 +106,6 @@ public class ScoreManager : MonoBehaviour
         // Calcular fragmentos
         int _fragments = finalScore / pointsPerFragment;
 
-        //// Guardar almas
-        //int prevSouls = PlayerPrefs.GetInt("Souls", 0);
-        //int totalSouls = Mathf.Clamp(prevSouls + souls, 0, maxSouls);
-        
 
         // Guardar fragmentos
         AddFragments(_fragments);
