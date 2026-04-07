@@ -269,6 +269,7 @@ public class PlayerController : MonoBehaviour
             StopCoroutine(shieldCoroutine);
             bottomShield.SetActive(false);
         }
+        canShoot = false;
     }
 
     public void LoseLife()
@@ -277,6 +278,12 @@ public class PlayerController : MonoBehaviour
         PlayCanvas.Instance.UpdateLifes(actualGlobalLife);
         BallManager.Instance.ResetSpeed();
         PowerUpPool.Instance.ResetPool();
+        canShoot = false;
+        if (shieldCoroutine != null)
+        {
+            StopCoroutine(shieldCoroutine);
+            bottomShield.SetActive(false);
+        }
         if (actualGlobalLife <= 0)
         {
             GameOver();

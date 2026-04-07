@@ -12,6 +12,7 @@ public class Block : MonoBehaviour
     private SpriteRenderer sr;
     private float currentPowerUpChance;
     Collider2D col;
+    private bool isDestroy = false;
 
     private void Awake()
     {
@@ -37,24 +38,28 @@ public class Block : MonoBehaviour
     //Destroy block and add points to the score manager
     void DestroyBlock(BallController ball)
     {
-        if (ball != null)
+        if (!isDestroy)
         {
-            int pointsEarned = data.points * ball.GetMultiplier();
-            Debug.Log("Multiplier: " + ball.GetMultiplier());
-            ScoreManager.Instance.AddScore(pointsEarned);
-            ball.IncreaseMultiplier();
+            isDestroy = true;
+            if (ball != null)
+            {
+                int pointsEarned = data.points * ball.GetMultiplier();
+                Debug.Log("Multiplier: " + ball.GetMultiplier());
+                ScoreManager.Instance.AddScore(pointsEarned);
+                ball.IncreaseMultiplier();
+            }
+            else
+            {
+                ScoreManager.Instance.AddScore(data.points);
+            }
+            if (Random.value < currentPowerUpChance)
+            {
+                Debug.Log("currentPowerUpChance " + currentPowerUpChance);
+                PowerUpManager.Instance.TrySpawnPowerUp(transform.position);
+            }
+            LevelController.Instance.BlockDestroyed();
+            Destroy(gameObject);
         }
-        else
-        {
-            ScoreManager.Instance.AddScore(data.points);
-        }
-        if (Random.value < currentPowerUpChance)
-        {
-            Debug.Log("currentPowerUpChance " + currentPowerUpChance);
-            PowerUpManager.Instance.TrySpawnPowerUp(transform.position);
-        }
-        LevelController.Instance.BlockDestroyed();
-        Destroy(gameObject);
     }
     //----------------------------------------- external calls
     public BlockData GetBlockData()
