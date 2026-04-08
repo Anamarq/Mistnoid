@@ -11,10 +11,8 @@ public class BlockData : ScriptableObject
 
     [Header("Rewards")]
     public int points;
-    //public int soulsReward = 1;
     public float powerUpChance = 0.1f;
 
     [Header("Visual")]
     public Sprite[] sprite;
-    public Color color = Color.white;
 }

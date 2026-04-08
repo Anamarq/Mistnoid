@@ -28,8 +28,6 @@ public class Block : MonoBehaviour
         if (data.sprite != null && data.sprite.Length > 0)
             sr.sprite = data.sprite[data.sprite.Length - 1];
 
-        sr.color = data.color;
-
 
         currentPowerUpChance = data.powerUpChance;
         currentPowerUpChance += UpgradeManager.Instance.GetLevel(UpgradeType.PowerUpChance) * 0.05f;
