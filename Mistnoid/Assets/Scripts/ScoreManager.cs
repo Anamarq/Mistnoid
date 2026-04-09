@@ -53,6 +53,7 @@ public class ScoreManager : MonoBehaviour
 
     public void AddSouls(int _souls)
     {
+        AudioManager.Instance.PlaySouls();
         souls += _souls;
         soulsRun += souls;
         souls = Mathf.Clamp(souls, 0, maxSouls);

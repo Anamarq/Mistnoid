@@ -78,13 +78,18 @@ public class Block : MonoBehaviour
         if (currentHealth <= 0)
         {
             DestroyBlock(ball);
+            AudioManager.Instance.PlayBlockBreak();
         }
         else
+        {
             sr.sprite = data.sprite[currentHealth - 1];
+            AudioManager.Instance.PlayBlock2();
+        }
 
     }
     public void TakeHitInvincible(BallController ball = null)
     {
+        AudioManager.Instance.PlayBlockMetal();
         if (data.indestructible)
             return;
         currentHealth = 0;

@@ -93,6 +93,7 @@ public class BookPanel : MonoBehaviour
         int prev = currentPageIndex - 1;
         if (prev < 0)
         {
+            AudioManager.Instance.PlayCloseBook();
             ShowMainPanel();
         }
         else
@@ -104,6 +105,7 @@ public class BookPanel : MonoBehaviour
 
     public void CloseBook()
     {
+        AudioManager.Instance.PlayCloseBook();
         if (currentPageIndex >= 0)
             HidePage(currentPageIndex);
         ShowMainPanel();
@@ -111,6 +113,7 @@ public class BookPanel : MonoBehaviour
 
     void ShowPage(int index)
     {
+        AudioManager.Instance.PlayPage();
         pages[index].gameObject.SetActive(true);
     }
 
@@ -152,6 +155,7 @@ public class BookPanel : MonoBehaviour
         selected.SetObtained(true);
         PlayerPrefs.SetInt(selected.PieceID, 1);
         PlayerPrefs.Save();
+        AudioManager.Instance.PlayFragments();
         ScoreManager.Instance.AddFragments(-fragmentCostPerPiece);
         UpdateFragmentsUI();
         selected.ParentPage.CheckCompletion();
@@ -162,7 +166,7 @@ public class BookPanel : MonoBehaviour
     {
         if (ScoreManager.Instance.Fragments < costIncreaseUse)
             return;
-
+        AudioManager.Instance.PlayFragments();
         ScoreManager.Instance.AddFragments(-costIncreaseUse);
         AbilityManager.Instance.AddMaxUse();
 

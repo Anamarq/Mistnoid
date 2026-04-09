@@ -75,7 +75,7 @@ public class BallController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Paddle"))
         {
-
+            AudioManager.Instance.PlayPaddle();
             float paddleWidth = PlayerController.Instance.PaddleColider.bounds.size.x;
             float hitPosition = transform.position.x - collision.transform.position.x;
             float normalizedHit = hitPosition / (paddleWidth / 2f);
@@ -104,6 +104,8 @@ public class BallController : MonoBehaviour
                     block.TakeHit(this);
                 }
             }
+            else
+                AudioManager.Instance.PlayBallHit();
         }
         
     }
@@ -122,6 +124,7 @@ public class BallController : MonoBehaviour
     //----------------------------------------- external calls
     public void Launch(Vector2 direction)
     {
+        AudioManager.Instance.PlayPaddle();
         isLaunched = true;
         rb.bodyType = RigidbodyType2D.Dynamic;
         rb.linearVelocity = direction * speed;

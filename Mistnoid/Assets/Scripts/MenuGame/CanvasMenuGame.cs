@@ -44,18 +44,21 @@ public class CanvasMenuGame : MonoBehaviour
     //MainPanel -> ButtonPlay
     public void LoadGame()
     {
+        AudioManager.Instance.PlayButton();
         GameManager.Instance.SetState(GameManager.StateMachine.Game);
     }
 
     //MainPanel -> ButtonMainMenu
     public void ReturnToMenu()
     {
+        AudioManager.Instance.PlayButtonBack();
         GameManager.Instance.SetState(GameManager.StateMachine.Menu);
     }
 
     //MainPanel -> Buttonbook
     public void LoadBook()
     {
+        AudioManager.Instance.PlayButton();
         mainPanel.SetActive(false);
         bookPanel.SetActive(true);
         //pages[actualPage].SetActive(false);
@@ -68,6 +71,7 @@ public class CanvasMenuGame : MonoBehaviour
     //MainPanel -> ButtonShop
     public void LoadShop()
     {
+        AudioManager.Instance.PlayButton();
         mainPanel.SetActive(false);
         shopPanel.SetActive(true);
     }
@@ -75,6 +79,7 @@ public class CanvasMenuGame : MonoBehaviour
     //ShopPanel -> ButtonReturn
     public void ReturnShop()
     {
+        AudioManager.Instance.PlayButtonBack();
         mainPanel.SetActive(true);
         shopPanel.SetActive(false);
     }
@@ -82,6 +87,7 @@ public class CanvasMenuGame : MonoBehaviour
     //BookPanel -> ButtonReturn
     public void ReturnBook()
     {
+        AudioManager.Instance.PlayButtonBack();
         mainPanel.SetActive(true);
         bookPanel.SetActive(false);
     }

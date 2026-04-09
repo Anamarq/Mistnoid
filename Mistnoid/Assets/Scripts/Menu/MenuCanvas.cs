@@ -8,18 +8,21 @@ public class MenuCanvas : MonoBehaviour
     public void LoadMenuGame()
     {
         GameManager.Instance.SetState(GameManager.StateMachine.MenuGame);
+        AudioManager.Instance.PlayButton();
     }
 
     //MainPanel -> ButtonExit
     public void ExitGame()
     {
-        GameManager.Instance.SetState(GameManager.StateMachine.Exit);
+        AudioManager.Instance.PlayButtonBack();
+        GameManager.Instance.SetState(GameManager.StateMachine.Exit);       
     }
 
 
     //MainPanel -> ButtonOptions
     public void Options()
     {
+        AudioManager.Instance.PlayButton();
         mainPanel.SetActive(false);
         optionPanel.SetActive(true);
     }
