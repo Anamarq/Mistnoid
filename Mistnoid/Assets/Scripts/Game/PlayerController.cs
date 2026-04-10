@@ -141,6 +141,7 @@ public class PlayerController : MonoBehaviour
 
     void Shoot()
     {
+        AudioManager.Instance.PlayShoot();
         Instantiate(projectilePrefab, shootPointLeft.position, Quaternion.identity);
         Instantiate(projectilePrefab, shootPointRight.position, Quaternion.identity);
     }

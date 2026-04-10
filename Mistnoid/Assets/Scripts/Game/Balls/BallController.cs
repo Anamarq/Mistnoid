@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 //Controller of each ball
@@ -104,6 +103,8 @@ public class BallController : MonoBehaviour
                     block.TakeHit(this);
                 }
             }
+            else if (collision.gameObject.CompareTag("Bar"))
+                AudioManager.Instance.PlayBarHit();
             else
                 AudioManager.Instance.PlayBallHit();
         }

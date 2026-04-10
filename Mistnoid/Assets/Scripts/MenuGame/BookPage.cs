@@ -40,11 +40,15 @@ public class BookPage : MonoBehaviour
 
     void OnToggleChanged(bool state)
     {
-        if (!state) return;
-
-        AbilityManager.Instance.SetAbility(abilityType);
-        BookPanel.Instance.DeselectAllTogglesExcept(this);
-        imgToggle.sprite = spriteSelected;
+        if (state)
+        {
+            AudioManager.Instance.PlayAbility();
+            AbilityManager.Instance.SetAbility(abilityType);
+            BookPanel.Instance.DeselectAllTogglesExcept(this);
+            imgToggle.sprite = spriteSelected;
+        }
+        //else
+        //    AudioManager.Instance.PlayButtonBack();
     }
 
     public List<Piece> GetMissingPieces()

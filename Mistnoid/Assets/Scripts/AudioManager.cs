@@ -16,12 +16,12 @@ public class AudioManager : MonoBehaviour
     private const string SFX_KEY = "SFXVolume";
 
     [Header("Audio Clips")]
-    [SerializeField] private AudioClip musicMenu;
-    [SerializeField] private AudioClip musicGame;
+    [SerializeField] private AudioClip musicMenu, musicGame;
 
     [SerializeField] private AudioClip sfxButton, sfxButtonBack, sfxPage, sfxCloseBook, sfxSouls, sfxFragments, 
-        sfxBlockBreak, sfxBlocklv2, sfxBlockMetal, sfxShoot, sfxPowerUp, sfxPaddle, sfxBallHit,
-        sfxCat, sfxPhoenix, sfxFrog, sfxBirdWhite, sfxBirdBlack, sfxDragon, sfxWopiHappy, sfxWopiSad;
+        sfxBlockBreak, sfxBlocklv2, sfxBlockMetal, sfxShoot, sfxPowerUp, sfxPaddle, sfxBallHit, sfxAbility,
+        sfxWin, sfxLose, sfxBarHit,
+        sfxCat, sfxPhoenix, sfxFrog, sfxBirdWhite, sfxBirdBlack, sfxDragon, sfxWopiHappy, sfxWopiSad, sfxLife;
 
     void Awake()
     {
@@ -98,6 +98,22 @@ public class AudioManager : MonoBehaviour
 
     #region PlaySounds
     //Play sounds (external calls)
+    public void PlayMenuMusic()
+    {
+        PlayMusic(musicMenu);
+    }
+    public void PlayGameMusic()
+    {
+        PlayMusic(musicGame);
+    }
+    public void PlayWin()
+    {
+        PlaySFX(sfxWin);
+    }
+    public void PlayLose()
+    {
+        PlaySFX(sfxLose);
+    }
     public void PlayBlockBreak()
     {
         PlaySFX(sfxBlockBreak);
@@ -120,6 +136,10 @@ public class AudioManager : MonoBehaviour
     public void PlayButton()
     {
         PlaySFX(sfxButton);
+    }
+    public void PlayAbility()
+    {
+        PlaySFX(sfxAbility);
     }
     public void PlayButtonBack()
     {
@@ -148,6 +168,46 @@ public class AudioManager : MonoBehaviour
     public void PlayBallHit()
     {
         PlaySFX(sfxBallHit);
+    }
+    public void PlayBarHit()
+    {
+        PlaySFX(sfxBarHit);
+    }
+    public void PlayCat()
+    {
+        PlaySFX(sfxCat);
+    }
+    public void PlayPhoenix()
+    {
+        PlaySFX(sfxPhoenix);
+    }
+    public void PlayBird()
+    {
+        PlaySFX(sfxBirdBlack);
+    }
+    public void PlayBirdW()
+    {
+        PlaySFX(sfxBirdWhite);
+    }
+    public void PlayDragon()
+    {
+        PlaySFX(sfxDragon);
+    }
+    public void PlayWopi()
+    {
+        PlaySFX(sfxWopiHappy);
+    }
+    public void PlayWopiSad()
+    {
+        PlaySFX(sfxWopiSad);
+    }
+    public void PlayFrog()
+    {
+        PlaySFX(sfxFrog);
+    }
+    public void PlayLife()
+    {
+        PlaySFX(sfxLife);
     }
     #endregion
 }

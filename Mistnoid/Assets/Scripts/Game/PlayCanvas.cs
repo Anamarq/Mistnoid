@@ -27,6 +27,7 @@ public class PlayCanvas : MonoBehaviour
         PanelPause(false);
         PanelGameOver(false);
         PanelWin(false);
+        AudioManager.Instance.PlayGameMusic();
     }
 
     //----------------------------------------- class methods
@@ -70,6 +71,16 @@ public class PlayCanvas : MonoBehaviour
     {
         panelPause.SetActive(state);
         GameManager.Instance.SetPause(state);
+        if(state)
+        {
+            AudioManager.Instance.PlayButton();
+            AudioManager.Instance.StopMusic();
+        }
+        else
+        {
+            AudioManager.Instance.PlayButtonBack();
+            AudioManager.Instance.PlayGameMusic();
+        }
     }
 
     public void PanelLevel(bool state)
@@ -118,6 +129,7 @@ public class PlayCanvas : MonoBehaviour
             "Almas: " + souls;
 
         PanelWin(true);
+        AudioManager.Instance.PlayWin();
     }
 
     public void ShowGameOver(int souls, int score, int fragments)
@@ -129,5 +141,6 @@ public class PlayCanvas : MonoBehaviour
             "Almas: " + souls;
 
         PanelGameOver(true);
+        AudioManager.Instance.PlayLose();
     }
 }

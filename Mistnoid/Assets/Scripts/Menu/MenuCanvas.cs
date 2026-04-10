@@ -4,6 +4,10 @@ public class MenuCanvas : MonoBehaviour
 {
     [SerializeField] private GameObject mainPanel;
     [SerializeField] private GameObject optionPanel;
+    private void Start()
+    {
+        AudioManager.Instance.PlayMenuMusic();
+    }
     //MainPanel -> ButtonPlay
     public void LoadMenuGame()
     {

@@ -24,6 +24,8 @@ public class CanvasMenuGame : MonoBehaviour
         int minutes = Mathf.FloorToInt(_time / 60);
         int seconds = Mathf.FloorToInt(_time % 60);
         timeText.text = "Mejor tiempo: " + $"{minutes:00}:{seconds:00}";
+
+        AudioManager.Instance.PlayMenuMusic();
     }
 
     public void ChangeTextSouls()
