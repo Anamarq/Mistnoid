@@ -72,7 +72,10 @@ public class Block : MonoBehaviour
     {
         
         if (data.indestructible)
+        {
+            AudioManager.Instance.PlayBlockMetal();
             return;
+        }
         currentHealth--;
 
         if (currentHealth <= 0)
@@ -89,7 +92,7 @@ public class Block : MonoBehaviour
     }
     public void TakeHitInvincible(BallController ball = null)
     {
-        AudioManager.Instance.PlayBlockMetal();
+        AudioManager.Instance.PlayBlockBreak();
         if (data.indestructible)
             return;
         currentHealth = 0;

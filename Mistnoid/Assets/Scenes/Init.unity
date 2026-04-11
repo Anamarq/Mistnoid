@@ -401,9 +401,32 @@ MonoBehaviour:
   sfxVolume: 1
   musicMenu: {fileID: 0}
   musicGame: {fileID: 0}
-  sfxBlockBreak: {fileID: 0}
-  sfxShoot: {fileID: 0}
-  sfxPowerUp: {fileID: 0}
+  sfxButton: {fileID: 8300000, guid: 6f6dc2253a769bf4e82b327ee33dfe71, type: 3}
+  sfxButtonBack: {fileID: 8300000, guid: bedd54c756d23004ebf6d13a1bdf194f, type: 3}
+  sfxPage: {fileID: 8300000, guid: 16e349d13a504144e9f6d6bb72a00be2, type: 3}
+  sfxCloseBook: {fileID: 8300000, guid: 5b523c2e8d6d6cd46979b03f53a13454, type: 3}
+  sfxSouls: {fileID: 8300000, guid: ddf0461f36a3c7e4cadffa6b9159ff68, type: 3}
+  sfxFragments: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
+  sfxBlockBreak: {fileID: 8300000, guid: 8615a3a2fe3102e468552a13d483a73d, type: 3}
+  sfxBlocklv2: {fileID: 8300000, guid: 9ddc9c6278aa41f41ae6ef648482db0d, type: 3}
+  sfxBlockMetal: {fileID: 8300000, guid: e8f99f3e507e3ae4bbc2911639150daa, type: 3}
+  sfxShoot: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
+  sfxPowerUp: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
+  sfxPaddle: {fileID: 8300000, guid: db9f08d182875e1438c912aae0377556, type: 3}
+  sfxBallHit: {fileID: 8300000, guid: 60a8b11e3ab2ad64bbd4292ed1c6c602, type: 3}
+  sfxAbility: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
+  sfxWin: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
+  sfxLose: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
+  sfxBarHit: {fileID: 8300000, guid: 321eddafda3912e4b8c71de6ed7de607, type: 3}
+  sfxCat: {fileID: 8300000, guid: 940803c6772e9cf4c8857e3f18eedf8c, type: 3}
+  sfxPhoenix: {fileID: 8300000, guid: 4eb9b5331a44ec84facd33fb74a9707f, type: 3}
+  sfxFrog: {fileID: 8300000, guid: 85051b4adab55cd46a98eecda840fa53, type: 3}
+  sfxBirdWhite: {fileID: 8300000, guid: 8db90c2ae1cf84845bdc02ef2d373fff, type: 3}
+  sfxBirdBlack: {fileID: 8300000, guid: 8db90c2ae1cf84845bdc02ef2d373fff, type: 3}
+  sfxDragon: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
+  sfxWopiHappy: {fileID: 8300000, guid: c8b1c1a8b1c26ec45ba312b3ccf3fa37, type: 3}
+  sfxWopiSad: {fileID: 8300000, guid: c8b1c1a8b1c26ec45ba312b3ccf3fa37, type: 3}
+  sfxLife: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
 --- !u!1 &2107425387
 GameObject:
   m_ObjectHideFlags: 0

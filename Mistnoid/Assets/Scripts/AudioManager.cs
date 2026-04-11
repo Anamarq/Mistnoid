@@ -100,11 +100,11 @@ public class AudioManager : MonoBehaviour
     //Play sounds (external calls)
     public void PlayMenuMusic()
     {
-        PlayMusic(musicMenu);
+        //PlayMusic(musicMenu);
     }
     public void PlayGameMusic()
     {
-        PlayMusic(musicGame);
+       // PlayMusic(musicGame);
     }
     public void PlayWin()
     {

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class BookPanel : MonoBehaviour
 {
@@ -115,7 +116,13 @@ public class BookPanel : MonoBehaviour
     {
         AudioManager.Instance.PlayPage();
         pages[index].gameObject.SetActive(true);
+
     }
+    //IEnumerator Page()
+    //{
+    //    yield return new WaitForSeconds(0.5f);
+
+    //}
 
     void HidePage(int index)
     {
