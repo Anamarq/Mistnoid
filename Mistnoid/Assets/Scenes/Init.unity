@@ -406,27 +406,27 @@ MonoBehaviour:
   sfxPage: {fileID: 8300000, guid: 16e349d13a504144e9f6d6bb72a00be2, type: 3}
   sfxCloseBook: {fileID: 8300000, guid: 5b523c2e8d6d6cd46979b03f53a13454, type: 3}
   sfxSouls: {fileID: 8300000, guid: ddf0461f36a3c7e4cadffa6b9159ff68, type: 3}
-  sfxFragments: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
+  sfxFragments: {fileID: 8300000, guid: 4b9cac5c57a93894abafeeeb5cc8eb79, type: 3}
   sfxBlockBreak: {fileID: 8300000, guid: 8615a3a2fe3102e468552a13d483a73d, type: 3}
   sfxBlocklv2: {fileID: 8300000, guid: 9ddc9c6278aa41f41ae6ef648482db0d, type: 3}
   sfxBlockMetal: {fileID: 8300000, guid: e8f99f3e507e3ae4bbc2911639150daa, type: 3}
-  sfxShoot: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
-  sfxPowerUp: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
+  sfxShoot: {fileID: 8300000, guid: 4f57d0b3ffbf25d4fb89300e5ab9a2c0, type: 3}
   sfxPaddle: {fileID: 8300000, guid: db9f08d182875e1438c912aae0377556, type: 3}
   sfxBallHit: {fileID: 8300000, guid: 60a8b11e3ab2ad64bbd4292ed1c6c602, type: 3}
-  sfxAbility: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
-  sfxWin: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
-  sfxLose: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
+  sfxAbility: {fileID: 8300000, guid: fbe5ff1591ad71f43a0fa4b041663d55, type: 3}
+  sfxWin: {fileID: 8300000, guid: 03888afc9e87fcd45b9183c4a3ffcfc7, type: 3}
+  sfxLose: {fileID: 8300000, guid: 084f6d3e827bd384da5bcd6bf61a16f5, type: 3}
   sfxBarHit: {fileID: 8300000, guid: 321eddafda3912e4b8c71de6ed7de607, type: 3}
+  sfxWrong: {fileID: 8300000, guid: 7c547c7531fbdc24ead95ae8f662594b, type: 3}
   sfxCat: {fileID: 8300000, guid: 940803c6772e9cf4c8857e3f18eedf8c, type: 3}
   sfxPhoenix: {fileID: 8300000, guid: 4eb9b5331a44ec84facd33fb74a9707f, type: 3}
   sfxFrog: {fileID: 8300000, guid: 85051b4adab55cd46a98eecda840fa53, type: 3}
   sfxBirdWhite: {fileID: 8300000, guid: 8db90c2ae1cf84845bdc02ef2d373fff, type: 3}
-  sfxBirdBlack: {fileID: 8300000, guid: 8db90c2ae1cf84845bdc02ef2d373fff, type: 3}
-  sfxDragon: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
+  sfxBirdBlack: {fileID: 8300000, guid: 36213484919da4d4c93526d29f117e57, type: 3}
+  sfxDragon: {fileID: 8300000, guid: c59f945531b9c3544b4bd7e6001c80f0, type: 3}
   sfxWopiHappy: {fileID: 8300000, guid: c8b1c1a8b1c26ec45ba312b3ccf3fa37, type: 3}
-  sfxWopiSad: {fileID: 8300000, guid: c8b1c1a8b1c26ec45ba312b3ccf3fa37, type: 3}
-  sfxLife: {fileID: 8300000, guid: f661d99815b95dd4b9c9decf75615f5e, type: 3}
+  sfxWopiSad: {fileID: 8300000, guid: ea4bee9c1695660449c0ab1b3b6d3f95, type: 3}
+  sfxLife: {fileID: 8300000, guid: 28a7e95316e74b244bf47a7d6d9df0b6, type: 3}
 --- !u!1 &2107425387
 GameObject:
   m_ObjectHideFlags: 0

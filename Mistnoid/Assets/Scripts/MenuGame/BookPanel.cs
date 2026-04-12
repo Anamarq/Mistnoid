@@ -141,6 +141,7 @@ public class BookPanel : MonoBehaviour
         if (ScoreManager.Instance.Fragments < fragmentCostPerPiece)
         {
             Debug.Log("No tienes suficientes fragmentos.");
+            AudioManager.Instance.PlayWrong();
             return;
         }
 
@@ -155,6 +156,7 @@ public class BookPanel : MonoBehaviour
         if (allMissingPieces.Count == 0)
         {
             Debug.Log("Ya tienes todas las piezas desbloqueadas.");
+            AudioManager.Instance.PlayWrong();
             return;
         }
 

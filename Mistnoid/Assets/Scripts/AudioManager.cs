@@ -19,8 +19,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip musicMenu, musicGame;
 
     [SerializeField] private AudioClip sfxButton, sfxButtonBack, sfxPage, sfxCloseBook, sfxSouls, sfxFragments, 
-        sfxBlockBreak, sfxBlocklv2, sfxBlockMetal, sfxShoot, sfxPowerUp, sfxPaddle, sfxBallHit, sfxAbility,
-        sfxWin, sfxLose, sfxBarHit,
+        sfxBlockBreak, sfxBlocklv2, sfxBlockMetal, sfxShoot, sfxPaddle, sfxBallHit, sfxAbility,
+        sfxWin, sfxLose, sfxBarHit, sfxWrong,
         sfxCat, sfxPhoenix, sfxFrog, sfxBirdWhite, sfxBirdBlack, sfxDragon, sfxWopiHappy, sfxWopiSad, sfxLife;
 
     void Awake()
@@ -144,6 +144,10 @@ public class AudioManager : MonoBehaviour
     public void PlayButtonBack()
     {
         PlaySFX(sfxButtonBack);
+    }
+    public void PlayWrong()
+    {
+        PlaySFX(sfxWrong);
     }
     public void PlayPage()
     {
