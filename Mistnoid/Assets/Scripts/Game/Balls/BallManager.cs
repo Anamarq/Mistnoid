@@ -91,6 +91,7 @@ public class BallManager : MonoBehaviour
                 BallController newBall = Instantiate(ballPrefab, position, Quaternion.identity);
                 float angle = Random.Range(-60f, 60f);
                 Vector2 dir = Quaternion.Euler(0, 0, angle) * Vector2.up;
+                newBall.SetInvincibleVisual(true);
                 newBall.Launch(dir);
             }
         }

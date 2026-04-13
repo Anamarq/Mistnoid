@@ -42,7 +42,8 @@ public class BallController : MonoBehaviour
         {
             transform.position = paddle.position + offset;
 
-            if (Input.GetButtonDown("Fire1") && PlayerController.Instance.IsPlayerAlive)
+            if (Input.GetButtonDown("Fire1") && PlayerController.Instance.IsPlayerAlive 
+                && GameManager.Instance.GetCurrentState() != GameManager.StateMachine.Pause)
             {
                 LaunchRandom();
             }
