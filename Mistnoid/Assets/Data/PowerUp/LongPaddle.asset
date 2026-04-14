@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LongPaddle
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpData
   powerUpName: "Bendici\xF3n espectral"
-  sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  sprite: {fileID: -8337736631442672647, guid: 70ffc224b9250dd44b00a9d764a44906, type: 3}
   fallSpeed: 2
   duration: 10
   weight: 10
