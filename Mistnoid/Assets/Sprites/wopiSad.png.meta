@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4f18c58da7846714d821a1aa78ad5cf9
+guid: dac8f88e5a386464cbf24a285387b7d3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7026411677795088878
-    second: Halcon White_0
+      213: 9216083132947606133
+    second: wopiSad_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Halcon White_0
+      name: wopiSad_0
       rect:
         serializedVersion: 2
-        x: 88
-        y: 85
+        x: 85
+        y: 79
         width: 86
-        height: 87
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee9f1a48134d28160800000000000000
-      internalID: 7026411677795088878
+      spriteID: 57aafcfc7ca16ef70800000000000000
+      internalID: 9216083132947606133
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Halcon White_0: 7026411677795088878
+      wopiSad_0: 9216083132947606133
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
