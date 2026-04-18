@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 00f36e27b15d771459c0e2b2f85a3760
+guid: 458808f4bff911042bfe6f58a569c171
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7799871034107387471
-    second: fila-2-columna-2_0
+      213: -7919683162714341815
+    second: fila-1-columna-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fila-2-columna-2_0
+      name: fila-1-columna-1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 71
-        width: 83
-        height: 72
+        x: 89
+        y: 0
+        width: 39
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b1ab26be9a41c390800000000000000
-      internalID: -7799871034107387471
+      spriteID: 94ef4c0bf12a71290800000000000000
+      internalID: -7919683162714341815
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fila-2-columna-2_0: -7799871034107387471
+      fila-1-columna-1_0: -7919683162714341815
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

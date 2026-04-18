@@ -3,10 +3,14 @@ using UnityEngine;
 public enum Ability
 {
     None,
-    DragonShield,
-    FrogMulti,
+    Dragon,
+    Frog,
     PhoenixFire,
-    TurtleBarrier
+    BlackBird,
+    WhiteBird,
+    Cat,
+    Wopi,
+    Heart
 }
 
 public class AbilityManager : MonoBehaviour

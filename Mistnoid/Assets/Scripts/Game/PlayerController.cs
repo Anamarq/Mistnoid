@@ -229,7 +229,7 @@ public class PlayerController : MonoBehaviour
 
         switch (ability)
         {
-            case Ability.DragonShield:
+            case Ability.Dragon:
                 abilityCoroutine = StartCoroutine(ActivateShield());
                 break;
 
@@ -237,8 +237,10 @@ public class PlayerController : MonoBehaviour
                 EnableShoot(5f);
                 break;
 
-            case Ability.FrogMulti:
+            case Ability.Frog:
                 BallManager.Instance.SpawnExtraBalls(BallManager.Instance.GetBallPosition(), 2);
+                break;
+            default:
                 break;
         }
     }
