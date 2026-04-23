@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 //Controller of each ball
@@ -17,17 +18,18 @@ public class BallController : MonoBehaviour
     [SerializeField] private int multiplier = 1, multiplierIncrease = 1, maxMultiplier = 5;
 
     [Header("Invincible Mode")]
-    [SerializeField] private Sprite invincibleSprite;
-    private Sprite normalSprite;
+    [SerializeField] private GameObject invincibleSprite;
+    [SerializeField] private Color invincibleColor = Color.green;
+    [SerializeField] private float colorSpeed = 4f;
+    [SerializeField] private float glowIntensity = 2f;
     private SpriteRenderer sr;
+    private Coroutine invincibleVisualCoroutine;
+
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        
-        normalSprite = sr.sprite;
-
     }
 
     void Start()
@@ -119,10 +121,9 @@ public class BallController : MonoBehaviour
             isLaunched = false;
             BallManager.Instance.RemoveBall(this);
             Destroy(gameObject);
-            
+
         }
     }
-
     //----------------------------------------- external calls
     public void Launch(Vector2 direction)
     {
@@ -150,7 +151,34 @@ public class BallController : MonoBehaviour
     // invincible mode
     public void SetInvincibleVisual(bool state)
     {
-        sr.sprite = state ? invincibleSprite : normalSprite;
+        //sr.sprite = state ? invincibleSprite : normalSprite;
+        invincibleSprite.SetActive(state);
+        if (state)
+        {
+            if (invincibleVisualCoroutine != null)
+                StopCoroutine(invincibleVisualCoroutine);
+
+            invincibleVisualCoroutine = StartCoroutine(InvincibleVisualRoutine());
+        }
+        else
+        {
+            if (invincibleVisualCoroutine != null)
+                StopCoroutine(invincibleVisualCoroutine);
+            sr.color = Color.white;
+        }
+    }
+    IEnumerator InvincibleVisualRoutine()
+    {
+        float t = 0f;
+        while (true)
+        {
+            t += Time.deltaTime * colorSpeed;
+            float lerp = (Mathf.Sin(t) + 1f) / 2f;
+            //sr.color = Color.Lerp(Color.white, invincibleColor, lerp);
+            sr.color = Color.Lerp(Color.white, invincibleColor * glowIntensity, lerp);
+            transform.localScale = Vector3.one * (1f + lerp * 0.1f);
+            yield return null;
+        }
     }
 
 }
