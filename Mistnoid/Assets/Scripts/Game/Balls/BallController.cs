@@ -36,6 +36,7 @@ public class BallController : MonoBehaviour
     {
         paddle = GameObject.FindWithTag("Paddle").transform;
         BallManager.Instance.RegisterBall(this);
+        sr.sprite = AspectManager.Instance.GetBallSprite();
     }
 
     void Update()

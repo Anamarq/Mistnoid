@@ -8,6 +8,7 @@ public class ShopPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textSouls;
 
     [SerializeField] private PaddlePreviewUI paddlePreview;
+    [SerializeField] private Image previewBallImage;
     void Start()
     {
         for (int i = 0; i < upgrades.Length; i++)
@@ -22,6 +23,7 @@ public class ShopPanel : MonoBehaviour
         }
 
         UpdateSoulsUI();
+        previewBallImage.sprite = AspectManager.Instance.GetBallSprite();
     }
 
 
