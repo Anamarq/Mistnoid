@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using static ShopPanel;
+//using static ShopPanel;
 
 //Controller of the player (the paddle), paddle settings
 public class PlayerController : MonoBehaviour
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     float fireTimer;
 
     [Header("LongPaddle")]
-    [SerializeField] private Sprite[] paddleSprites;
+    //[SerializeField] private Sprite[] paddleSprites;
     private int currentPaddleLevel = 0, maxPaddleLevel = 6, minPaddleLevel = 0;
     private SpriteRenderer sr;
 
@@ -185,10 +185,11 @@ public class PlayerController : MonoBehaviour
     }
     void UpdatePaddleVisual()
     {
-        if (paddleSprites != null && currentPaddleLevel < paddleSprites.Length)
-        {
-            sr.sprite = paddleSprites[currentPaddleLevel];
-        }
+        //if (paddleSprites != null && currentPaddleLevel < paddleSprites.Length)
+        //{
+        //    sr.sprite = paddleSprites[currentPaddleLevel];
+            sr.sprite = AspectManager.Instance.GetPaddleSprite(currentPaddleLevel);
+       // }
         if (paddleColider is BoxCollider2D box)
         {
             box.size = sr.sprite.bounds.size;

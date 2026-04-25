@@ -12,9 +12,13 @@ public class ShopPanel : MonoBehaviour
     [SerializeField] private PaddlePreviewUI paddlePreview;
     [SerializeField] private Image previewBallImage;
     public Image PreviewBallImage { get { return previewBallImage; } set { previewBallImage = value; } }
+    [SerializeField] private Image previewPaddleImage;
+    public Image PreviewPaddleImage { get { return previewPaddleImage; } set { previewPaddleImage = value; } }
     [SerializeField] private GameObject _ballsPanel;
+    [SerializeField] private GameObject _PaddlePanel;
 
     private bool ballsPanelState = false;
+    private bool paddlePanelState = false;
     void Start()
     {
         for (int i = 0; i < upgrades.Length; i++)
@@ -30,6 +34,9 @@ public class ShopPanel : MonoBehaviour
 
         UpdateSoulsUI();
         previewBallImage.sprite = AspectManager.Instance.GetBallSprite();
+        int level = UpgradeManager.Instance.GetLevel(UpgradeType.PaddleSize);
+        previewPaddleImage.sprite = AspectManager.Instance.GetPaddleSprite(level);
+
     }
 
 
@@ -68,6 +75,8 @@ public class ShopPanel : MonoBehaviour
             if (u.type == UpgradeType.PaddleSize)
             {
                 paddlePreview.UpdatePreview();
+                int level = UpgradeManager.Instance.GetLevel(UpgradeType.PaddleSize);
+                previewPaddleImage.sprite = AspectManager.Instance.GetPaddleSprite(level);
             }
         }
     }
@@ -121,6 +130,10 @@ public class ShopPanel : MonoBehaviour
     {
         _ballsPanel.SetActive(false);
         ballsPanelState = false;
+
+        _PaddlePanel.SetActive(false);
+        paddlePanelState = false;
+
     }
     public void ButtonBalls()
     {
@@ -135,18 +148,27 @@ public class ShopPanel : MonoBehaviour
             ballsPanelState = false;
         }
     }
-
-
-
-    public enum UpgradeType
+    //PAnel change paddle
+    public void ButtonPaddles()
     {
-        PaddleSize,
-        StartLives,
-        PowerUpChance,
-        PaddleHealth // futuro
+        if (!paddlePanelState)
+        {
+            _PaddlePanel.SetActive(true);
+            paddlePanelState = true;
+        }
+        else
+        {
+            _PaddlePanel.SetActive(false);
+            paddlePanelState = false;
+        }
     }
-
-    
+}
+public enum UpgradeType
+{
+    PaddleSize,
+    StartLives,
+    PowerUpChance,
+    PaddleHealth // futuro
 }
 [System.Serializable]
 public class Upgrade

@@ -5,11 +5,13 @@ public class AspectManager : MonoBehaviour
     public static AspectManager Instance;
     private const string BALL_SELECTED = "BallAspect_Selected";
     private const string BALL_UNLOCK = "BallAspect_";
+    private const string PADDLE_SELECTED = "PaddleAspect_Selected";
+    private const string PADDLE_UNLOCK = "PaddleAspect_";
 
     [SerializeField] private Sprite[] ballSprites;
     [SerializeField] private PaddleAspect[] paddleAspects;
 
-    private int selectedPaddle = 0;
+    //private int selectedPaddle = 0;
     
 
     void Awake()
@@ -26,9 +28,11 @@ public class AspectManager : MonoBehaviour
 
     void Init()
     {
-        // Default desbloqueado
         if (PlayerPrefs.GetInt(BALL_UNLOCK + 0, 0) == 0)
             PlayerPrefs.SetInt(BALL_UNLOCK + 0, 1);
+
+        if (PlayerPrefs.GetInt(PADDLE_UNLOCK + 0, 0) == 0)
+            PlayerPrefs.SetInt(PADDLE_UNLOCK + 0, 1);
     }
 
     public void SetBallAspect(int index)
@@ -79,7 +83,8 @@ public class AspectManager : MonoBehaviour
     //PADDLE
     public Sprite GetPaddleSprite(int level)
     {
-        var aspect = paddleAspects[selectedPaddle];
+        int index = GetSelectedPaddle();
+        var aspect = paddleAspects[index];
 
         if (level < aspect.spritesByLevel.Length)
             return aspect.spritesByLevel[level];
@@ -89,14 +94,42 @@ public class AspectManager : MonoBehaviour
 
     public void SetPaddleAspect(int index)
     {
-        selectedPaddle = index;
-        PlayerPrefs.SetInt("PaddleAspect", index);
+        if (!IsPaddleUnlocked(index)) return;
+
+        PlayerPrefs.SetInt(PADDLE_SELECTED, index);
+        PlayerPrefs.Save();
+
+        //selectedPaddle = index;
+    }
+    public int GetSelectedPaddle()
+    {
+        return PlayerPrefs.GetInt(PADDLE_SELECTED, 0);
+    }
+    public bool IsPaddleUnlocked(int index)
+    {
+        return PlayerPrefs.GetInt(PADDLE_UNLOCK + index, 0) == 1;
+    }
+
+    public void UnlockPaddle(int index)
+    {
+        PlayerPrefs.SetInt(PADDLE_UNLOCK + index, 1);
         PlayerPrefs.Save();
     }
 
-    public int GetSelectedPaddle()
+    public int GetRandomLockedPaddle()
     {
-        return selectedPaddle;
+        System.Collections.Generic.List<int> locked = new();
+
+        for (int i = 0; i < paddleAspects.Length; i++)
+        {
+            if (!IsPaddleUnlocked(i))
+                locked.Add(i);
+        }
+
+        if (locked.Count == 0)
+            return -1;
+
+        return locked[Random.Range(0, locked.Count)];
     }
 }
 [System.Serializable]
