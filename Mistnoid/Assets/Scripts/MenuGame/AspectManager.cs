@@ -7,6 +7,10 @@ public class AspectManager : MonoBehaviour
     private const string BALL_UNLOCK = "BallAspect_";
 
     [SerializeField] private Sprite[] ballSprites;
+    [SerializeField] private PaddleAspect[] paddleAspects;
+
+    private int selectedPaddle = 0;
+    
 
     void Awake()
     {
@@ -70,4 +74,34 @@ public class AspectManager : MonoBehaviour
 
         return locked[Random.Range(0, locked.Count)];
     }
+
+
+    //PADDLE
+    public Sprite GetPaddleSprite(int level)
+    {
+        var aspect = paddleAspects[selectedPaddle];
+
+        if (level < aspect.spritesByLevel.Length)
+            return aspect.spritesByLevel[level];
+
+        return aspect.spritesByLevel[aspect.spritesByLevel.Length - 1];
+    }
+
+    public void SetPaddleAspect(int index)
+    {
+        selectedPaddle = index;
+        PlayerPrefs.SetInt("PaddleAspect", index);
+        PlayerPrefs.Save();
+    }
+
+    public int GetSelectedPaddle()
+    {
+        return selectedPaddle;
+    }
+}
+[System.Serializable]
+public class PaddleAspect
+{
+  //  public string name;
+    public Sprite[] spritesByLevel;
 }

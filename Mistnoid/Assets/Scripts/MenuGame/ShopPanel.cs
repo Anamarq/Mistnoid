@@ -1,6 +1,8 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static ShopPanel;
+
 public class ShopPanel : MonoBehaviour
 {
 
@@ -9,6 +11,10 @@ public class ShopPanel : MonoBehaviour
 
     [SerializeField] private PaddlePreviewUI paddlePreview;
     [SerializeField] private Image previewBallImage;
+    public Image PreviewBallImage { get { return previewBallImage; } set { previewBallImage = value; } }
+    [SerializeField] private GameObject _ballsPanel;
+
+    private bool ballsPanelState = false;
     void Start()
     {
         for (int i = 0; i < upgrades.Length; i++)
@@ -109,6 +115,29 @@ public class ShopPanel : MonoBehaviour
         upgrades[index].helpPanel.SetActive(false);
     }
 
+
+    //Panel change ball
+    private void OnDisable()
+    {
+        _ballsPanel.SetActive(false);
+        ballsPanelState = false;
+    }
+    public void ButtonBalls()
+    {
+        if (!ballsPanelState)
+        {
+            _ballsPanel.SetActive(true);
+            ballsPanelState = true;
+        }
+        else
+        {
+            _ballsPanel.SetActive(false);
+            ballsPanelState = false;
+        }
+    }
+
+
+
     public enum UpgradeType
     {
         PaddleSize,
@@ -117,27 +146,28 @@ public class ShopPanel : MonoBehaviour
         PaddleHealth // futuro
     }
 
-    [System.Serializable]
-    public class Upgrade
-    {
-        public UpgradeType type;
+    
+}
+[System.Serializable]
+public class Upgrade
+{
+    public UpgradeType type;
 
-        [Header("Stats")]
-        public int level;
-        public int maxLevel = 5;
-        public int baseCost = 10;
+    [Header("Stats")]
+    public int level;
+    public int maxLevel = 5;
+    public int baseCost = 10;
 
-        [Header("UI")]
-        public TextMeshProUGUI textLevel;
-        public TextMeshProUGUI textCost;
-        public TextMeshProUGUI textEffect;
-        public GameObject helpPanel;
-        
+    [Header("UI")]
+    public TextMeshProUGUI textLevel;
+    public TextMeshProUGUI textCost;
+    public TextMeshProUGUI textEffect;
+    public GameObject helpPanel;
 
-        [Header("Buttons")]
-        public Button buttonUp;
-        public Button buttonDown;
-        public Button buttonHelp;
-        public Button buttonCloseHelp;
-    }
+
+    [Header("Buttons")]
+    public Button buttonUp;
+    public Button buttonDown;
+    public Button buttonHelp;
+    public Button buttonCloseHelp;
 }

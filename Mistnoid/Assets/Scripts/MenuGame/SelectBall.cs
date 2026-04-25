@@ -6,7 +6,7 @@ public class SelectBall : MonoBehaviour
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private Button[] buttons;
     [SerializeField] private int cost = 50;
-    
+    [SerializeField] private ShopPanel shopPanel;
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class SelectBall : MonoBehaviour
         {
             int index = i;
 
-            buttons[i].onClick.RemoveAllListeners(); // por si acaso
+            buttons[i].onClick.RemoveAllListeners();
             buttons[i].onClick.AddListener(() => SelectBallAspect(index));
         }
     }
@@ -28,7 +28,7 @@ public class SelectBall : MonoBehaviour
     {
         AspectManager.Instance.SetBallAspect(index);
 
-        ApplyToPrefab(); // ?? clave
+        ApplyToPrefab();
     }
 
     void ApplyToPrefab()
@@ -36,7 +36,7 @@ public class SelectBall : MonoBehaviour
         var sr = ballPrefab.GetComponent<SpriteRenderer>();
 
         sr.sprite = AspectManager.Instance.GetBallSprite();
-
+        shopPanel.PreviewBallImage.sprite = AspectManager.Instance.GetBallSprite(); 
     }
 
     public void BuyRandom()
