@@ -5,7 +5,7 @@ using UnityEngine;
 public class CanvasMenuGame : MonoBehaviour
 {
     public static CanvasMenuGame Instance;
-    [SerializeField] private GameObject mainPanel, bookPanel, shopPanel;
+    [SerializeField] private GameObject mainPanel, bookPanel, shopPanel, achievementsPanel;
     [SerializeField]
     private TextMeshProUGUI soulsText, pointTe, timeText, fragmentText;
 
@@ -63,12 +63,7 @@ public class CanvasMenuGame : MonoBehaviour
         AudioManager.Instance.PlayButton();
         mainPanel.SetActive(false);
         bookPanel.SetActive(true);
-        //pages[actualPage].SetActive(false);
-        //actualPage = 0;
-        //pages[actualPage].SetActive(true);
     }
-
-    
 
     //MainPanel -> ButtonShop
     public void LoadShop()
@@ -76,6 +71,14 @@ public class CanvasMenuGame : MonoBehaviour
         AudioManager.Instance.PlayButton();
         mainPanel.SetActive(false);
         shopPanel.SetActive(true);
+    }
+
+    //MainPanel -> Achievements
+    public void LoadAchievements()
+    {
+        AudioManager.Instance.PlayButton();
+        mainPanel.SetActive(false);
+        achievementsPanel.SetActive(true);
     }
 
     //ShopPanel -> ButtonReturn
@@ -92,5 +95,12 @@ public class CanvasMenuGame : MonoBehaviour
         AudioManager.Instance.PlayButtonBack();
         mainPanel.SetActive(true);
         bookPanel.SetActive(false);
+    }
+    //AchievementPanel -> Return
+    public void ReturnAchievement()
+    {
+        AudioManager.Instance.PlayButtonBack();
+        mainPanel.SetActive(true);
+        achievementsPanel.SetActive(false);
     }
 }

@@ -13,8 +13,6 @@ public class ScoreManager : MonoBehaviour
     public float BestTime { get { return bestTime; } }
 
 
-
-    // Ajustable (balance)
     [Header("Limits")]
     [SerializeField] private int maxSouls = 9999;
     [SerializeField] private int maxFragments = 9999;
@@ -131,7 +129,45 @@ public class ScoreManager : MonoBehaviour
             soulsRun
         );
 
-       
+        CheckAchivements(finalScore);
+    }
+
+    private void CheckAchivements(int score)
+    {
+        float time = RunTimer.Instance.RunTime;
+        //Achivements:
+        // Without lose live
+        if (!PlayerController.Instance.PlayerLoseALive)
+        {
+            AchievementManager.Instance.Unlock(AchievementType.WinNoDamage);
+        }
+
+        // Fast time
+        if (time < 60f)
+        {
+            AchievementManager.Instance.Unlock(AchievementType.WinFast);
+        }
+
+        // With ability
+        if (AbilityManager.Instance.CurrentAbility != Ability.None)
+        {
+            AchievementManager.Instance.Unlock(AchievementType.WinWithAbility);
+        }
+        //Score
+        if (score >= 10000)
+            AchievementManager.Instance.Unlock(AchievementType.Score10000);
+
+        //Aspect master
+        int ball = AspectManager.Instance.GetBallAspect();
+        int paddle = AspectManager.Instance.GetSelectedPaddle();
+        if (ball == paddle)
+        {
+            if (ball == 0)
+                AchievementManager.Instance.Unlock(AchievementType.BlueMaster);
+
+            if (ball == 1)
+                AchievementManager.Instance.Unlock(AchievementType.RedMaster);
+        }
     }
 
 }

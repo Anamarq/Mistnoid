@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
 
     private bool isPlayerAlive = true;
     public bool IsPlayerAlive { get { return isPlayerAlive; } set { isPlayerAlive = value; } }
+    private bool playerLoseALive = true;
+    public bool PlayerLoseALive { get { return playerLoseALive; } }
 
     [Header("Bounce Settings")]
     [SerializeField] private float maxBounceAngle = 75f;
@@ -78,6 +80,7 @@ public class PlayerController : MonoBehaviour
         isPlayerAlive = true;
         ApplyPaddleSize();
         PlayCanvas.Instance.UpdateLifes(actualGlobalLife);
+        playerLoseALive = false;
     }
 
     private void Update()
@@ -279,6 +282,7 @@ public class PlayerController : MonoBehaviour
     public void LoseLife()
     {
         actualGlobalLife--;
+        playerLoseALive = true;
         PlayCanvas.Instance.UpdateLifes(actualGlobalLife);
         BallManager.Instance.ResetSpeed();
         PowerUpPool.Instance.ResetPool();

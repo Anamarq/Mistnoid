@@ -169,6 +169,10 @@ public class BookPanel : MonoBehaviour
         UpdateFragmentsUI();
         selected.ParentPage.CheckCompletion();
         Debug.Log("Pieza obtenida: " + selected.PieceID);
+
+        //Achivement
+        if(allMissingPieces.Count == 1)
+            AchievementManager.Instance.Unlock(AchievementType.CompleteBook);
     }
     //Buy ability use
     public void BuyAbilityUse()
