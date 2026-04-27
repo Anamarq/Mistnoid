@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: 7859c370bd228fe46b1b1beb0706330a
+guid: dd759ff2373a3254bb839d13c9d32dc6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5369285662818599017
-    second: PaddleGreen_0
+      213: -7453445568506111361
+    second: PaddleWhite_0
   - first:
-      213: -3710953515190008181
-    second: PaddleGreen_1
+      213: -6524930963995121218
+    second: PaddleWhite_1
   - first:
-      213: -3155546765514712682
-    second: PaddleGreen_2
+      213: 1559678022032465861
+    second: PaddleWhite_2
   - first:
-      213: 6233902701324707251
-    second: PaddleGreen_3
+      213: 461329129329849008
+    second: PaddleWhite_3
   - first:
-      213: -3919003437886519985
-    second: PaddleGreen_4
+      213: -8131725632533092676
+    second: PaddleWhite_4
   - first:
-      213: -232975508299036190
-    second: PaddleGreen_5
+      213: -7700067100083303825
+    second: PaddleWhite_5
   - first:
-      213: 4780824430035197187
-    second: PaddleGreen_6
+      213: -2744899663573693157
+    second: PaddleWhite_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -69,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -118,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PaddleGreen_0
+      name: PaddleWhite_0
       rect:
         serializedVersion: 2
         x: 183
         y: 1247
-        width: 193
-        height: 108
+        width: 146
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96086e5dcd8838a40800000000000000
-      internalID: 5369285662818599017
+      spriteID: f7adb78deba009890800000000000000
+      internalID: -7453445568506111361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaddleGreen_1
+      name: PaddleWhite_1
       rect:
         serializedVersion: 2
         x: 685
@@ -155,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b86cc1d707b008cc0800000000000000
-      internalID: -3710953515190008181
+      spriteID: eb9af1bdbd9c275a0800000000000000
+      internalID: -6524930963995121218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaddleGreen_2
+      name: PaddleWhite_2
       rect:
         serializedVersion: 2
         x: 1187
@@ -177,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 699dc518fee3534d0800000000000000
-      internalID: -3155546765514712682
+      spriteID: 5cf9a33c5e615a510800000000000000
+      internalID: 1559678022032465861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaddleGreen_3
+      name: PaddleWhite_3
       rect:
         serializedVersion: 2
         x: 153
@@ -199,14 +199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b5aecc6a75438650800000000000000
-      internalID: 6233902701324707251
+      spriteID: 0b2fe3e1668f66600800000000000000
+      internalID: 461329129329849008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaddleGreen_4
+      name: PaddleWhite_4
       rect:
         serializedVersion: 2
         x: 655
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f454d331327ec99c0800000000000000
-      internalID: -3919003437886519985
+      spriteID: cb62de5fe9e462f80800000000000000
+      internalID: -8131725632533092676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaddleGreen_5
+      name: PaddleWhite_5
       rect:
         serializedVersion: 2
         x: 1157
@@ -243,14 +243,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e94872720e44ccf0800000000000000
-      internalID: -232975508299036190
+      spriteID: f6accd8e4cdd32590800000000000000
+      internalID: -7700067100083303825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaddleGreen_6
+      name: PaddleWhite_6
       rect:
         serializedVersion: 2
         x: 123
@@ -265,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30dd1cd3d76e85240800000000000000
-      internalID: 4780824430035197187
+      spriteID: b1dc9909c4828e9d0800000000000000
+      internalID: -2744899663573693157
       vertices: []
       indices: 
       edges: []
@@ -285,13 +285,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PaddleGreen_0: 5369285662818599017
-      PaddleGreen_1: -3710953515190008181
-      PaddleGreen_2: -3155546765514712682
-      PaddleGreen_3: 6233902701324707251
-      PaddleGreen_4: -3919003437886519985
-      PaddleGreen_5: -232975508299036190
-      PaddleGreen_6: 4780824430035197187
+      PaddleWhite_0: -7453445568506111361
+      PaddleWhite_1: -6524930963995121218
+      PaddleWhite_2: 1559678022032465861
+      PaddleWhite_3: 461329129329849008
+      PaddleWhite_4: -8131725632533092676
+      PaddleWhite_5: -7700067100083303825
+      PaddleWhite_6: -2744899663573693157
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
