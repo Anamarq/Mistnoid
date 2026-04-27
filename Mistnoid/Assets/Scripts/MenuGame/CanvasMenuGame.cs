@@ -47,6 +47,13 @@ public class CanvasMenuGame : MonoBehaviour
     public void LoadGame()
     {
         AudioManager.Instance.PlayButton();
+        var state = GameProgressManager.Instance.State;
+
+        if (state == GameProgressState.Intro)
+        {
+            GameProgressManager.Instance.SetState(GameProgressState.FirstRun);
+        }
+
         GameManager.Instance.SetState(GameManager.StateMachine.Game);
     }
 
