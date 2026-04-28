@@ -3,6 +3,7 @@ public enum GameProgressState
 {
     Intro,
     FirstRun,
+    AfterFirstRun,
     AfterFirstDeath,
     UnlockingPowerUps,
     AllPowerUpsUnlocked,

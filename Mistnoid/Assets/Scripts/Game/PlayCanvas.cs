@@ -28,6 +28,8 @@ public class PlayCanvas : MonoBehaviour
         PanelGameOver(false);
         PanelWin(false);
         AudioManager.Instance.PlayGameMusic();
+        if(GameProgressManager.Instance.State == GameProgressState.FirstRun)
+            GameManager.Instance.SetPause(true);
     }
 
     //----------------------------------------- class methods

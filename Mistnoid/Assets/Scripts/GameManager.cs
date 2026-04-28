@@ -21,8 +21,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private StateMachine lastState;
 
-    //[SerializeField] private bool pause = false;
-  //  public bool Pause { get { return pause; } set { pause = value; } }
+    public bool IsDialogue = false;
 
     #region MonoBehaviour
     private void Awake()
@@ -50,13 +49,13 @@ public class GameManager : MonoBehaviour
     {
        if(currentState == StateMachine.Game)
        {
-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+            if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) && !IsDialogue)
             {
                 PlayCanvas.Instance.PanelPause(true);
             }
-       } else if(currentState == StateMachine.Pause)
+       } else if(currentState == StateMachine.Pause && !IsDialogue)
        {
-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+            if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) && !IsDialogue)
             {
                 PlayCanvas.Instance.PanelPause(false);
             }

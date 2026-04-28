@@ -19,11 +19,9 @@ public class GameSceneController : MonoBehaviour
 
     void StartTutorial()
     {
-        GameManager.Instance.SetPause(true);
-        PowerUpManager.Instance.EnableOnly(
-            PowerUpType.ExpandPaddle,
-            PowerUpType.ShrinkPaddle
-        );
+        GameManager.Instance.IsDialogue = true;
+        PowerUpManager.Instance.Unlock(PowerUpType.ExpandPaddle);
+        PowerUpManager.Instance.Unlock(PowerUpType.ShrinkPaddle);
         string[] dialogue =
         {
             "¡Eh! Has venido ??",
@@ -40,10 +38,15 @@ public class GameSceneController : MonoBehaviour
         DialogueManager.Instance.OnDialogueEnd += StartGame;
     }
 
+
     void StartGame()
     {
+        Debug.Log("START");
         DialogueManager.Instance.OnDialogueEnd -= StartGame;
 
         GameManager.Instance.SetPause(false);
+        GameManager.Instance.IsDialogue = false;
+
+        GameProgressManager.Instance.SetState(GameProgressState.AfterFirstRun);
     }
 }

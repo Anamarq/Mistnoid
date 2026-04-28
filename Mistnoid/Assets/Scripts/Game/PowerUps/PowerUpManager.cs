@@ -58,19 +58,8 @@ public class PowerUpManager : MonoBehaviour
         return unlocked.Contains(type);
     }
 
-    public void LockAll()
-    {
-        unlocked.Clear();
-    }
 
-    //TUTORIAL
-    public void EnableOnly(params PowerUpType[] types)
-    {
-        unlocked.Clear();
 
-        foreach (var t in types)
-            unlocked.Add(t);
-    }
     #endregion
 
     // RANDOM  (only unlocked)
