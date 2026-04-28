@@ -1,16 +1,22 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 using System;
+
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
     public Action OnDialogueEnd;
 
+    [Header("UI")]
     [SerializeField] private GameObject panel;
     [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI nameText;
+    [SerializeField] private Image portraitImage;
 
-    private string[] lines;
+    private DialogueLine[] lines;
+
     private int index;
 
     void Awake()
@@ -18,19 +24,16 @@ public class DialogueManager : MonoBehaviour
         Instance = this;
     }
 
-    public void StartDialogue(string[] dialogueLines)
+    public void StartDialogue(DialogueData data)
     {
-        
         panel.SetActive(true);
-        lines = dialogueLines;
+        lines = data.lines;
         index = 0;
         ShowLine();
     }
 
     void Update()
     {
-        //if (GameManager.Instance.GetCurrentState() == GameManager.StateMachine.Game)
-        //    GameManager.Instance.SetPause(true);
         if (panel.activeSelf && Input.GetKeyDown(KeyCode.Space))
         {
             NextLine();
@@ -39,14 +42,17 @@ public class DialogueManager : MonoBehaviour
 
     void ShowLine()
     {
-        text.text = lines[index];
+        var line = lines[index];
+
+        text.text = line.text;
+        nameText.text = line.characterName;
+        portraitImage.sprite = line.characterSprite;
     }
 
     void NextLine()
     {
-       
         index++;
-        Debug.Log("GameManager.Instance.State " + GameManager.Instance.GetCurrentState());
+
         if (index >= lines.Length)
         {
             panel.SetActive(false);

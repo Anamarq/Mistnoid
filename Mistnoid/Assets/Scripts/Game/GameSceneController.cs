@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GameSceneController : MonoBehaviour
 {
+    [SerializeField] private DialogueData introDialogue;
     void Start()
     {
         CheckFirstRun();
@@ -22,18 +23,18 @@ public class GameSceneController : MonoBehaviour
         GameManager.Instance.IsDialogue = true;
         PowerUpManager.Instance.Unlock(PowerUpType.ExpandPaddle);
         PowerUpManager.Instance.Unlock(PowerUpType.ShrinkPaddle);
-        string[] dialogue =
-        {
-            "¡Eh! Has venido ??",
-            "Vale, escucha rápido...",
-            "Para romper los bloques tienes que rebotar la bola con la pala.",
-            "Yo puedo ayudarte un poco...",
-            "Intentaré hacer la pala más grande con mi magia ?",
-            "…aunque a veces no me sale muy bien ??",
-            "¡Vamos, inténtalo!"
-        };
+        //string[] dialogue =
+        //{
+        //    "¡Eh! Has venido ??",
+        //    "Vale, escucha rápido...",
+        //    "Para romper los bloques tienes que rebotar la bola con la pala.",
+        //    "Yo puedo ayudarte un poco...",
+        //    "Intentaré hacer la pala más grande con mi magia ?",
+        //    "…aunque a veces no me sale muy bien ??",
+        //    "¡Vamos, inténtalo!"
+        //};
 
-        DialogueManager.Instance.StartDialogue(dialogue);
+        DialogueManager.Instance.StartDialogue(introDialogue);
 
         DialogueManager.Instance.OnDialogueEnd += StartGame;
     }

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060a8617640264e4faf3be70dca7101f, type: 3}
+  m_Name: Intro_Game
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Nimbo
+    characterSprite: {fileID: -8337736631442672647, guid: 70ffc224b9250dd44b00a9d764a44906, type: 3}
+    text: "\xA1Eh! Has venido ??"
+  - characterName: Nimbo
+    characterSprite: {fileID: -8337736631442672647, guid: 70ffc224b9250dd44b00a9d764a44906, type: 3}
+    text: Vale ecucha

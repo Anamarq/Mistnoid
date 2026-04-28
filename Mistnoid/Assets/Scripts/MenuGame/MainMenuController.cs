@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private Button shopButton, achievementsButton, bookButton;
-
+    [SerializeField] private DialogueData introDialogue;
     void Start()
     {
         CheckFirstTime();
@@ -48,16 +48,16 @@ public class MainMenuController : MonoBehaviour
 
     void StartIntroDialogue()
     {
-        string[] dialogue =
-        {
-            "Eh… hola ??",
-            "No esperaba encontrar a nadie aquí...",
-            "Estoy… un poco atrapado.",
-            "Y creo que tú también.",
-            "Si me ayudas, quizá podamos salir de este sitio.",
-            "Prueba a pulsar JUGAR..."
-        };
+        //string[] dialogue =
+        //{
+        //    "Eh… hola ??",
+        //    "No esperaba encontrar a nadie aquí...",
+        //    "Estoy… un poco atrapado.",
+        //    "Y creo que tú también.",
+        //    "Si me ayudas, quizá podamos salir de este sitio.",
+        //    "Prueba a pulsar JUGAR..."
+        //};
 
-        DialogueManager.Instance.StartDialogue(dialogue);
+        DialogueManager.Instance.StartDialogue(introDialogue);
     }
 }
