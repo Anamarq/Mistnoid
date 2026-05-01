@@ -71,6 +71,8 @@ public class LevelController : MonoBehaviour
     {
         Debug.Log("Nivel completado");
         PlayerController.Instance.ResetPaddle();
+        PlayerPrefs.SetInt("Level_" + currentLevel, 1);
+        PlayerPrefs.Save();
         NextLevel();
         GameManager.Instance.SetPause(true);
 
@@ -85,5 +87,12 @@ public class LevelController : MonoBehaviour
         {
             WinLevel();
         }
+        if(currentLevel == 1 && remainingBlocks == 1)
+        {
+            Debug.Log("LEVEL %");
+            ProgressFlags.Level5Reached = true;
+            PlayerPrefs.Save();
+        }
     }
+
 }

@@ -5313,7 +5313,7 @@ MonoBehaviour:
   mainPanel: {fileID: 787418586}
   bookPanel: {fileID: 2025316732}
   shopPanel: {fileID: 1711784662}
-  achievementsPanel: {fileID: 0}
+  achievementsPanel: {fileID: 704712629}
   soulsText: {fileID: 1742330753}
   pointTe: {fileID: 1980148125}
   timeText: {fileID: 1547562633}
@@ -5336,6 +5336,12 @@ MonoBehaviour:
   introDialogue: {fileID: 11400000, guid: 440d0d4eb5fcc4642a31350bcba64e78, type: 2}
   birdsDialogue: {fileID: 11400000, guid: 4288d3aef21ea094782115fd8a3091e3, type: 2}
   frogDialogue: {fileID: 11400000, guid: 54970882eb1cdb84280c6106fb0c4e81, type: 2}
+  heartDialogue: {fileID: 11400000, guid: ea239b83f062cd0479c1eff2c525cdfe, type: 2}
+  failLevel1Dialogue: {fileID: 11400000, guid: b2698e763e369ef4380cc13487697774, type: 2}
+  dragonDialogue: {fileID: 11400000, guid: 501ebc9df000add438cef5e9dbcd55da, type: 2}
+  phoenixDialogue: {fileID: 11400000, guid: 218f3e995d708054fafcf27cb40f40c7, type: 2}
+  level5WarningDialogue: {fileID: 11400000, guid: a2d30ef06c5368a46bb37e04cb465707, type: 2}
+  catDialogue: {fileID: 11400000, guid: be04c6f8667fc2f4cb1c0e6d1e0516eb, type: 2}
 --- !u!1 &592541925
 GameObject:
   m_ObjectHideFlags: 0
@@ -6977,11 +6983,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721138470}
   m_CullTransparentMesh: 1
---- !u!1 &729485095 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2163779393511192544, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
-  m_PrefabInstance: {fileID: 7686957664639930017}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &729485096 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7807573083938973750, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
@@ -15144,7 +15145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1711784663
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18338,12 +18339,12 @@ RectTransform:
   - {fileID: 768433009}
   - {fileID: 729485096}
   - {fileID: 1417395104}
-  - {fileID: 1740498473}
   - {fileID: 902734321}
   - {fileID: 1322840749}
   - {fileID: 243127415}
   - {fileID: 1988862760}
   - {fileID: 41532913}
+  - {fileID: 1740498473}
   - {fileID: 542154677}
   m_Father: {fileID: 556496533}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18366,14 +18367,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BookPanel
   mainPanel: {fileID: 768433006}
   pages:
-  - {fileID: 729485095}
+  - {fileID: 7686957664639930018}
   - {fileID: 1417395105}
-  - {fileID: 1740498474}
   - {fileID: 902734322}
   - {fileID: 1322840750}
   - {fileID: 243127416}
   - {fileID: 1988862761}
   - {fileID: 41532914}
+  - {fileID: 1740498474}
   textFragments: {fileID: 2065716104}
   textAbility: {fileID: 223882539}
   fragmentCostPerPiece: 5
@@ -19539,6 +19540,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
+--- !u!114 &7686957664639930018 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 528704394151863053, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
+  m_PrefabInstance: {fileID: 7686957664639930017}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e163549a63be60e43b7504a063b45a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BookPage
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (panel.activeSelf && Input.GetKeyDown(KeyCode.Space))
+        if (panel.activeSelf && (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire1")))
         {
             NextLine();
         }

@@ -35,16 +35,14 @@ public class BookPanel : MonoBehaviour
         ShowMainPanel();
         UpdateFragmentsUI();
         textAbility.text = AbilityManager.Instance.MaxUses.ToString();
-        // ?? ORDEN CONTROLADO
         foreach (var page in pages)
-        {
-            page.LoadPieces();   // primero carga piezas
-        }
+            page.LoadPieces();
 
         foreach (var page in pages)
-        {
-            page.InitializeToggle(); // luego evalúa toggles
-        }
+            page.InitializeToggle();
+        var state = GameProgressManager.Instance.State;
+        if (state >= GameProgressState.AllPowerUpsUnlocked)
+            UnlockPage(7);
     }
 
     //Navegation
