@@ -5,6 +5,8 @@ public class GameSceneController : MonoBehaviour
     [SerializeField] private DialogueData introDialogue;
     void Start()
     {
+        PlayerPrefs.SetInt("HasPlayedAfterDialogue", 1);
+        PlayerPrefs.Save();
         CheckFirstRun();
     }
 

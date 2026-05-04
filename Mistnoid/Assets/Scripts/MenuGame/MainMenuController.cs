@@ -11,6 +11,8 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private DialogueData introDialogue, birdsDialogue, frogDialogue, heartDialogue, failLevel1Dialogue,
         dragonDialogue, phoenixDialogue, level5WarningDialogue, catDialogue;
 
+    const string HAS_PLAYED_KEY = "HasPlayedAfterDialogue";
+
     void Start()
     {
         CheckFirstTime();
@@ -48,53 +50,69 @@ public class MainMenuController : MonoBehaviour
                 break;
 
             case GameProgressState.AfterFirstRun:
-                LockButtons();
-                StartBirdsDialogue();
+                if (HasPlayed())
+                {
+                    LockButtons();
+                    StartBirdsDialogue();
+                }
                 break;
             case GameProgressState.AfterBirds:
-                LockButtons();
-                StartFrogDialogue();
+                if (HasPlayed())
+                {
+                    LockButtons();
+                    StartFrogDialogue();
+                }
                 break;
             case GameProgressState.AfterFrog:
-
-                if (!IsLevelCompleted(0))
+                if (HasPlayed())
                 {
-                    LockButtons();
-
-                    if (!(PlayerPrefs.GetInt("FailLevel1Shown", 0) == 1))
+                    if (!IsLevelCompleted(0))
                     {
-                        StartFailLevel1Dialogue();
-                        PlayerPrefs.SetInt("FailLevel1Shown", 1);
+                        LockButtons();
+
+                        if (!(PlayerPrefs.GetInt("FailLevel1Shown", 0) == 1))
+                        {
+                            StartFailLevel1Dialogue();
+                            PlayerPrefs.SetInt("FailLevel1Shown", 1);
+                        }
                     }
-                }
-                else
-                {
-                    LockButtons();
-                    StartHeartDialogue();
+                    else
+                    {
+                        LockButtons();
+                        StartHeartDialogue();
+                    }
                 }
                 break;
 
             case GameProgressState.AfterHeart:
-                LockButtons();
-                StartDragonDialogue();
+                if (HasPlayed())
+                {
+                    LockButtons();
+                    StartDragonDialogue();
+                }
                 break;
             case GameProgressState.AfterDragon:
-                LockButtons();
-                StartPhoenixDialogue();
+                if (HasPlayed())
+                {
+                    LockButtons();
+                    StartPhoenixDialogue();
+                }
                 break;
             case GameProgressState.AfterPhoenix:
-
-                if (!ProgressFlags.Level5Reached)
+                if (HasPlayed())
                 {
-                    UnlockButtons();
-                    break;
-                }
+                    if (!ProgressFlags.Level5Reached)
+                    {
+                        UnlockButtons();
+                        break;
+                    }
 
-                LockButtons();
-                if (!ProgressFlags.Level5ImpossibleSeen)
-                    StartLevel5WarningThenCat();
-                else
-                    StartCatDialogue();
+                    LockButtons();
+                    if (!ProgressFlags.Level5ImpossibleSeen)
+                        StartLevel5WarningThenCat();
+                    else
+                        StartCatDialogue();
+                }
                 break;
             default:
                 UnlockButtons();
@@ -106,8 +124,12 @@ public class MainMenuController : MonoBehaviour
     {
         return PlayerPrefs.GetInt("Level_" + levelIndex, 0) == 1;
     }
+    bool HasPlayed()
+    {
+        return PlayerPrefs.GetInt(HAS_PLAYED_KEY, 0) == 1;
+    }
 
-#region Dialogues
+    #region Dialogues
     // DIALOGUES
     //Event lvel 5 reached
     bool CheckLevel5Event()
@@ -141,6 +163,8 @@ public class MainMenuController : MonoBehaviour
     {
         DialogueManager.Instance.OnDialogueEnd -= OnIntroEnd;
         GameProgressManager.Instance.SetState(GameProgressState.FirstRun);
+        PlayerPrefs.SetInt(HAS_PLAYED_KEY, 0);
+        PlayerPrefs.Save();
         UpdateButtons();
     }
     //2 Birds
@@ -155,6 +179,8 @@ public class MainMenuController : MonoBehaviour
         PowerUpManager.Instance.Unlock(PowerUpType.FastBall);
         PowerUpManager.Instance.Unlock(PowerUpType.SlowBall);
         GameProgressManager.Instance.SetState(GameProgressState.AfterBirds);
+        PlayerPrefs.SetInt(HAS_PLAYED_KEY, 0);
+        PlayerPrefs.Save();
         UpdateButtons();
     }
     //3 frog
@@ -169,6 +195,8 @@ public class MainMenuController : MonoBehaviour
         DialogueManager.Instance.OnDialogueEnd -= OnFrogEnd;
         PowerUpManager.Instance.Unlock(PowerUpType.MultiBall);
         GameProgressManager.Instance.SetState(GameProgressState.AfterFrog);
+        PlayerPrefs.SetInt(HAS_PLAYED_KEY, 0);
+        PlayerPrefs.Save();
         UpdateButtons();
     }
 
@@ -183,6 +211,7 @@ public class MainMenuController : MonoBehaviour
     void OnFailLevel1End()
     {
         DialogueManager.Instance.OnDialogueEnd -= OnFailLevel1End;
+
         UpdateButtons();
     }
 
@@ -198,6 +227,8 @@ public class MainMenuController : MonoBehaviour
         DialogueManager.Instance.OnDialogueEnd -= OnHeartEnd;
         PowerUpManager.Instance.Unlock(PowerUpType.ExtraLife);
         GameProgressManager.Instance.SetState(GameProgressState.AfterHeart);
+        PlayerPrefs.SetInt(HAS_PLAYED_KEY, 0);
+        PlayerPrefs.Save();
         UpdateButtons();
     }
 
@@ -213,6 +244,8 @@ public class MainMenuController : MonoBehaviour
         DialogueManager.Instance.OnDialogueEnd -= OnDragonEnd;
         PowerUpManager.Instance.Unlock(PowerUpType.BarShield);
         GameProgressManager.Instance.SetState(GameProgressState.AfterDragon);
+        PlayerPrefs.SetInt(HAS_PLAYED_KEY, 0);
+        PlayerPrefs.Save();
         UpdateButtons();
     }
     //6 phoenix
@@ -227,6 +260,8 @@ public class MainMenuController : MonoBehaviour
         DialogueManager.Instance.OnDialogueEnd -= OnPhoenixEnd;
         PowerUpManager.Instance.Unlock(PowerUpType.Shot);
         GameProgressManager.Instance.SetState(GameProgressState.AfterPhoenix);
+        PlayerPrefs.SetInt(HAS_PLAYED_KEY, 0);
+        PlayerPrefs.Save();
         UpdateButtons();
     }
 
@@ -257,7 +292,9 @@ public class MainMenuController : MonoBehaviour
         PowerUpManager.Instance.Unlock(PowerUpType.InvincibleBall);
         ProgressFlags.CatUnlocked = true;
         GameProgressManager.Instance.SetState(GameProgressState.AllPowerUpsUnlocked);
-       // BookPanel.Instance.UnlockPage(7);
+        PlayerPrefs.SetInt(HAS_PLAYED_KEY, 0);
+        PlayerPrefs.Save();
+        // BookPanel.Instance.UnlockPage(7);
         UpdateButtons();
     }
     #endregion

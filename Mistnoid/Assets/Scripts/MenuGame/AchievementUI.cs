@@ -18,7 +18,6 @@ public class AchievementUI : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(ACH_DIALOGUE_SHOWN, 0) == 1)
             return;
-        GameManager.Instance.SetPause(true);
         GameManager.Instance.IsDialogue = true;
 
         DialogueManager.Instance.StartDialogue(AchDialogue);
@@ -31,7 +30,6 @@ public class AchievementUI : MonoBehaviour
     {
         DialogueManager.Instance.OnDialogueEnd -= OnAchDialogueEnd;
 
-        GameManager.Instance.SetPause(false);
         GameManager.Instance.IsDialogue = false;
     }
     #endregion

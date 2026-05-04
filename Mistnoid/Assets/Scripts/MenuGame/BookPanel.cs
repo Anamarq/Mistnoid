@@ -57,7 +57,6 @@ public class BookPanel : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(BOOK_DIALOGUE_SHOWN, 0) == 1)
             return;
-        GameManager.Instance.SetPause(true);
         GameManager.Instance.IsDialogue = true;
 
         DialogueManager.Instance.StartDialogue(bookDialogue);
@@ -69,8 +68,6 @@ public class BookPanel : MonoBehaviour
     void OnBookDialogueEnd()
     {
         DialogueManager.Instance.OnDialogueEnd -= OnBookDialogueEnd;
-
-        GameManager.Instance.SetPause(false);
         GameManager.Instance.IsDialogue = false;
     }
     #endregion

@@ -53,7 +53,6 @@ public class ShopPanel : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(SHOP_DIALOGUE_SHOWN, 0) == 1)
             return;
-        GameManager.Instance.SetPause(true);
         GameManager.Instance.IsDialogue = true;
 
         DialogueManager.Instance.StartDialogue(shopDialogue);
@@ -66,7 +65,6 @@ public class ShopPanel : MonoBehaviour
     {
         DialogueManager.Instance.OnDialogueEnd -= OnShopDialogueEnd;
 
-        GameManager.Instance.SetPause(false);
         GameManager.Instance.IsDialogue = false;
     }
     #endregion

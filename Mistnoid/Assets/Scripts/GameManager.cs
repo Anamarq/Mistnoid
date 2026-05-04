@@ -109,6 +109,7 @@ public class GameManager : MonoBehaviour
 
     public void SetState(StateMachine newState)
     {
+        Debug.Log("Currnet: " + currentState + " new " + newState);
         if (currentState == newState)
             return;
 

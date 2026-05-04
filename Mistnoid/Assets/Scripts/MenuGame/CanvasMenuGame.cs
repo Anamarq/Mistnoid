@@ -55,6 +55,7 @@ public class CanvasMenuGame : MonoBehaviour
         }
 
         GameManager.Instance.SetState(GameManager.StateMachine.Game);
+        Debug.Log("LoadGame");
     }
 
     //MainPanel -> ButtonMainMenu
