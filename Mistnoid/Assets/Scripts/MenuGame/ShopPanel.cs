@@ -19,6 +19,10 @@ public class ShopPanel : MonoBehaviour
 
     private bool ballsPanelState = false;
     private bool paddlePanelState = false;
+
+    //Dialogue first time
+    const string SHOP_DIALOGUE_SHOWN = "ShopDialogueShown";
+    [SerializeField] private DialogueData shopDialogue;
     void Start()
     {
         for (int i = 0; i < upgrades.Length; i++)
@@ -39,7 +43,35 @@ public class ShopPanel : MonoBehaviour
 
     }
 
+    #region Dialogue
+    //Dialogue first time
+    void OnEnable()
+    {
+        CheckFirstTimeOpen();
+    }
+    void CheckFirstTimeOpen()
+    {
+        if (PlayerPrefs.GetInt(SHOP_DIALOGUE_SHOWN, 0) == 1)
+            return;
+        GameManager.Instance.SetPause(true);
+        GameManager.Instance.IsDialogue = true;
 
+        DialogueManager.Instance.StartDialogue(shopDialogue);
+        DialogueManager.Instance.OnDialogueEnd += OnShopDialogueEnd;
+
+        PlayerPrefs.SetInt(SHOP_DIALOGUE_SHOWN, 1);
+        PlayerPrefs.Save();
+    }
+    void OnShopDialogueEnd()
+    {
+        DialogueManager.Instance.OnDialogueEnd -= OnShopDialogueEnd;
+
+        GameManager.Instance.SetPause(false);
+        GameManager.Instance.IsDialogue = false;
+    }
+    #endregion
+
+    //levels shop
     void LevelUp(int index)
     {
         Upgrade u = upgrades[index];

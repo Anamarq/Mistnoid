@@ -20,6 +20,9 @@ public class BookPanel : MonoBehaviour
     [SerializeField] private int costIncreaseUse = 20;
 
     private int currentPageIndex = -1; // -1 = main panel
+    //Dialogue first time
+    const string BOOK_DIALOGUE_SHOWN = "BookDialogueShown";
+    [SerializeField] private DialogueData bookDialogue;
 
     void Awake()
     {
@@ -44,7 +47,33 @@ public class BookPanel : MonoBehaviour
         if (state >= GameProgressState.AllPowerUpsUnlocked)
             UnlockPage(7);
     }
+    #region Dialogue
+    //Dialogue first time
+    void OnEnable()
+    {
+        CheckFirstTimeOpen();
+    }
+    void CheckFirstTimeOpen()
+    {
+        if (PlayerPrefs.GetInt(BOOK_DIALOGUE_SHOWN, 0) == 1)
+            return;
+        GameManager.Instance.SetPause(true);
+        GameManager.Instance.IsDialogue = true;
 
+        DialogueManager.Instance.StartDialogue(bookDialogue);
+        DialogueManager.Instance.OnDialogueEnd += OnBookDialogueEnd;
+
+        PlayerPrefs.SetInt(BOOK_DIALOGUE_SHOWN, 1);
+        PlayerPrefs.Save();
+    }
+    void OnBookDialogueEnd()
+    {
+        DialogueManager.Instance.OnDialogueEnd -= OnBookDialogueEnd;
+
+        GameManager.Instance.SetPause(false);
+        GameManager.Instance.IsDialogue = false;
+    }
+    #endregion
     //Navegation
     public void ShowMainPanel()
     {

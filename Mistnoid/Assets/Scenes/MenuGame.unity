@@ -335,7 +335,7 @@ PrefabInstance:
     - target: {fileID: 2052549744953400123, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 967693dd4a75a954b9aab14fd6423490, type: 3}
+      objectReference: {fileID: 3660870557685960493, guid: a5c13902d24844142a945db8de5a7039, type: 3}
     - target: {fileID: 2163779393511192544, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
       propertyPath: m_Name
       value: Page7
@@ -347,7 +347,7 @@ PrefabInstance:
     - target: {fileID: 2226821639970843841, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 60b56639b35a4a94c9704b4d446d0fbd, type: 3}
+      objectReference: {fileID: 8151173753962275507, guid: 0876859a15785e049ade623b42245787, type: 3}
     - target: {fileID: 2379527532167457793, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -359,11 +359,11 @@ PrefabInstance:
     - target: {fileID: 2617014691035982175, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 632aa2fccbbdff34d82d9a0163c7c1ea, type: 3}
+      objectReference: {fileID: 5527677724296131200, guid: 623fe92177632354aadb446d232c0614, type: 3}
     - target: {fileID: 2810806991802199324, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d7543d0707b1e6c4ba24d38bbc225e38, type: 3}
+      objectReference: {fileID: 6832504522059788467, guid: e3cf59efa9a381a44870e5f9781d0747, type: 3}
     - target: {fileID: 2979881986487452375, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -178.20944
@@ -5291,6 +5291,7 @@ RectTransform:
   - {fileID: 2025316735}
   - {fileID: 1711784663}
   - {fileID: 704712630}
+  - {fileID: 1680585168}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6725,6 +6726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AchievementUI
   slots:
   - {fileID: 538728012}
+  AchDialogue: {fileID: 11400000, guid: 68652d715f0c2644d9a0bb467f8a7ad3, type: 2}
 --- !u!1 &710783031
 GameObject:
   m_ObjectHideFlags: 0
@@ -7410,7 +7412,6 @@ RectTransform:
   - {fileID: 2092993449}
   - {fileID: 1288263380}
   - {fileID: 405461935}
-  - {fileID: 1680585168}
   - {fileID: 212493341}
   m_Father: {fileID: 556496533}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15267,6 +15268,7 @@ MonoBehaviour:
   previewPaddleImage: {fileID: 1249927274}
   _ballsPanel: {fileID: 737646078}
   _PaddlePanel: {fileID: 2034534997}
+  shopDialogue: {fileID: 11400000, guid: b478911272911ae4d825d5fb2e984d49, type: 2}
 --- !u!1 &1719245197
 GameObject:
   m_ObjectHideFlags: 0
@@ -15357,6 +15359,10 @@ PrefabInstance:
     - target: {fileID: 212107617515129120, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -10.260598
+      objectReference: {fileID: 0}
+    - target: {fileID: 528704394151863053, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
+      propertyPath: isUnlocked
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 528704394151863053, guid: 655ac2cda3b07b84495636508117d7e6, type: 3}
       propertyPath: abilityType
@@ -18379,6 +18385,7 @@ MonoBehaviour:
   textAbility: {fileID: 223882539}
   fragmentCostPerPiece: 5
   costIncreaseUse: 20
+  bookDialogue: {fileID: 11400000, guid: 8d7dc3485cfef2045a95ebbeb36f33f2, type: 2}
 --- !u!1 &2034534997
 GameObject:
   m_ObjectHideFlags: 0
@@ -19292,11 +19299,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 787418587}
+    m_TransformParent: {fileID: 556496533}
     m_Modifications:
     - target: {fileID: 68125699510079785, guid: d1bbc93223ef1354fa03387243e8be43, type: 3}
       propertyPath: m_Name
       value: Dialogues
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329959591882835284, guid: d1bbc93223ef1354fa03387243e8be43, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4759149473797007303, guid: d1bbc93223ef1354fa03387243e8be43, type: 3}
       propertyPath: m_Pivot.x
