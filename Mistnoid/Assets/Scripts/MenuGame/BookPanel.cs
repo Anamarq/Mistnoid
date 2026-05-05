@@ -18,7 +18,7 @@ public class BookPanel : MonoBehaviour
     [Header("Buy")]
     [SerializeField] private int fragmentCostPerPiece = 5;
     [SerializeField] private int costIncreaseUse = 20;
-
+    public bool canBuyAbUse = false;
     private int currentPageIndex = -1; // -1 = main panel
     //Dialogue first time
     const string BOOK_DIALOGUE_SHOWN = "BookDialogueShown";
@@ -201,8 +201,17 @@ public class BookPanel : MonoBehaviour
     //Buy ability use
     public void BuyAbilityUse()
     {
-        if (ScoreManager.Instance.Fragments < costIncreaseUse)
+        if (!canBuyAbUse)
+        {
+            Debug.Log("No tienes ninguna habilidad desbloqueada o seleccionada");
             return;
+        }
+        if(ScoreManager.Instance.Fragments < costIncreaseUse)
+        {
+            Debug.Log("te faltan almas");
+            return;
+        }
+            
         AudioManager.Instance.PlayFragments();
         ScoreManager.Instance.AddFragments(-costIncreaseUse);
         AbilityManager.Instance.AddMaxUse();

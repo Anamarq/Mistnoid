@@ -73,6 +73,7 @@ public class BookPage : MonoBehaviour
 
         Debug.Log("Página " + pageIndex + " completada!");
         abilityToggle.interactable = true;
+        BookPanel.Instance.canBuyAbUse = true;
         InitializeToggle();
     }
 

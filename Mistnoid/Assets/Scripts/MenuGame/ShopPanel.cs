@@ -31,8 +31,6 @@ public class ShopPanel : MonoBehaviour
             upgrades[i].level = UpgradeManager.Instance.GetLevel(upgrades[i].type);
             upgrades[i].buttonUp.onClick.AddListener(() => LevelUp(index));
             upgrades[i].buttonDown.onClick.AddListener(() => LevelDown(index));
-            upgrades[i].buttonHelp.onClick.AddListener(() => ShowHelp(index));
-            upgrades[i].buttonCloseHelp.onClick.AddListener(() => HideHelp(index));
             UpdateUpgradeUI(i);
         }
 
@@ -144,15 +142,6 @@ public class ShopPanel : MonoBehaviour
         textSouls.text = ScoreManager.Instance.Souls.ToString();
     }
 
-    private void ShowHelp(int index)
-    {
-        upgrades[index].helpPanel.SetActive(true);
-    }
-
-    private void HideHelp(int index)
-    {
-        upgrades[index].helpPanel.SetActive(false);
-    }
 
 
     //Panel change ball
@@ -214,12 +203,9 @@ public class Upgrade
     public TextMeshProUGUI textLevel;
     public TextMeshProUGUI textCost;
     public TextMeshProUGUI textEffect;
-    public GameObject helpPanel;
 
 
     [Header("Buttons")]
     public Button buttonUp;
     public Button buttonDown;
-    public Button buttonHelp;
-    public Button buttonCloseHelp;
 }

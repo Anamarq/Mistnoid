@@ -57,6 +57,7 @@ public class AbilityManager : MonoBehaviour
     public void Use()
     {
         currentUses--;
+        PlayCanvas.Instance.UpdateAbility(currentUses);
     }
 
     public void ResetUses()
@@ -69,6 +70,11 @@ public class AbilityManager : MonoBehaviour
         maxUses++;
         PlayerPrefs.SetInt("AbilityUses", maxUses);
         PlayerPrefs.Save();
+    }
+
+    public void UpdateCanvasUses()
+    {
+        PlayCanvas.Instance.UpdateAbility(currentUses);
     }
 
 }

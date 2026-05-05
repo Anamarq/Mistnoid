@@ -7,7 +7,8 @@ public class PlayCanvas : MonoBehaviour
 {
     public static PlayCanvas Instance;
     [SerializeField] private GameObject panelPause, panelGameOver, panelWin, panelLevel;
-    [SerializeField] private TextMeshProUGUI textPoints, textLifes, textSouls, textTimer, textWin, textGameOver, textPhase;
+    [SerializeField] private TextMeshProUGUI textPoints, textLifes, textSouls, textTimer, textWin, 
+        textGameOver, textPhase, textAbility;
 
 
 
@@ -27,6 +28,7 @@ public class PlayCanvas : MonoBehaviour
         PanelPause(false);
         PanelGameOver(false);
         PanelWin(false);
+        AbilityManager.Instance.UpdateCanvasUses();
         AudioManager.Instance.PlayGameMusic();
         if(GameProgressManager.Instance.State == GameProgressState.FirstRun)
             GameManager.Instance.SetPause(true);
@@ -113,6 +115,11 @@ public class PlayCanvas : MonoBehaviour
         int seconds = Mathf.FloorToInt(time % 60);
 
         textTimer.text = $"{minutes:00}:{seconds:00}";
+    }
+
+    public void UpdateAbility(int ab)
+    {
+        textAbility.text = ab.ToString();
     }
 
 
