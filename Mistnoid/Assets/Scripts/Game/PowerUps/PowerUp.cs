@@ -40,13 +40,13 @@ public class PowerUp : MonoBehaviour
                 break;
             case PowerUpType.ExpandPaddle:
                 Debug.Log("Expand paddle");
-                AudioManager.Instance.PlayWopi();
+                AudioManager.Instance.PlayNimbo();
                 PlayerController.Instance.ExpandPaddle();
                 break;
 
             case PowerUpType.ShrinkPaddle:
                 Debug.Log("SHIRNK paddle");
-                AudioManager.Instance.PlayWopiSad();
+                AudioManager.Instance.PlayNimboSad();
                 PlayerController.Instance.ShrinkPaddle();
                 break;
 

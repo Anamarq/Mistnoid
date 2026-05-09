@@ -220,6 +220,135 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed263d507f50421418d5fa4dd2fa958c, type: 3}
+--- !u!1 &717179255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717179256}
+  - component: {fileID: 717179257}
+  m_Layer: 0
+  m_Name: IntroMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &717179256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717179255}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184105438}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &717179257
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717179255}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -4215751279750504117, guid: dd259e8cdaafafc48828c89b2e6fda9f, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: b70fba36103caf34b8eb33c77fee8785, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &907038250
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +598,7 @@ Transform:
   m_Children:
   - {fileID: 2107425388}
   - {fileID: 967607057}
+  - {fileID: 717179256}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1184105439
@@ -483,13 +613,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ffb775e245bd5c4d88525446c00bfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  musicSource: {fileID: 967607058}
+  musicSource: {fileID: 717179257}
+  loopSource: {fileID: 967607058}
   sfxSource: {fileID: 2107425389}
   musicVolume: 1
   sfxVolume: 1
-  musicMenu: {fileID: 8300000, guid: f3d9d65a29bc3034db4d7a475e12197b, type: 3}
-  musicGame: {fileID: 8300000, guid: f3d9d65a29bc3034db4d7a475e12197b, type: 3}
+  musicMenu: {fileID: 8300000, guid: 1f0a858140692d446b4cb1f0258a4d74, type: 3}
+  musicGame: {fileID: 8300000, guid: 8d96039a3c06fb64494d12b45a46827b, type: 3}
+  musicIntroGame: {fileID: 8300000, guid: b70fba36103caf34b8eb33c77fee8785, type: 3}
   sfxButton: {fileID: 8300000, guid: 6f6dc2253a769bf4e82b327ee33dfe71, type: 3}
+  sfxBlockButton: {fileID: 8300000, guid: b5e80c9b6f7523c45b6f8218f246fef7, type: 3}
   sfxButtonBack: {fileID: 8300000, guid: bedd54c756d23004ebf6d13a1bdf194f, type: 3}
   sfxPage: {fileID: 8300000, guid: 16e349d13a504144e9f6d6bb72a00be2, type: 3}
   sfxCloseBook: {fileID: 8300000, guid: 5b523c2e8d6d6cd46979b03f53a13454, type: 3}
@@ -512,8 +645,8 @@ MonoBehaviour:
   sfxBirdWhite: {fileID: 8300000, guid: 8db90c2ae1cf84845bdc02ef2d373fff, type: 3}
   sfxBirdBlack: {fileID: 8300000, guid: 36213484919da4d4c93526d29f117e57, type: 3}
   sfxDragon: {fileID: 8300000, guid: c59f945531b9c3544b4bd7e6001c80f0, type: 3}
-  sfxWopiHappy: {fileID: 8300000, guid: c8b1c1a8b1c26ec45ba312b3ccf3fa37, type: 3}
-  sfxWopiSad: {fileID: 8300000, guid: ea4bee9c1695660449c0ab1b3b6d3f95, type: 3}
+  sfxNimboHappy: {fileID: 8300000, guid: c8b1c1a8b1c26ec45ba312b3ccf3fa37, type: 3}
+  sfxNimboSad: {fileID: 8300000, guid: ea4bee9c1695660449c0ab1b3b6d3f95, type: 3}
   sfxLife: {fileID: 8300000, guid: 28a7e95316e74b244bf47a7d6d9df0b6, type: 3}
 --- !u!1 &2107425387
 GameObject:
@@ -690,6 +823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   currentState: 0
   lastState: 0
+  IsDialogue: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

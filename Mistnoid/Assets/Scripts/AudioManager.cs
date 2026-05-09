@@ -1,11 +1,13 @@
+using System.Collections;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
     [Header("Audio Sources")]
-    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioSource musicSource, loopSource;
     [SerializeField] private AudioSource sfxSource;
 
     [Header("Volume")]
@@ -16,12 +18,12 @@ public class AudioManager : MonoBehaviour
     private const string SFX_KEY = "SFXVolume";
 
     [Header("Audio Clips")]
-    [SerializeField] private AudioClip musicMenu, musicGame;
+    [SerializeField] private AudioClip musicMenu, musicGame, musicIntroGame;
 
-    [SerializeField] private AudioClip sfxButton, sfxButtonBack, sfxPage, sfxCloseBook, sfxSouls, sfxFragments, 
+    [SerializeField] private AudioClip sfxButton, sfxBlockButton, sfxButtonBack, sfxPage, sfxCloseBook, sfxSouls, sfxFragments, 
         sfxBlockBreak, sfxBlocklv2, sfxBlockMetal, sfxShoot, sfxPaddle, sfxBallHit, sfxAbility,
         sfxWin, sfxLose, sfxBarHit, sfxWrong,
-        sfxCat, sfxPhoenix, sfxFrog, sfxBirdWhite, sfxBirdBlack, sfxDragon, sfxWopiHappy, sfxWopiSad, sfxLife;
+        sfxCat, sfxPhoenix, sfxFrog, sfxBirdWhite, sfxBirdBlack, sfxDragon, sfxNimboHappy, sfxNimboSad, sfxLife;
 
     void Awake()
     {
@@ -46,16 +48,17 @@ public class AudioManager : MonoBehaviour
 
     private void PlayMusic(AudioClip clip, bool loop = true)
     {
-        if (musicSource.clip == clip) return;
+        if (loopSource.clip == clip) return;
 
-        musicSource.clip = clip;
-        musicSource.loop = loop;
-        musicSource.Play();
+        loopSource.clip = clip;
+        loopSource.loop = loop;
+        loopSource.Play();
     }
 
     public void StopMusic()
     {
         musicSource.Stop();
+        loopSource.Stop();
     }
 
 
@@ -100,12 +103,51 @@ public class AudioManager : MonoBehaviour
     //Play sounds (external calls)
     public void PlayMenuMusic()
     {
+        musicSource.Stop();
         PlayMusic(musicMenu);
     }
     public void PlayGameMusic()
     {
-        PlayMusic(musicGame);
+        loopSource.Stop();
+        StartCoroutine(GameMusicCoroutine());
     }
+    bool musicPaused;
+    IEnumerator GameMusicCoroutine()
+    {
+        musicSource.clip = musicIntroGame;
+        musicSource.loop = false;
+        musicSource.Play();
+
+        loopSource.clip = musicGame;
+        loopSource.loop = true;
+
+        while (musicSource.time < musicSource.clip.length)
+        {
+            if (!musicPaused)
+            {
+
+            }
+
+            yield return null;
+        }
+
+        loopSource.Play();
+        musicSource.Stop();
+    }
+    public void PauseMusic()
+    {
+        musicPaused = true;
+        musicSource.Pause();
+        loopSource.Pause();
+    }
+
+    public void ResumeMusic()
+    {
+        musicPaused = false;
+        musicSource.UnPause();
+        loopSource.UnPause();
+    }
+    //SFX
     public void PlayWin()
     {
         PlaySFX(sfxWin);
@@ -136,6 +178,10 @@ public class AudioManager : MonoBehaviour
     public void PlayButton()
     {
         PlaySFX(sfxButton);
+    }
+    public void PlayBlockButton()
+    {
+        PlaySFX(sfxBlockButton);
     }
     public void PlayAbility()
     {
@@ -197,13 +243,13 @@ public class AudioManager : MonoBehaviour
     {
         PlaySFX(sfxDragon);
     }
-    public void PlayWopi()
+    public void PlayNimbo()
     {
-        PlaySFX(sfxWopiHappy);
+        PlaySFX(sfxNimboHappy);
     }
-    public void PlayWopiSad()
+    public void PlayNimboSad()
     {
-        PlaySFX(sfxWopiSad);
+        PlaySFX(sfxNimboSad);
     }
     public void PlayFrog()
     {

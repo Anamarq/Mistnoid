@@ -78,12 +78,12 @@ public class PlayCanvas : MonoBehaviour
         if(state)
         {
             AudioManager.Instance.PlayButton();
-            AudioManager.Instance.StopMusic();
+            AudioManager.Instance.PauseMusic();
         }
         else
         {
             AudioManager.Instance.PlayButtonBack();
-            AudioManager.Instance.PlayGameMusic();
+            AudioManager.Instance.ResumeMusic();
         }
     }
 

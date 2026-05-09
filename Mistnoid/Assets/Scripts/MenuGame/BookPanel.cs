@@ -12,7 +12,7 @@ public class BookPanel : MonoBehaviour
     [SerializeField] private List<BookPage> pages;
 
     [Header("UI")]
-    [SerializeField] private TextMeshProUGUI textFragments, textAbility;
+    [SerializeField] private TextMeshProUGUI textFragments, textAbility, textMaxUses;
     
 
     [Header("Buy")]
@@ -43,6 +43,8 @@ public class BookPanel : MonoBehaviour
 
         foreach (var page in pages)
             page.InitializeToggle();
+        if (AbilityManager.Instance.IsMaxBuy)
+            textMaxUses.gameObject.SetActive(true);
         var state = GameProgressManager.Instance.State;
         if (state >= GameProgressState.AllPowerUpsUnlocked)
             UnlockPage(7);
@@ -204,11 +206,19 @@ public class BookPanel : MonoBehaviour
         if (!canBuyAbUse)
         {
             Debug.Log("No tienes ninguna habilidad desbloqueada o seleccionada");
+            AudioManager.Instance.PlayBlockButton();
             return;
         }
         if(ScoreManager.Instance.Fragments < costIncreaseUse)
         {
             Debug.Log("te faltan almas");
+            AudioManager.Instance.PlayBlockButton();
+            return;
+        }
+        if(AbilityManager.Instance.IsMaxBuy)
+        {
+            Debug.Log("Maximo alcanzado");
+            AudioManager.Instance.PlayBlockButton();
             return;
         }
             

@@ -9,7 +9,7 @@ public enum Ability
     BlackBird,
     WhiteBird,
     Cat,
-    Wopi,
+    Nimbo,
     Heart
 }
 
@@ -20,7 +20,11 @@ public class AbilityManager : MonoBehaviour
     public Ability CurrentAbility => currentAbility;
 
     private int maxUses, currentUses;
-    public int MaxUses => maxUses;  
+    public int MaxUses => maxUses;
+
+    [SerializeField] int maxToBuy = 7;
+    private bool isMaxBuy = false;
+    public bool IsMaxBuy => isMaxBuy;
 
     void Awake()
     {
@@ -39,6 +43,8 @@ public class AbilityManager : MonoBehaviour
         currentAbility = (Ability)PlayerPrefs.GetInt("ActiveAbility", 0);
         maxUses = PlayerPrefs.GetInt("AbilityUses", 1);
         currentUses = maxUses;
+        if (maxUses >= maxToBuy)
+            isMaxBuy = true;
     }
 
     public void SetAbility(Ability ability)
@@ -68,6 +74,8 @@ public class AbilityManager : MonoBehaviour
     public void AddMaxUse()
     {
         maxUses++;
+        if (maxUses >= maxToBuy)
+            isMaxBuy = true;
         PlayerPrefs.SetInt("AbilityUses", maxUses);
         PlayerPrefs.Save();
     }
