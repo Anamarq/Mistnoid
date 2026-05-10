@@ -206,19 +206,19 @@ public class BookPanel : MonoBehaviour
         if (!canBuyAbUse)
         {
             Debug.Log("No tienes ninguna habilidad desbloqueada o seleccionada");
-            AudioManager.Instance.PlayBlockButton();
+            AudioManager.Instance.PlayWrong();
             return;
         }
         if(ScoreManager.Instance.Fragments < costIncreaseUse)
         {
             Debug.Log("te faltan almas");
-            AudioManager.Instance.PlayBlockButton();
+            AudioManager.Instance.PlayWrong();
             return;
         }
         if(AbilityManager.Instance.IsMaxBuy)
         {
             Debug.Log("Maximo alcanzado");
-            AudioManager.Instance.PlayBlockButton();
+            AudioManager.Instance.PlayWrong();
             return;
         }
             
@@ -228,6 +228,8 @@ public class BookPanel : MonoBehaviour
 
         UpdateFragmentsUI();
         textAbility.text = AbilityManager.Instance.MaxUses.ToString();
+        if (AbilityManager.Instance.IsMaxBuy)
+            textMaxUses.gameObject.SetActive(true);
     }
     //UI 
     public void UpdateFragmentsUI()

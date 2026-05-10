@@ -36,6 +36,7 @@ public class BookPage : MonoBehaviour
             bool obtained = PlayerPrefs.GetInt(piece.PieceID, 0) == 1;
             piece.SetObtained(obtained);
         }
+        CheckCompletion();
     }
 
     void OnToggleChanged(bool state)
