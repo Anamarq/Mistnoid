@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private bool canShoot = false;
     private float shootTimer;
     float fireTimer;
+    public bool IsShotActive => canShoot;
 
     [Header("LongPaddle")]
     //[SerializeField] private Sprite[] paddleSprites;
@@ -45,11 +46,9 @@ public class PlayerController : MonoBehaviour
     [Header("Bar shield")]
     [SerializeField] private GameObject bottomShield;
     private Coroutine shieldCoroutine;
+    public bool IsBarActive = false;
 
-    [Header("Ability")]
-    [SerializeField] private float abilityDuration = 5f;
-    private bool abilityActive = false;
-    private Coroutine abilityCoroutine;
+
 
     private void Awake()
     {
@@ -90,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            TryUseAbility();
+            AbilityManager.Instance.TryUseAbility();
         }
     }
 
@@ -124,17 +123,13 @@ public class PlayerController : MonoBehaviour
     {
         if (!canShoot)
             return;
-
         shootTimer -= Time.deltaTime;
-
         if (shootTimer <= 0)
         {
             canShoot = false;
             return;
         }
-
         fireTimer -= Time.deltaTime;
-
         if (Input.GetButton("Fire1") && fireTimer <= 0)
         {
             Shoot();
@@ -215,50 +210,14 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator BottomShieldRoutine(float duration)
     {
+        IsBarActive = true;
         bottomShield.SetActive(true);
         yield return new WaitForSeconds(duration);
         bottomShield.SetActive(false);
+        IsBarActive = false;
     }
     #endregion
 
-    #region Ability
-    void TryUseAbility()
-    {
-        if (abilityActive) return;
-        if (!AbilityManager.Instance.CanUse()) return;
-
-        AbilityManager.Instance.Use();
-
-        var ability = AbilityManager.Instance.CurrentAbility;
-
-        switch (ability)
-        {
-            case Ability.Dragon:
-                abilityCoroutine = StartCoroutine(ActivateShield());
-                break;
-
-            case Ability.PhoenixFire:
-                EnableShoot(5f);
-                break;
-
-            case Ability.Frog:
-                BallManager.Instance.SpawnExtraBalls(BallManager.Instance.GetBallPosition(), 2);
-                break;
-            default:
-                break;
-        }
-    }
-    IEnumerator ActivateShield()
-    {
-        abilityActive = true;
-        bottomShield.SetActive(true);
-
-        yield return new WaitForSeconds(abilityDuration);
-
-        bottomShield.SetActive(false);
-        abilityActive = false;
-    }
-    #endregion
     void GameOver()
     {
         ScoreManager.Instance.LoseRun();

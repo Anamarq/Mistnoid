@@ -34,7 +34,6 @@ public class AbilityManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
-
         Load();
     }
 
@@ -55,17 +54,6 @@ public class AbilityManager : MonoBehaviour
         Debug.Log("Habilidad activa: " + ability);
     }
 
-    public bool CanUse()
-    {
-        return currentUses > 0;
-    }
-
-    public void Use()
-    {
-        currentUses--;
-        PlayCanvas.Instance.UpdateAbility(currentUses);
-    }
-
     public void ResetUses()
     {
         currentUses = maxUses;
@@ -83,6 +71,70 @@ public class AbilityManager : MonoBehaviour
     public void UpdateCanvasUses()
     {
         PlayCanvas.Instance.UpdateAbility(currentUses);
+    }
+
+
+    public void TryUseAbility()
+    {
+        if (currentUses < 0) return;
+
+        currentUses--;
+        PlayCanvas.Instance.UpdateAbility(currentUses);
+        switch (currentAbility)
+        {
+            case Ability.Dragon:
+                if (!PlayerController.Instance.IsBarActive)
+                {
+                    AudioManager.Instance.PlayDragon();
+                    PlayerController.Instance.ActivateBottomShield(10);
+                }
+
+                break;
+
+            case Ability.PhoenixFire:
+                if (!PlayerController.Instance.IsShotActive)
+                {
+                    AudioManager.Instance.PlayPhoenix();
+                    PlayerController.Instance.EnableShoot(5);
+                }
+                break;
+
+            case Ability.Frog:
+                AudioManager.Instance.PlayFrog();
+                if (BallManager.Instance.GetNumBalls() > 0)
+                {
+                    BallManager.Instance.SpawnExtraBalls(
+                        BallManager.Instance.GetBallPosition(),
+                        2
+                    );
+                }
+                break;
+            case Ability.BlackBird:
+                AudioManager.Instance.PlayBird();
+                BallManager.Instance.ModifySpeed(2);
+                break;
+            case Ability.WhiteBird:
+                AudioManager.Instance.PlayBirdW();
+                BallManager.Instance.ModifySpeed(2);
+                break;
+            case Ability.Nimbo:
+                AudioManager.Instance.PlayNimbo();
+                PlayerController.Instance.ExpandPaddle();
+                break;
+            case Ability.Heart:
+                AudioManager.Instance.PlayLife();
+                PlayerController.Instance.AddLife();
+                break;
+            case Ability.Cat:
+                if (!BallManager.Instance.IsInvActive)
+                {
+                    AudioManager.Instance.PlayCat();
+                    BallManager.Instance.ActivateInvincible(2);
+                }
+                break;
+            default:
+                break;
+        }
     }
 
 }

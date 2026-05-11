@@ -18,6 +18,7 @@ public class BallManager : MonoBehaviour
 
     //power up invincible
     private Coroutine invincibleCoroutine;
+    public bool IsInvActive = false;
 
     void Awake()
     {
@@ -115,6 +116,7 @@ public class BallManager : MonoBehaviour
 
     IEnumerator InvincibleRoutine(float duration)
     {
+        IsInvActive = true;
         SetBlocksTrigger(true);
         foreach (var ball in activeBalls)
             ball.SetInvincibleVisual(true);
@@ -122,6 +124,7 @@ public class BallManager : MonoBehaviour
         SetBlocksTrigger(false);
         foreach (var ball in activeBalls)
             ball.SetInvincibleVisual(false);
+        IsInvActive = false;
     }
     public void SetBlocksTrigger(bool state)
     {
