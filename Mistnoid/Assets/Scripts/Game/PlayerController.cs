@@ -234,6 +234,7 @@ public class PlayerController : MonoBehaviour
         {
             StopCoroutine(shieldCoroutine);
             bottomShield.SetActive(false);
+            IsBarActive = false;
         }
         canShoot = false;
     }
@@ -250,6 +251,7 @@ public class PlayerController : MonoBehaviour
         {
             StopCoroutine(shieldCoroutine);
             bottomShield.SetActive(false);
+            IsBarActive = false;
         }
         if (actualGlobalLife <= 0)
         {

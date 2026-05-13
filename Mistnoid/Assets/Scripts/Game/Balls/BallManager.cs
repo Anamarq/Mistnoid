@@ -42,6 +42,7 @@ public class BallManager : MonoBehaviour
             PlayerController.Instance.LoseLife();
             Instantiate(ballPrefab);
             SetBlocksTrigger(false);
+            IsInvActive = false;
         }
     }
     //Reset the list of the balls
@@ -56,6 +57,7 @@ public class BallManager : MonoBehaviour
         Instantiate(ballPrefab);
         ResetSpeed();
         SetBlocksTrigger(false);
+        IsInvActive = false;
     }
     public void ResetSpeed()
     {

@@ -76,17 +76,18 @@ public class AbilityManager : MonoBehaviour
 
     public void TryUseAbility()
     {
-        if (currentUses < 0) return;
+        if (currentUses <= 0) return;
 
-        currentUses--;
-        PlayCanvas.Instance.UpdateAbility(currentUses);
+        
+        
         switch (currentAbility)
         {
             case Ability.Dragon:
                 if (!PlayerController.Instance.IsBarActive)
                 {
                     AudioManager.Instance.PlayDragon();
-                    PlayerController.Instance.ActivateBottomShield(10);
+                    PlayerController.Instance.ActivateBottomShield(5);
+                    currentUses--;
                 }
 
                 break;
@@ -96,6 +97,7 @@ public class AbilityManager : MonoBehaviour
                 {
                     AudioManager.Instance.PlayPhoenix();
                     PlayerController.Instance.EnableShoot(5);
+                    currentUses--;
                 }
                 break;
 
@@ -107,34 +109,42 @@ public class AbilityManager : MonoBehaviour
                         BallManager.Instance.GetBallPosition(),
                         2
                     );
+                    currentUses--;
                 }
                 break;
             case Ability.BlackBird:
                 AudioManager.Instance.PlayBird();
-                BallManager.Instance.ModifySpeed(2);
+                BallManager.Instance.ModifySpeed(0.5f);
+                currentUses--;
                 break;
             case Ability.WhiteBird:
                 AudioManager.Instance.PlayBirdW();
                 BallManager.Instance.ModifySpeed(2);
+                currentUses--;
                 break;
             case Ability.Nimbo:
                 AudioManager.Instance.PlayNimbo();
                 PlayerController.Instance.ExpandPaddle();
+                currentUses--;
                 break;
             case Ability.Heart:
                 AudioManager.Instance.PlayLife();
                 PlayerController.Instance.AddLife();
+                currentUses--;
                 break;
             case Ability.Cat:
                 if (!BallManager.Instance.IsInvActive)
                 {
                     AudioManager.Instance.PlayCat();
-                    BallManager.Instance.ActivateInvincible(2);
+                    BallManager.Instance.ActivateInvincible(10);
+                    currentUses--;
                 }
                 break;
             default:
                 break;
+
         }
+        PlayCanvas.Instance.UpdateAbility(currentUses);
     }
 
 }
