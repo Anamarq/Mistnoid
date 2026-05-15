@@ -14,6 +14,9 @@ public class Piece : MonoBehaviour
     {
         obtained = state;
         gameObject.SetActive(state);
+        //transform.localScale = Vector3.zero;
+        //LeanTween.scale(gameObject, Vector3.one, 0.3f)
+        //    .setEaseOutBack();
     }
     
 }

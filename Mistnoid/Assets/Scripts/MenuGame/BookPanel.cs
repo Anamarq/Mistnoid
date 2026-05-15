@@ -172,10 +172,12 @@ public class BookPanel : MonoBehaviour
         }
 
         List<Piece> allMissingPieces = new List<Piece>();
+
         foreach (var page in pages)
         {
             if (!page.IsUnlocked)
                 continue;
+
             allMissingPieces.AddRange(page.GetMissingPieces());
         }
 
@@ -186,19 +188,41 @@ public class BookPanel : MonoBehaviour
             return;
         }
 
-        Piece selected = allMissingPieces[Random.Range(0, allMissingPieces.Count)];
+        Piece selected =
+            allMissingPieces[Random.Range(0, allMissingPieces.Count)];
+
+        ScoreManager.Instance.AddFragments(-fragmentCostPerPiece);
+        UpdateFragmentsUI();
+
+        StartCoroutine(ShowAndUnlockPiece(selected, allMissingPieces.Count));
+    }
+
+    //open page and activate piece
+    IEnumerator ShowAndUnlockPiece(Piece selected, int missingCount)
+    {
+        AudioManager.Instance.PlayFragments();
+        mainPanel.SetActive(false);
+        HideAllPages();
+        currentPageIndex = pages.IndexOf(selected.ParentPage);
+        ShowPage(currentPageIndex);
+        yield return new WaitForSeconds(1f);
+
         selected.SetObtained(true);
         PlayerPrefs.SetInt(selected.PieceID, 1);
         PlayerPrefs.Save();
-        AudioManager.Instance.PlayFragments();
-        ScoreManager.Instance.AddFragments(-fragmentCostPerPiece);
-        UpdateFragmentsUI();
+        //Sound 
+        AudioManager.Instance.PlayPage();
         selected.ParentPage.CheckCompletion();
+
         Debug.Log("Pieza obtenida: " + selected.PieceID);
 
-        //Achivement
-        if(allMissingPieces.Count == 1)
-            AchievementManager.Instance.Unlock(AchievementType.CompleteBook);
+        // Achievement
+        if (missingCount == 1)
+        {
+            AchievementManager.Instance.Unlock(
+                AchievementType.CompleteBook
+            );
+        }
     }
     //Buy ability use
     public void BuyAbilityUse()
