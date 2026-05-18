@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class AspectManager : MonoBehaviour
@@ -28,11 +29,16 @@ public class AspectManager : MonoBehaviour
 
     void Init()
     {
+        //First time
         if (PlayerPrefs.GetInt(BALL_UNLOCK + 0, 0) == 0)
             PlayerPrefs.SetInt(BALL_UNLOCK + 0, 1);
-
-        if (PlayerPrefs.GetInt(PADDLE_UNLOCK + 0, 0) == 0)
-            PlayerPrefs.SetInt(PADDLE_UNLOCK + 0, 1);
+        if (PlayerPrefs.GetInt(PADDLE_UNLOCK + 1, 0) == 0)
+            PlayerPrefs.SetInt(PADDLE_UNLOCK + 1, 1);    
+        if (!PlayerPrefs.HasKey(PADDLE_SELECTED))
+            PlayerPrefs.SetInt(PADDLE_SELECTED, 1);
+        if (!PlayerPrefs.HasKey(BALL_SELECTED))
+            PlayerPrefs.SetInt(BALL_SELECTED, 0);
+        PlayerPrefs.Save();
     }
 
     public void SetBallAspect(int index)

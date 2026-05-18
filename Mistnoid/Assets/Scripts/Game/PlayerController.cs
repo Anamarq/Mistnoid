@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxBounceAngle = 75f;
     public float MaxBounceAngle { get { return maxBounceAngle; } }
 
-    
 
     [Header("Projectile")]
     [SerializeField] private Transform shootPointLeft;
@@ -39,7 +38,6 @@ public class PlayerController : MonoBehaviour
     public bool IsShotActive => canShoot;
 
     [Header("LongPaddle")]
-    //[SerializeField] private Sprite[] paddleSprites;
     private int currentPaddleLevel = 0, maxPaddleLevel = 6, minPaddleLevel = 0;
     private SpriteRenderer sr;
 
@@ -183,11 +181,8 @@ public class PlayerController : MonoBehaviour
     }
     void UpdatePaddleVisual()
     {
-        //if (paddleSprites != null && currentPaddleLevel < paddleSprites.Length)
-        //{
-        //    sr.sprite = paddleSprites[currentPaddleLevel];
-            sr.sprite = AspectManager.Instance.GetPaddleSprite(currentPaddleLevel);
-       // }
+        sr.sprite = AspectManager.Instance.GetPaddleSprite(currentPaddleLevel);
+
         if (paddleColider is BoxCollider2D box)
         {
             box.size = sr.sprite.bounds.size;
