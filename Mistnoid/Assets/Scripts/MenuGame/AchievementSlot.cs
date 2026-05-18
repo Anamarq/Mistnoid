@@ -6,9 +6,8 @@ public class AchievementSlot : MonoBehaviour
 {
     public AchievementType type;
 
-    [SerializeField] private Image icon, background1, background2;
+    [SerializeField] private Image unlockedSprite, lockedSprite, background1, background2, moonImage;
     [SerializeField] private TextMeshProUGUI textName, textlocked, textDescription;
-    [SerializeField] private Sprite unlockedSprite, lockedSprite;
 
     [SerializeField] private Color unlockedColor = Color.white;
     [SerializeField] private Color lockedColor = Color.gray;
@@ -17,23 +16,27 @@ public class AchievementSlot : MonoBehaviour
     {
         if (unlocked)
         {
-            icon.sprite = unlockedSprite;
+            unlockedSprite.gameObject.SetActive(true);
+            lockedSprite.gameObject.SetActive(false);
             textName.color = unlockedColor;
             textlocked.gameObject.SetActive(false);
             textDescription.gameObject.SetActive(true);
             background1.color = unlockedColor;
             background2.color = unlockedColor;
+            moonImage.color = unlockedColor;  
 
         }
         else
         {
-            icon.sprite = lockedSprite;
+            unlockedSprite.gameObject.SetActive(false);
+            lockedSprite.gameObject.SetActive(true);
             textName.color = lockedColor;
             textDescription.color = lockedColor;
             textlocked.gameObject.SetActive(true);
             textDescription.gameObject.SetActive(false);
             background1.color = lockedColor;
             background2.color= lockedColor;
+            moonImage.color = lockedColor;
 
         }
     }

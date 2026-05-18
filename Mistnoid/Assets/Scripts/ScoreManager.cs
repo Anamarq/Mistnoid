@@ -139,7 +139,7 @@ public class ScoreManager : MonoBehaviour
         // Without lose live
         if (!PlayerController.Instance.PlayerLoseALive)
         {
-            AchievementManager.Instance.Unlock(AchievementType.WinNoDamage);
+            AchievementManager.Instance.Unlock(AchievementType.WinInOneLife);
         }
 
         // Fast time
@@ -162,11 +162,36 @@ public class ScoreManager : MonoBehaviour
         int paddle = AspectManager.Instance.GetSelectedPaddle();
         if (ball == paddle)
         {
-            if (ball == 0)
-                AchievementManager.Instance.Unlock(AchievementType.BlueMaster);
+            switch(ball)
+            {
+                case 0:
+                    AchievementManager.Instance.Unlock(AchievementType.WhiteMaster);
+                    break;
+                case 1:
+                    AchievementManager.Instance.Unlock(AchievementType.BlueMaster);
+                    break;
+                case 2:
+                    AchievementManager.Instance.Unlock(AchievementType.PurpleMaster);
+                    break;
+                case 3:
+                    AchievementManager.Instance.Unlock(AchievementType.YellowMaster);
+                    break;
+                case 4:
+                    AchievementManager.Instance.Unlock(AchievementType.RedMaster);
+                    break;
+                case 5:
+                    AchievementManager.Instance.Unlock(AchievementType.GreenMaster);
+                    break;
+                case 6:
+                    AchievementManager.Instance.Unlock(AchievementType.BlackMaster);
+                    break;
+                case 7:
+                    AchievementManager.Instance.Unlock(AchievementType.PinkMaster);
+                    break;
+                default:
+                    break;
+            }
 
-            if (ball == 1)
-                AchievementManager.Instance.Unlock(AchievementType.RedMaster);
         }
     }
 

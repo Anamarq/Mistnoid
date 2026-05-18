@@ -622,7 +622,6 @@ MonoBehaviour:
   musicGame: {fileID: 8300000, guid: 8d96039a3c06fb64494d12b45a46827b, type: 3}
   musicIntroGame: {fileID: 8300000, guid: b70fba36103caf34b8eb33c77fee8785, type: 3}
   sfxButton: {fileID: 8300000, guid: 6f6dc2253a769bf4e82b327ee33dfe71, type: 3}
-  sfxBlockButton: {fileID: 8300000, guid: b5e80c9b6f7523c45b6f8218f246fef7, type: 3}
   sfxButtonBack: {fileID: 8300000, guid: bedd54c756d23004ebf6d13a1bdf194f, type: 3}
   sfxPage: {fileID: 8300000, guid: 16e349d13a504144e9f6d6bb72a00be2, type: 3}
   sfxCloseBook: {fileID: 8300000, guid: 5b523c2e8d6d6cd46979b03f53a13454, type: 3}
@@ -639,6 +638,7 @@ MonoBehaviour:
   sfxLose: {fileID: 8300000, guid: 084f6d3e827bd384da5bcd6bf61a16f5, type: 3}
   sfxBarHit: {fileID: 8300000, guid: 321eddafda3912e4b8c71de6ed7de607, type: 3}
   sfxWrong: {fileID: 8300000, guid: 7c547c7531fbdc24ead95ae8f662594b, type: 3}
+  sfxClickDialogue: {fileID: 8300000, guid: a916378b7734d6142b1a3ea655230af3, type: 3}
   sfxCat: {fileID: 8300000, guid: 940803c6772e9cf4c8857e3f18eedf8c, type: 3}
   sfxPhoenix: {fileID: 8300000, guid: 4eb9b5331a44ec84facd33fb74a9707f, type: 3}
   sfxFrog: {fileID: 8300000, guid: 85051b4adab55cd46a98eecda840fa53, type: 3}

@@ -60,6 +60,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            AudioManager.Instance.PlayClickDialogue();
             ShowLine();
         }
     }

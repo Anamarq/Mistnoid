@@ -3,12 +3,18 @@ using UnityEngine;
 public enum AchievementType
 {
     CompleteBook,
-    AllUpgrades,
     BlueMaster,
     RedMaster,
-    WinNoDamage,
+    PurpleMaster,
+    BlackMaster,
+    WhiteMaster,
+    YellowMaster,
+    GreenMaster,
+    PinkMaster,
+    WinInOneLife,
     WinFast,
     WinWithAbility,
+    Escape,
     Score10000,
     Score50000
 }

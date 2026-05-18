@@ -23,6 +23,7 @@ public class GameSceneController : MonoBehaviour
     void StartTutorial()
     {
         GameManager.Instance.IsDialogue = true;
+        PowerUpManager.Instance.Unlock(PowerUpType.Soul);
         PowerUpManager.Instance.Unlock(PowerUpType.ExpandPaddle);
         PowerUpManager.Instance.Unlock(PowerUpType.ShrinkPaddle);
         //string[] dialogue =

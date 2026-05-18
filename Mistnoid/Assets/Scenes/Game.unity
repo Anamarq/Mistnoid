@@ -1523,6 +1523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BallManager
   ballPrefab: {fileID: 6890776907139805956, guid: ecfac119fe3e22a43bf0b9d675bc5e46, type: 3}
   paddle: {fileID: 700242901}
+  IsInvActive: 0
 --- !u!4 &428690212
 Transform:
   m_ObjectHideFlags: 0
@@ -3265,6 +3266,7 @@ MonoBehaviour:
   levelData:
   - {fileID: 11400000, guid: fe63bd79d3659da4287449249ad02fd2, type: 2}
   - {fileID: 11400000, guid: d963d10ceab28284089f686edd456b2d, type: 2}
+  - {fileID: 11400000, guid: da1e90c3260737149a864bd39a6cee40, type: 2}
   blockPrefab: {fileID: 5194323587711061956, guid: dd247fdfac0ea7b4eb2ffa509a18e967, type: 3}
 --- !u!4 &1041516064
 Transform:
