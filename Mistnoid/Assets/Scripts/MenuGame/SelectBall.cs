@@ -48,12 +48,16 @@ public class SelectBall : MonoBehaviour
     public void BuyRandom()
     {
         if (ScoreManager.Instance.Souls < cost)
+        {
+            AudioManager.Instance.PlayWrong();
             return;
+        }
 
         int index = AspectManager.Instance.GetRandomLockedBall();
         if (index == -1)
         {
             Debug.Log("Todo desbloqueado");
+            AudioManager.Instance.PlayWrong();
             return;
         }
         ScoreManager.Instance.AddSouls(-cost);

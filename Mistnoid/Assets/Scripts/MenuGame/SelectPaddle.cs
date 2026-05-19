@@ -54,13 +54,17 @@ public class SelectPaddle : MonoBehaviour
     public void BuyRandom()
     {
         if (ScoreManager.Instance.Souls < cost)
+        {
+            AudioManager.Instance.PlayWrong();
             return;
+        }
 
         int index = AspectManager.Instance.GetRandomLockedPaddle();
 
         if (index == -1)
         {
             Debug.Log("Todo desbloqueado");
+            AudioManager.Instance.PlayWrong();
             return;
         }
 

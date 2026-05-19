@@ -28,7 +28,7 @@ public class MainMenuController : MonoBehaviour
         if (isFirstTime)
         {
             GameProgressManager.Instance.SetState(GameProgressState.Intro);
-
+            PlayerPrefs.SetFloat("BestTime", float.MaxValue);
             PlayerPrefs.SetInt("FirstTime", 0);
             PlayerPrefs.Save();
         }

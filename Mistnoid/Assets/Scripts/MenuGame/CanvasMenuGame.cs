@@ -21,9 +21,14 @@ public class CanvasMenuGame : MonoBehaviour
         fragmentText.text = ScoreManager.Instance.Fragments.ToString();
         pointTe.text = "Mejor puntuación: " + ScoreManager.Instance.HighScore.ToString();
         float _time = ScoreManager.Instance.BestTime;
-        int minutes = Mathf.FloorToInt(_time / 60);
-        int seconds = Mathf.FloorToInt(_time % 60);
-        timeText.text = "Mejor tiempo: " + $"{minutes:00}:{seconds:00}";
+        if (_time != float.MaxValue)
+        {
+            int minutes = Mathf.FloorToInt(_time / 60);
+            int seconds = Mathf.FloorToInt(_time % 60);
+            timeText.text = "Mejor tiempo: " + $"{minutes:00}:{seconds:00}";
+        }
+        else
+            timeText.text = "Mejor tiempo: -";
 
         AudioManager.Instance.PlayMenuMusic();
     }

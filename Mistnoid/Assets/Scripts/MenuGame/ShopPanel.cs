@@ -86,6 +86,10 @@ public class ShopPanel : MonoBehaviour
                 paddlePreview.UpdatePreview();
             }
         }
+        else
+        {
+            AudioManager.Instance.PlayWrong();
+        }
     }
 
     void LevelDown(int index)
@@ -106,6 +110,10 @@ public class ShopPanel : MonoBehaviour
                 int level = UpgradeManager.Instance.GetLevel(UpgradeType.PaddleSize);
                 previewPaddleImage.sprite = AspectManager.Instance.GetPaddleSprite(level);
             }
+        }
+        else
+        {
+            AudioManager.Instance.PlayWrong();
         }
     }
     private int GetCost(Upgrade u)

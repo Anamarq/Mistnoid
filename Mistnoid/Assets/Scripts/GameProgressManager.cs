@@ -26,7 +26,7 @@ public class GameProgressManager : MonoBehaviour
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        PlayerPrefs.DeleteAll(); //BORRAR
+        //PlayerPrefs.DeleteAll(); //BORRAR
         currentState = (GameProgressState)
             PlayerPrefs.GetInt("GameState", 0);
     }
