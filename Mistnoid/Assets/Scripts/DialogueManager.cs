@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
-
+using UnityEngine.Localization;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -16,7 +16,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Image portraitImage;
 
     private DialogueLine[] lines;
-
     private int index;
 
     void Awake()
@@ -34,7 +33,8 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (panel.activeSelf && (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire1")))
+        if (panel.activeSelf &&
+            (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire1")))
         {
             NextLine();
         }
@@ -44,9 +44,14 @@ public class DialogueManager : MonoBehaviour
     {
         var line = lines[index];
 
-        text.text = line.text;
         nameText.text = line.characterName;
         portraitImage.sprite = line.characterSprite;
+
+        // ?? CLAVE: pedir texto localizado
+        line.text.GetLocalizedStringAsync().Completed += handle =>
+        {
+            text.text = handle.Result;
+        };
     }
 
     void NextLine()

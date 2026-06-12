@@ -6,21 +6,28 @@ public class MenuCanvas : MonoBehaviour
 {
     [SerializeField] private GameObject mainPanel;
     [SerializeField] private GameObject optionPanel;
-    const string LANGUAGE_KEY = "Language";
+
+    private void Awake()
+    {
+        LoadLanguage();
+    }
 
     private void Start()
     {
-        LoadLanguage();
+        
         AudioManager.Instance.PlayMenuMusic();
     }
     void LoadLanguage()
     {
-        int index = PlayerPrefs.GetInt(LANGUAGE_KEY, 0);
+        string code = PlayerPrefs.GetString("Language", "en");
 
-        if (index < LocalizationSettings.AvailableLocales.Locales.Count)
+        foreach (var locale in LocalizationSettings.AvailableLocales.Locales)
         {
-            LocalizationSettings.SelectedLocale =
-                LocalizationSettings.AvailableLocales.Locales[index];
+            if (locale.Identifier.Code == code)
+            {
+                LocalizationSettings.SelectedLocale = locale;
+                break;
+            }
         }
     }
 
@@ -35,7 +42,7 @@ public class MenuCanvas : MonoBehaviour
     public void ExitGame()
     {
         AudioManager.Instance.PlayButtonBack();
-        GameManager.Instance.SetState(GameManager.StateMachine.Exit);       
+        GameManager.Instance.SetState(GameManager.StateMachine.Exit);
     }
 
 
@@ -43,7 +50,7 @@ public class MenuCanvas : MonoBehaviour
     public void Options()
     {
         AudioManager.Instance.PlayButton();
-      //  mainPanel.SetActive(false);
+        //  mainPanel.SetActive(false);
         optionPanel.SetActive(true);
     }
 
@@ -58,20 +65,25 @@ public class MenuCanvas : MonoBehaviour
     //OptionsPanel -> Languajes
     public void Spanish()
     {
-        SetLanguage(1);
+        SetLanguage("es");
     }
 
     public void English()
     {
-        SetLanguage(0);
+        SetLanguage("en");
     }
 
-    void SetLanguage(int index)
+    void SetLanguage(string code)
     {
-        LocalizationSettings.SelectedLocale =
-            LocalizationSettings.AvailableLocales.Locales[index];
-
-        PlayerPrefs.SetInt(LANGUAGE_KEY, index);
-        PlayerPrefs.Save();
+        foreach (var locale in LocalizationSettings.AvailableLocales.Locales)
+        {
+            if (locale.Identifier.Code == code)
+            {
+                LocalizationSettings.SelectedLocale = locale;
+                PlayerPrefs.SetString("Language", code);
+                PlayerPrefs.Save();
+                break;
+            }
+        }
     }
 }
