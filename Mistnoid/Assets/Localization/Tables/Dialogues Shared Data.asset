@@ -16,11 +16,39 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: dbcfa153334420642a74bbaaf4718f82
   m_Entries:
   - m_Id: 11973013504
-    m_Key: intro
+    m_Key: intro_Nimbo
     m_Metadata:
       m_Items: []
   - m_Id: 277950607360
-    m_Key: intro2
+    m_Key: introNimbo2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11487085314027520
+    m_Key: IntroGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11500370767753216
+    m_Key: IntroNimbo3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11502131540766720
+    m_Key: Birds1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11856143909761024
+    m_Key: IntroNimbo3_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11856825014398976
+    m_Key: IntroNimbo4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11857092103483392
+    m_Key: IntroNmbo5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11863475901280256
+    m_Key: IntroNimbo6
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -19,11 +19,42 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 11973013504
-    m_Localized: welcome
+    m_Localized: "Ow! Ow, ow! Please don't squish me! I'm\u2026 I'm friendly. I think.
+      Well, that's what I say. I'm not exactly the most reliable source on that.
+      Sorry."
     m_Metadata:
       m_Items: []
   - m_Id: 277950607360
+    m_Localized: Where am I?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11487085314027520
     m_Localized: welcome2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11500370767753216
+    m_Localized: "That's\u2026 a very good question. Really good. I don't have an
+      answer. Sorry. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11856825014398976
+    m_Localized: How do we get out?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11857092103483392
+    m_Localized: 'That one I think I know! Well. Sort of. I''ve seen the floating
+      blocks break when something hits them hard enough. If we break them all, I
+      think we''ll find the exit. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11856143909761024
+    m_Localized: What I do know is that we've been trapped here for a while. I say
+      "we" because now you're trapped too. Sorry about that as well.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11863475901280256
+    m_Localized: I have a paddle, a ball, and a bit of magic. Not much. Well, very
+      little. Will you help me?
     m_Metadata:
       m_Items: []
   references:

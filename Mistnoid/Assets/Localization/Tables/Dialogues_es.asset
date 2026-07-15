@@ -19,11 +19,43 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 11973013504
-    m_Localized: holaa
+    m_Localized: "\xA1Ay! \xA1Ay, ay! \xA1No me aplastes, por favor! Soy\u2026 soy
+      amistoso. Creo. Bueno, eso dicen. Bueno, lo digo yo. Que tampoco soy la fuente
+      m\xE1s fiable. Perdona."
     m_Metadata:
       m_Items: []
   - m_Id: 277950607360
-    m_Localized: hola2
+    m_Localized: "\xBFD\xF3nde estoy?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11487085314027520
+    m_Localized: Bienvenido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11500370767753216
+    m_Localized: "Esa es\u2026 una pregunta muy buena. Muy, muy buena. No tengo respuesta.
+      Perdona. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11856825014398976
+    m_Localized: "\xBFY c\xF3mo se sale?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11857092103483392
+    m_Localized: "Eso creo que s\xED lo s\xE9. Los bloques flotan, y si algo los
+      golpea con fuerza se rompen. Si los rompemos todos, creo que encontraremos
+      la salida. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11856143909761024
+    m_Localized: "Lo que s\xED s\xE9 es que llevamos tiempo atrapados aqu\xED. Digo
+      \xABllevamos\xBB porque ahora t\xFA tambi\xE9n est\xE1s atrapado. Perdona por
+      eso tambi\xE9n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11863475901280256
+    m_Localized: "Tengo una pala, una bola y algo de magia. No mucha. Bueno, poca.
+      \xBFMe ayudas?"
     m_Metadata:
       m_Items: []
   references:
