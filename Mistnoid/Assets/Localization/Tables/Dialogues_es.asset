@@ -29,7 +29,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 11487085314027520
-    m_Localized: Bienvenido
+    m_Localized: "A ver, es sencillo. T\xFA mueves la pala. La bola rebota. Los bloques
+      se rompen. Si la bola se cae, perdemos una vida. Que no pase. Por favor. Me
+      pongo muy nervioso cuando pasa. Perdona."
     m_Metadata:
       m_Items: []
   - m_Id: 11500370767753216
@@ -56,6 +58,69 @@ MonoBehaviour:
   - m_Id: 11863475901280256
     m_Localized: "Tengo una pala, una bola y algo de magia. No mucha. Bueno, poca.
       \xBFMe ayudas?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12276868411928576
+    m_Localized: "Tambi\xE9n tengo magia. Puedo alargar tu pala para que sea m\xE1s
+      f\xE1cil atrapar la bola. Tan solo coge mis power ups que salen de los bloques."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12277683998535680
+    m_Localized: "Oh. Bueno. No pasa nada. De verdad. Tengo que contarte algo sobre
+      mi magia. A veces\u2026 a veces sale un poco al rev\xE9s. Lo de alargar la
+      pala\u2026 puede que alguna vez la haya acortado. Perdona."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11502131540766720
+    m_Localized: "\xA1Hay que ir m\xE1s r\xE1pido! \xA1Si la bola va m\xE1s r\xE1pido,
+      rompemos los bloques antes y escapamos antes! \xA1Es matem\xE1tica!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12279841561096192
+    m_Localized: "No es matem\xE1tica. Es impaciencia disfrazada de estrategia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12280010859982848
+    m_Localized: "\xA1Y t\xFA quieres ir lento! \xBFC\xF3mo se escapa yendo lento?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12280728731889664
+    m_Localized: "Con precisi\xF3n. Que es algo que t\xFA no conoces."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12281128746856448
+    m_Localized: "\xA1Hola! Perdona que interrumpa. Nosotros tambi\xE9n queremos
+      escapar. Creo que podr\xEDamos ayudarnos mutuamente. Si quer\xE9is. Si no,
+      tambi\xE9n est\xE1 bien. Perdona."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12281386981765120
+    m_Localized: "\xBFEscapar? \xA1Yo puedo acelerar la bola! \xA1A toda velocidad!
+      \xA1As\xED rompemos todo rapid\xEDsimo! \xBFLo hacemos ya? Por cierto, soy
+      Lumo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12281951195344896
+    m_Localized: Y yo puedo ralentizarla. Para apuntar. Para pensar. Para no estrellarlo
+      todo a lo loco. Me llamo Umbra.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12282401848143872
+    m_Localized: "\xBFQui\xE9n quiere apuntar cuando puede ir a m\xE1xima velocidad?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12283187445477376
+    m_Localized: "Todo el mundo con un m\xEDnimo de cordura."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12283362477977600
+    m_Localized: "\xA1Qu\xE9 bien! \xA1Amigos nuevos! Creo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12279753954668544
+    m_Localized: "Deber\xEDamos buscar m\xE1s ayuda. Creo que yo solo no soy suficiente.
+      Aunque no me rindo, \xBFeh? Eso s\xED. Para nada. Bueno. Un poco. Pero no del
+      todo."
     m_Metadata:
       m_Items: []
   references:

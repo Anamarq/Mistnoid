@@ -29,7 +29,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 11487085314027520
-    m_Localized: welcome2
+    m_Localized: Okay, it's simple. You move the paddle. The ball bounces. The blocks
+      break. If the ball falls, we lose a life. Please don't let that happen. I get
+      very nervous when it happens. Sorry.
     m_Metadata:
       m_Items: []
   - m_Id: 11500370767753216
@@ -55,6 +57,67 @@ MonoBehaviour:
   - m_Id: 11863475901280256
     m_Localized: I have a paddle, a ball, and a bit of magic. Not much. Well, very
       little. Will you help me?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12276868411928576
+    m_Localized: "I\u2019ve got some magic too. I can make your paddle longer so
+      it\u2019s easier to catch the ball. Just collect my power-ups that pop out
+      of the blocks."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12277683998535680
+    m_Localized: "Oh. Well. It's fine. Really. I need to tell you something about
+      my magic. Sometimes\u2026 sometimes it goes a little backwards. The paddle-extending
+      thing\u2026 it may have shrunk it a few times."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11502131540766720
+    m_Localized: We need to go faster! If the ball goes faster, we break the blocks
+      sooner and we escape sooner! It's just maths!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12279841561096192
+    m_Localized: It's not maths. It's impatience dressed up as strategy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12280010859982848
+    m_Localized: And you want to go slow! How do you escape by going slow?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12280728731889664
+    m_Localized: With precision. Which is something you're not familiar with.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12281128746856448
+    m_Localized: Hello! Sorry to interrupt. We're also trying to escape. I think
+      we could help each other. If you want. If not, that's fine too. Sorry.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12281386981765120
+    m_Localized: 'Escape? I can speed up the ball! Full speed! We break everything
+      in no time! Can we start now? By de way, I''m Lumo '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12281951195344896
+    m_Localized: And I can slow it down. To aim. To think. To not crash everything
+      at random. My name is Umbra.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12282401848143872
+    m_Localized: Who wants to aim when you can go at maximum speed?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12283187445477376
+    m_Localized: Anyone with a minimum of common sense.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12283362477977600
+    m_Localized: Great! New friends! I think.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12279753954668544
+    m_Localized: We should look for more help. I think I'm not enough on my own.
+      Though I'm not giving up, okay? Not at all. Well. A little. But not entirely.
     m_Metadata:
       m_Items: []
   references:
