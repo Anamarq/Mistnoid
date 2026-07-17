@@ -22,7 +22,8 @@ public class ShopPanel : MonoBehaviour
 
     //Dialogue first time
     const string SHOP_DIALOGUE_SHOWN = "ShopDialogueShown";
-    [SerializeField] private DialogueData shopDialogue;
+    const string PHOENIX_SHOP_DIALOGUE_SHOWN = "PhoenixShopDialogueShown";
+    [SerializeField] private DialogueData shopDialogue, phoenixShop;
     void Start()
     {
         for (int i = 0; i < upgrades.Length; i++)
@@ -45,12 +46,26 @@ public class ShopPanel : MonoBehaviour
     //Dialogue first time
     void OnEnable()
     {
-        CheckFirstTimeOpen();
+        CheckDialogues();
     }
-    void CheckFirstTimeOpen()
+    void CheckDialogues()
     {
-        if (PlayerPrefs.GetInt(SHOP_DIALOGUE_SHOWN, 0) == 1)
+        // Primer diálogo de la tienda
+        if (PlayerPrefs.GetInt(SHOP_DIALOGUE_SHOWN, 0) == 0)
+        {
+            StartShopDialogue();
             return;
+        }
+
+        // Diálogo del Fénix
+        if (GameProgressManager.Instance.State >= GameProgressState.AfterPhoenix &&
+            PlayerPrefs.GetInt(PHOENIX_SHOP_DIALOGUE_SHOWN, 0) == 0)
+        {
+            StartPhoenixShopDialogue();
+        }
+    }
+    void StartShopDialogue()
+    {
         GameManager.Instance.IsDialogue = true;
 
         DialogueManager.Instance.StartDialogue(shopDialogue);
@@ -59,9 +74,27 @@ public class ShopPanel : MonoBehaviour
         PlayerPrefs.SetInt(SHOP_DIALOGUE_SHOWN, 1);
         PlayerPrefs.Save();
     }
+
+    void StartPhoenixShopDialogue()
+    {
+        GameManager.Instance.IsDialogue = true;
+
+        DialogueManager.Instance.StartDialogue(phoenixShop);
+        DialogueManager.Instance.OnDialogueEnd += OnPhoenixShopDialogueEnd;
+
+        PlayerPrefs.SetInt(PHOENIX_SHOP_DIALOGUE_SHOWN, 1);
+        PlayerPrefs.Save();
+    }
+
     void OnShopDialogueEnd()
     {
         DialogueManager.Instance.OnDialogueEnd -= OnShopDialogueEnd;
+
+        GameManager.Instance.IsDialogue = false;
+    }
+    void OnPhoenixShopDialogueEnd()
+    {
+        DialogueManager.Instance.OnDialogueEnd -= OnPhoenixShopDialogueEnd;
 
         GameManager.Instance.IsDialogue = false;
     }

@@ -120,6 +120,93 @@ MonoBehaviour:
       Though I'm not giving up, okay? Not at all. Well. A little. But not entirely.
     m_Metadata:
       m_Items: []
+  - m_Id: 12583136120909824
+    m_Localized: Someone arrives carrying a foldable shop that she sets up in three
+      seconds with a suspicious efficiency.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12583438089826304
+    m_Localized: Customers! Finally, customers in this forgotten hole! I am Ribbitra.
+      Welcome to Ribbitra's Emporium. Upgrades, balls, and everything a trapped adventurer
+      needs. What can I get you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12584011467960320
+    m_Localized: A SHOP? In here? HOW?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12584256465645568
+    m_Localized: Where there are trapped people, there's business. Universal law.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12584647576104960
+    m_Localized: That's mildly unsettling.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12585373354274816
+    m_Localized: What kind of upgrades do you have? Sorry if that's a bad question.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12585569563815936
+    m_Localized: 'The best upgrades. Things that''ll help you advance, break more
+      blocks, hold on longer. Everything you need to escape. And the best part: in
+      exchange for souls.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12585811810037760
+    m_Localized: Souls? Where do we get souls from?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12586010670379008
+    m_Localized: "They\u2019re left behind when the blocks break. You\u2019ll have
+      seen them \u2013 energy being released, round and blue. Don\u2019t ask for
+      any more details; it makes the explanation too complicated for me. The important
+      thing is that they\u2019re valid, and I accept them."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12587174308720640
+    m_Localized: "As they look round the shop, you spot an old book in a corner with
+      a cover that glimmers slightly. It\u2019s exorbitantly priced."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12587499275005952
+    m_Localized: What's that book? What is it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12588431517790208
+    m_Localized: Ah, that. The Mystic Book. One of a kind. Unrepeatable. Exclusive.
+      A relic. The price is what it is because it's worth what it's worth. Not on
+      sale. There will be no sale. Ever.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12588932300910592
+    m_Localized: "That's\u2026 a lot of souls."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12589137511428096
+    m_Localized: Yes. Because it's one of a kind. Have I mentioned it's one of a
+      kind?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12589735254274048
+    m_Localized: About three times.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12589934655680512
+    m_Localized: What does it actually do? Sorry if that's a bit nosy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12590099869315072
+    m_Localized: "They say it grants power to whoever uses it. And it\u2019s one
+      of a kind. A relic. I\u2019ve already said that, haven\u2019t I?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12592819120484352
+    m_Localized: "Hey. Hey, hey. We\u2019ve got to try and make some progress, haven\u2019t
+      we? I reckon if we just stand here\u2026 we won\u2019t get anywhere. Sorry
+      if that\u2019s a bit obvious. Try to get to at least stage 2."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

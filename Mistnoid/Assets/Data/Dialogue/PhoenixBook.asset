@@ -10,20 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 060a8617640264e4faf3be70dca7101f, type: 3}
-  m_Name: FailLevel1Diag
+  m_Name: PhoenixBook
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
+  - characterName: Phoenix
+    characterSprite: {fileID: -4453784588268070965, guid: 78e409b8d92e59048b672d4ae7422da0, type: 3}
+    text: Hola
   - characterName: Nimbo
-    characterSprite: {fileID: 21300000, guid: dac8f88e5a386464cbf24a285387b7d3, type: 3}
-    text:
-      m_TableReference:
-        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
-      m_TableEntryReference:
-        m_KeyId: 12592819120484352
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-  references:
-    version: 2
-    RefIds: []
+    characterSprite: {fileID: 2820143329777312509, guid: a18e27cb7fcb18a4dbef9b42a948feba, type: 3}
+    text: Atrapado

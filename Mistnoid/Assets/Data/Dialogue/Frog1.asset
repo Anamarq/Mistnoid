@@ -13,9 +13,61 @@ MonoBehaviour:
   m_Name: Frog1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Frog
+  - characterName: Narrador
+    characterSprite: {fileID: 0}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 12583136120909824
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: '?'
     characterSprite: {fileID: 2820143329777312509, guid: a18e27cb7fcb18a4dbef9b42a948feba, type: 3}
-    text: Hola
-  - characterName: Nimbo
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 12583438089826304
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Lumo
+    characterSprite: {fileID: 7026411677795088878, guid: 4f18c58da7846714d821a1aa78ad5cf9, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 12584011467960320
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Ribbitra
     characterSprite: {fileID: 2820143329777312509, guid: a18e27cb7fcb18a4dbef9b42a948feba, type: 3}
-    text: Atrapado
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 12584256465645568
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Umbra
+    characterSprite: {fileID: 5620714328804711997, guid: cc101f7d96b548d469bc9fc93b485cf7, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 12584647576104960
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

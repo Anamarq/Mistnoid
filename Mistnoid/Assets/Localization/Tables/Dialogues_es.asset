@@ -123,6 +123,92 @@ MonoBehaviour:
       todo."
     m_Metadata:
       m_Items: []
+  - m_Id: 12583136120909824
+    m_Localized: Alguien llega cargando una tienda plegable que monta en tres segundos
+      con una eficiencia que no cuadra con el lugar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12583438089826304
+    m_Localized: "\xA1Clientes! \xA1Por fin clientes en este agujero olvidado! Soy
+      Ribbitra. Bienvenidos a Ribbitra's Emporium. Mejoras, bolas y todo lo que necesita
+      un aventurero atrapado sin salida. \xBFQu\xE9 les puedo ofrecer?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12584011467960320
+    m_Localized: "\xBFUNA TIENDA? \xBFAqu\xED dentro? \xBFC\xF3mo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12584256465645568
+    m_Localized: Donde hay atrapados, hay negocio. Ley universal.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12584647576104960
+    m_Localized: Eso es ligeramente inquietante.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12585373354274816
+    m_Localized: "\xBFY qu\xE9 tipo de mejoras tienes? Perdona si es mala pregunta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12585569563815936
+    m_Localized: "Las mejores mejoras. Cosas que os ayudar\xE1n a avanzar, a romper
+      m\xE1s bloques, a aguantar m\xE1s. Todo lo que necesit\xE1is para escapar.
+      Y lo mejor: a cambio de almas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12585811810037760
+    m_Localized: "\xBFAlmas? \xBFDe d\xF3nde sacamos almas?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12586010670379008
+    m_Localized: "Las dejan los bloques al romperse. Las habreus visto, energ\xEDa
+      que se libera, azul redondeada. No preguntes m\xE1s detalles, que se me complica
+      la explicaci\xF3n. Lo importante es que valen, y yo las acepto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12587174308720640
+    m_Localized: "Mientras revisan la tienda, ves en un rinc\xF3n un libro antiguo
+      con la cubierta brillando levemente. Tiene un precio desorbitado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12587499275005952
+    m_Localized: "\xBFY ese libro? \xBFQu\xE9 es?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12588431517790208
+    m_Localized: "Ah, eso. El Libro M\xEDstico. \xDAnico en su especie. Irrepetible.
+      Exclusivo. Una reliquia. El precio es el que es porque vale lo que vale. No
+      est\xE1 en oferta. No habr\xE1 oferta. Nunca."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12588932300910592
+    m_Localized: "Eso es\u2026 much\xEDsimas almas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12589137511428096
+    m_Localized: "S\xED. Porque es \xFAnico. \xBFHe dicho ya que es \xFAnico?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12589735254274048
+    m_Localized: Unas tres veces.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12589934655680512
+    m_Localized: "\xBFY para qu\xE9 sirve exactamente? Perdona si es indiscreta la
+      pregunta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12590099869315072
+    m_Localized: "Se dice que otorga poder a quien lo usar. Y es \xFAnico. Una reliquia.
+      Ya lo he dicho, \xBFverdad?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12592819120484352
+    m_Localized: "Oye. Oye, oye. Que hay que intentar avanzar, \xBFeh? Creo que si
+      seguimos aqu\xED parados\u2026 no avanzamos. Perdona que sea tan obvio. Intenta
+      llegar al menos a la fase 2."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -99,6 +99,78 @@ MonoBehaviour:
     m_Key: Birds12
     m_Metadata:
       m_Items: []
+  - m_Id: 12583136120909824
+    m_Key: Frog1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12583438089826304
+    m_Key: Frog2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12584011467960320
+    m_Key: Frog3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12584256465645568
+    m_Key: Frog4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12584647576104960
+    m_Key: Frog5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12585373354274816
+    m_Key: Shop1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12585569563815936
+    m_Key: Shop2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12585811810037760
+    m_Key: Shop3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12586010670379008
+    m_Key: Shop4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12587174308720640
+    m_Key: Shop5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12587499275005952
+    m_Key: Shop6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12588431517790208
+    m_Key: Shop7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12588932300910592
+    m_Key: Shop8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12589137511428096
+    m_Key: Shop9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12589735254274048
+    m_Key: Shop10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12589934655680512
+    m_Key: Shop11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12590099869315072
+    m_Key: Shop12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12592819120484352
+    m_Key: FailLevel1
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
