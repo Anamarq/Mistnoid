@@ -171,6 +171,84 @@ MonoBehaviour:
     m_Key: FailLevel1
     m_Metadata:
       m_Items: []
+  - m_Id: 15105086667993088
+    m_Key: Heart1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105254184300544
+    m_Key: Heart2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105428432465920
+    m_Key: Heart3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105582145318912
+    m_Key: Heart4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105785585840128
+    m_Key: Heart5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105948207394816
+    m_Key: Heart6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15106039441895424
+    m_Key: Heart7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15106135004917760
+    m_Key: Heart8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15106251254247424
+    m_Key: Heart9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108019132411904
+    m_Key: Heart10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108146291126272
+    m_Key: Heart11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108268177600512
+    m_Key: Heart13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108511333986304
+    m_Key: 'Heart12
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108838183514112
+    m_Key: Heart14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15110364641734656
+    m_Key: Heart15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15110477556592640
+    m_Key: Heart16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15110659417419776
+    m_Key: Heart17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15110986606686208
+    m_Key: Heart18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15112062898647040
+    m_Key: Heart19
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

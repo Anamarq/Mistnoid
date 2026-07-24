@@ -207,6 +207,89 @@ MonoBehaviour:
       if that\u2019s a bit obvious. Try to get to at least stage 2."
     m_Metadata:
       m_Items: []
+  - m_Id: 15105086667993088
+    m_Localized: I think we're making progress. A little. Well, some. Some is something,
+      right?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105254184300544
+    m_Localized: Getting closer every second! I can feel it! In my wings I can feel
+      it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105428432465920
+    m_Localized: What I feel is that there's still a long way to go.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105582145318912
+    m_Localized: A soft sob interrupts the conversation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105785585840128
+    m_Localized: "Was\u2026 was that Nimbo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105948207394816
+    m_Localized: No, it wasn't me. Sorry.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15106039441895424
+    m_Localized: Ribbitra?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15106135004917760
+    m_Localized: I don't cry. Bad for business.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15106251254247424
+    m_Localized: Another sob. The group looks around. And then they see it. Right
+      beside them. It had been there for a while and nobody had noticed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108019132411904
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108146291126272
+    m_Localized: AAAH! It has eyes! TWO EYES! WHERE THEY SHOULDN'T BE!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108268177600512
+    m_Localized: How long have you been standing there?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108511333986304
+    m_Localized: "\u2026They're where they are. Not where you expected them."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108838183514112
+    m_Localized: A while. Nobody saw me. I'm used to it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15110364641734656
+    m_Localized: "Hi. I'm Nimbo. Sorry we got scared. That was\u2026 not very kind
+      of us. Are you okay?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15110477556592640
+    m_Localized: Not really. I'm Cardia. People always get scared. And I only give
+      life. That's all I do.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15110659417419776
+    m_Localized: "Extra life sounds\u2026 really good for us. I think we could really
+      use that. If you wanted to help. Sorry if that's a lot to ask."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15110986606686208
+    m_Localized: You're asking me to stay? Nobody's going to run away?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15112062898647040
+    m_Localized: "Of course not! A new customer is always welcome. Come, come, I
+      have things you might be interested in\u2026"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

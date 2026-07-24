@@ -209,6 +209,88 @@ MonoBehaviour:
       llegar al menos a la fase 2."
     m_Metadata:
       m_Items: []
+  - m_Id: 15105086667993088
+    m_Localized: "Creo que vamos avanzando. Un poco. Bueno, algo. Algo es algo, \xBFno?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108019132411904
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105254184300544
+    m_Localized: "\xA1Cada vez m\xE1s cerca! \xA1Lo noto! \xA1En las alas lo noto!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105428432465920
+    m_Localized: "Lo que noto yo es que a\xFAn queda mucho."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105582145318912
+    m_Localized: "Un sollozo suave interrumpe la conversaci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105785585840128
+    m_Localized: "\xBFEso\u2026 ha sido Nimbo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15105948207394816
+    m_Localized: No, no era yo. Perdona.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15106039441895424
+    m_Localized: "\xBFRibbitra?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15106135004917760
+    m_Localized: Yo no lloro. Mal para el negocio.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15106251254247424
+    m_Localized: "Otro sollozo. El grupo mira a su alrededor. Y entonces lo ven.
+      A su lado. Justo al lado. Llevaba un buen rato ah\xED y nadie se hab\xEDa dado
+      cuenta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108146291126272
+    m_Localized: "\xA1AAAAH! \xA1Tiene ojos! \xA1DOS OJOS! \xA1DONDE NO TOCA!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108511333986304
+    m_Localized: "\u2026Los tiene donde los tiene. No donde esperabas t\xFA."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108268177600512
+    m_Localized: "\xBFCu\xE1nto tiempo llevas ah\xED?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15108838183514112
+    m_Localized: "Un rato. Nadie me ve\xEDa. Ya estoy acostumbrado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15110364641734656
+    m_Localized: "Hola. Soy Nimbo. Perdona que nos hayamos asustado. Eso ha sido\u2026
+      poco amable por nuestra parte. \xBFEst\xE1s bien?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15110477556592640
+    m_Localized: No mucho. Soy Cardia. La gente siempre se asusta. Y yo solo doy
+      vida. Es todo lo que hago.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15110659417419776
+    m_Localized: "Vida extra suena\u2026 muy bien para nosotros. Creo que nos vendr\xEDa
+      genial. Si quisieras ayudarnos. Perdona si es mucho pedir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15110986606686208
+    m_Localized: "\xBFMe est\xE1is pidiendo que me quede? \xBFNadie va a salir corriendo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15112062898647040
+    m_Localized: "\xA1Claro que no! Un cliente nuevo nunca est\xE1 de m\xE1s. Ven,
+      ven, que tengo cosas que podr\xEDan interesarte\u2026"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
