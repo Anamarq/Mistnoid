@@ -290,6 +290,44 @@ MonoBehaviour:
       have things you might be interested in\u2026"
     m_Metadata:
       m_Items: []
+  - m_Id: 16923577880522752
+    m_Localized: Ah! Who are you? Are you dangerous?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16923733132685312
+    m_Localized: "We're not dangerous. I think. Well, I'm not. The others\u2026 probably
+      not either. I think. Sorry."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16923920383193088
+    m_Localized: "It's just\u2026 I don't know how I got here. I was learning to
+      walk. It was my first day. And then I fell and\u2026 I was here. Do you know
+      how to get out?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16924031028932608
+    m_Localized: Same as us! We're trying to escape!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16924214940774400
+    m_Localized: Can I come with you? I don't want to be alone. You can call me Draco.
+      I want to find my mother.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16924595158626304
+    m_Localized: Of course. Of course you can. Sorry it took us a moment to say so.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16924787425521664
+    m_Localized: "I have scales. They're very hard. I can put them under the paddle
+      so the ball doesn't fall through. I don't know if it helps much, but\u2026
+      it's the only thing I know how to do right now."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16924959144521728
+    m_Localized: It helps. A lot.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

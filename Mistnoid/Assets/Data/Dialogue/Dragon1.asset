@@ -13,9 +13,94 @@ MonoBehaviour:
   m_Name: Dragon1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Dragon
+  - characterName: '?'
     characterSprite: {fileID: 3428391033546482049, guid: e6b80d3def5b1ee4cac17024ca9cb39c, type: 3}
-    text: Hola
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 16923577880522752
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - characterName: Nimbo
     characterSprite: {fileID: 2820143329777312509, guid: a18e27cb7fcb18a4dbef9b42a948feba, type: 3}
-    text: Atrapado
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 16923733132685312
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: '?'
+    characterSprite: {fileID: 3428391033546482049, guid: e6b80d3def5b1ee4cac17024ca9cb39c, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 16923920383193088
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Lumo
+    characterSprite: {fileID: 7026411677795088878, guid: 4f18c58da7846714d821a1aa78ad5cf9, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 16924031028932608
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: '?'
+    characterSprite: {fileID: 3428391033546482049, guid: e6b80d3def5b1ee4cac17024ca9cb39c, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 16924214940774400
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Nimbo
+    characterSprite: {fileID: -8337736631442672647, guid: 70ffc224b9250dd44b00a9d764a44906, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 16924595158626304
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Drako
+    characterSprite: {fileID: 3428391033546482049, guid: e6b80d3def5b1ee4cac17024ca9cb39c, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 16924787425521664
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Cardia
+    characterSprite: {fileID: -7134224125491679639, guid: 1bae29dbaa2a64b4e84bfefe6dc6fb2b, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 16924959144521728
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
