@@ -13,9 +13,50 @@ MonoBehaviour:
   m_Name: Book1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Phoenix
+  - characterName: Pyra
     characterSprite: {fileID: -4453784588268070965, guid: 78e409b8d92e59048b672d4ae7422da0, type: 3}
-    text: Libro
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18395253696737280
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Pyra
+    characterSprite: {fileID: -4453784588268070965, guid: 78e409b8d92e59048b672d4ae7422da0, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18395347875639296
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - characterName: Nimbo
+    characterSprite: {fileID: -8337736631442672647, guid: 70ffc224b9250dd44b00a9d764a44906, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18395445611311104
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Pyra
     characterSprite: {fileID: -4453784588268070965, guid: 78e409b8d92e59048b672d4ae7422da0, type: 3}
-    text: Atrapado
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18395601538756608
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

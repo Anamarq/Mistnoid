@@ -13,9 +13,138 @@ MonoBehaviour:
   m_Name: Phoenix1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Phoenix
+  - characterName: 
     characterSprite: {fileID: -4453784588268070965, guid: 78e409b8d92e59048b672d4ae7422da0, type: 3}
-    text: Hola
-  - characterName: Nimbo
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18390702134505472
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: '?'
+    characterSprite: {fileID: -4453784588268070965, guid: 78e409b8d92e59048b672d4ae7422da0, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18391076908150784
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Ribbitra
     characterSprite: {fileID: 2820143329777312509, guid: a18e27cb7fcb18a4dbef9b42a948feba, type: 3}
-    text: Atrapado
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18391248539070464
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: '?'
+    characterSprite: {fileID: -4453784588268070965, guid: 78e409b8d92e59048b672d4ae7422da0, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18391388612046848
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Ribbitra
+    characterSprite: {fileID: 2820143329777312509, guid: a18e27cb7fcb18a4dbef9b42a948feba, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18391977160978432
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Pyra
+    characterSprite: {fileID: -4453784588268070965, guid: 78e409b8d92e59048b672d4ae7422da0, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18393620199878656
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Ribbitra
+    characterSprite: {fileID: 2820143329777312509, guid: a18e27cb7fcb18a4dbef9b42a948feba, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18393791797243904
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Pyra
+    characterSprite: {fileID: -4453784588268070965, guid: 78e409b8d92e59048b672d4ae7422da0, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18393970185187328
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: 
+    characterSprite: {fileID: -4453784588268070965, guid: 78e409b8d92e59048b672d4ae7422da0, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18394103777964032
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Ribbitra
+    characterSprite: {fileID: 2820143329777312509, guid: a18e27cb7fcb18a4dbef9b42a948feba, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18394226733985792
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Lumo
+    characterSprite: {fileID: 7026411677795088878, guid: 4f18c58da7846714d821a1aa78ad5cf9, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18394362298085376
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - characterName: Ribbitra
+    characterSprite: {fileID: 2820143329777312509, guid: a18e27cb7fcb18a4dbef9b42a948feba, type: 3}
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 18394508607991808
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

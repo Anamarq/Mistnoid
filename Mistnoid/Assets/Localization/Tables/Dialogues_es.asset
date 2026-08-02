@@ -330,6 +330,84 @@ MonoBehaviour:
     m_Localized: Ayuda. Mucho.
     m_Metadata:
       m_Items: []
+  - m_Id: 18390702134505472
+    m_Localized: "Sin aviso, el huevo rojo vibra. Brilla. Y con un estallido de luz
+      y calor nace un f\xE9nix que mira todo a la vez y no puede quedarse quieto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18391076908150784
+    m_Localized: "\xA1HOLA! \xBFQu\xE9 es esto? \xBFQui\xE9nes sois? \xA1Qu\xE9 colores! "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18391248539070464
+    m_Localized: "Ha nacido en mi tienda. En mi tienda. Eso es\u2026 eso es m\xEDo.
+      Eso es como si fuera m\xEDo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18391388612046848
+    m_Localized: "\xBFPuedo disparar fuego desde la pala? \xA1Quiero disparar fuego
+      desde la pala! \xA1Lo s\xE9 hacer! \xA1No s\xE9 c\xF3mo lo s\xE9 pero lo s\xE9!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18391977160978432
+    m_Localized: "Fuego\u2026 te llamar\xE9 Pyra. Es bueno para el negocio tener
+      un nombre que suene bien."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18393620199878656
+    m_Localized: "Espera. Espera, espera. \xBFQu\xE9 es ESO? Ese libro. Ese libro
+      de ah\xED. \xBFPuedo verlo? \xA1Quiero verlo! \xA1Lo necesito! No s\xE9 por
+      qu\xE9 pero lo necesito."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18393791797243904
+    m_Localized: "Es el Libro M\xEDstico. \xDAnico. Irrepetible. Y cuesta\u2014"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18393970185187328
+    m_Localized: "\xA1Quiero pintarlo todo! \xA1Las p\xE1ginas est\xE1n vac\xEDas
+      y yo las veo llenas! \xA1Las veo con colores y formas y vosotros! \xA1Os veo
+      a vosotros dentro!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18394103777964032
+    m_Localized: "Ribbitra mira a Pyra. Luego mira el libro. Luego mira a Pyra otra
+      vez. Suspira de una manera que intenta que no suene a que le est\xE1 afectando.
+      No lo consigue."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18394226733985792
+    m_Localized: "Ha nacido en mi tienda. Es casi como si fuera de la familia. Lo
+      cual es una estupidez comercial pero\u2026 toma. Es tuyo. No se lo digas a
+      nadie. Arruinar\xEDa mi reputaci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18394362298085376
+    m_Localized: "\xA1Ribbitra tiene coraz\xF3n!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18394508607991808
+    m_Localized: No. Tengo criterio empresarial a largo plazo. Es distinto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18395253696737280
+    m_Localized: 'Puedo dibujaros a todos. A cada uno de vosotros. Pero necesito
+      fragmentos de esencia, son como mi tinta. Cada fragmento me permite pintar
+      un trozo. Y cada dibujo son cuatro trozos. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18395347875639296
+    m_Localized: "Cuando complete uno\u2026 creo que pasar\xE1 algo. Lo noto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18395445611311104
+    m_Localized: "\xBFAlgo bueno? Perdona, es que quiero asegurarme."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18395601538756608
+    m_Localized: "\xA1Algo bueno! \xA1Casi seguro! \xA1Pintemos!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

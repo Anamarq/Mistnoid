@@ -328,6 +328,84 @@ MonoBehaviour:
     m_Localized: It helps. A lot.
     m_Metadata:
       m_Items: []
+  - m_Id: 18390702134505472
+    m_Localized: "Without warning, the red egg vibrates. Glows. And with a burst
+      of light and warmth, a phoenix is born \u2014 looking at everything at once
+      and unable to stay still."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18391076908150784
+    m_Localized: 'HELLO! What is this? Who are you all? Such colours! '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18391248539070464
+    m_Localized: "They hatched in my shop. In MY shop. That's\u2026 that's like they're
+      mine. Sort of."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18391977160978432
+    m_Localized: "Fire\u2026 I'll call you Pyra. Good for business to have a name
+      that sounds right."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18391388612046848
+    m_Localized: Can I shoot fire from the paddle? I want to shoot fire from the
+      paddle! I know how to do it! I don't know how I know but I know!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18393620199878656
+    m_Localized: Wait. Wait wait wait. What is THAT? That book. That book right there.
+      Can I see it? I want to see it! I need it! I don't know why but I need it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18393791797243904
+    m_Localized: "That's the Mystic Book. One of a kind. Irreplaceable. And it costs\u2014"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18393970185187328
+    m_Localized: I want to paint everything in it! The pages are blank and I see
+      them full! I see colours and shapes and all of you! I can see you inside the
+      pages!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18394103777964032
+    m_Localized: Ribbitra looks at Pyra. Then at the book. Then at Pyra again. She
+      sighs in a way that tries very hard not to sound affected. It doesn't work.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18394226733985792
+    m_Localized: "They hatched in my shop. It's almost like family. Which is a terrible
+      business decision, but\u2026 here. It's yours. Don't tell anyone. It would
+      ruin my reputation."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18394362298085376
+    m_Localized: Ribbitra has a heart!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18394508607991808
+    m_Localized: I have long-term business acumen. It's different.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18395253696737280
+    m_Localized: "I can draw all of you. Each one of you. But I need essence fragments
+      \u2014 they're like my ink. Each fragment lets me paint one piece. And each
+      drawing is four pieces."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18395347875639296
+    m_Localized: "When I finish one\u2026 I think something will happen. I can feel
+      it."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18395445611311104
+    m_Localized: Something good? Sorry, I just want to be sure.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18395601538756608
+    m_Localized: Something good! Almost certainly! Let's paint!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
