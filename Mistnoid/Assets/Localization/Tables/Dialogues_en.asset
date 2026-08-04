@@ -406,6 +406,62 @@ MonoBehaviour:
     m_Localized: Something good! Almost certainly! Let's paint!
     m_Metadata:
       m_Items: []
+  - m_Id: 19116306005864448
+    m_Localized: We can't get through here. I think we need something special for
+      that block. Something we don't have yet. Sorry I can't tell you exactly what.
+      But we should go look for it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19116919187943424
+    m_Localized: I've heard of someone. Is called Axiom. Very calm. They say he knows
+      things nobody else knows. That he could clear that phase without any effort
+      if he wanted to.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19117101258485760
+    m_Localized: Why doesn't he then?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19117429504716800
+    m_Localized: They say he doesn't feel like it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19117577450401792
+    m_Localized: Axiom is perched on an elevated block, gazing into the distance.
+      He doesn't move when they arrive. He doesn't seem surprised.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19117924935905280
+    m_Localized: I know why you're here.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19118326771200000
+    m_Localized: Did you really know? Sorry we didn't warn you we were coming.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19118031689330688
+    m_Localized: I know everything about this place. I could have left a long time
+      ago. But I stayed. Out of curiosity. And a little boredom.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19118366415761408
+    m_Localized: "You could escape and you just\u2026 didn't?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19118555947970560
+    m_Localized: I could escape right now if I wanted. But I was bored. You're more
+      interesting than the silence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19118774571872256
+    m_Localized: That is the most unsettling thing anyone has ever said to me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19118871292522496
+    m_Localized: I'll help you. I have something better than everything you've got.
+      The invincible ball. No block can withstand it.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -408,6 +408,67 @@ MonoBehaviour:
     m_Localized: "\xA1Algo bueno! \xA1Casi seguro! \xA1Pintemos!"
     m_Metadata:
       m_Items: []
+  - m_Id: 19116306005864448
+    m_Localized: "No podemos seguir por aqu\xED. Creo que necesitamos algo especial
+      para ese bloque. Algo que a\xFAn no tenemos. Perdona que no sepa qu\xE9 es
+      exactamente. Pero hay que buscarlo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19116919187943424
+    m_Localized: "He o\xEDdo hablar de alguien. Se llama Axiom. Muy calmado. Dicen
+      que sabe cosas que nadie m\xE1s sabe. Que podr\xEDa pasar esa fase sin esfuerzo
+      si quisiera."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19117101258485760
+    m_Localized: "\xBFY por qu\xE9 no lo hace?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19117429504716800
+    m_Localized: Dicen que no le apetece.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19117577450401792
+    m_Localized: "Axiom est\xE1 sobre un bloque elevado, mirando al horizonte. No
+      se mueve cuando llegan. No parece sorprendido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19117924935905280
+    m_Localized: "Ya s\xE9 por qu\xE9 ven\xEDs."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19118031689330688
+    m_Localized: "Lo s\xE9 todo de este lugar. Podr\xEDa haberme ido hace tiempo.
+      Pero me qued\xE9. Por curiosidad. Y un poco por aburrimiento."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19118366415761408
+    m_Localized: "\xBFPod\xEDas escapar y no lo hiciste?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19118326771200000
+    m_Localized: "\xBFDe verdad lo sab\xEDas? Perdona que no hayamos avisado de que
+      ven\xEDamos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19118555947970560
+    m_Localized: "Podr\xEDa escapar ahora mismo si quisiera. Pero me aburr\xEDa.
+      Vosotros sois m\xE1s interesantes que el silencio."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19118774571872256
+    m_Localized: "Eso es lo m\xE1s desconcertante que me han dicho nunca."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19118871292522496
+    m_Localized: "Os ayudar\xE9. Tengo algo mejor que todo lo que llev\xE1is. La
+      bola invencible. Ning\xFAn bloque resiste."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19122329995292672
+    m_Localized: Barrera
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

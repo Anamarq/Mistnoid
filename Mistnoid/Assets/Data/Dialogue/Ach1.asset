@@ -15,7 +15,26 @@ MonoBehaviour:
   lines:
   - characterName: Ct
     characterSprite: {fileID: -7232521027535748977, guid: 515e10304545c144b96c699bf70ce44c, type: 3}
-    text: Logros
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 19122329995292672
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - characterName: Nimbo
     characterSprite: {fileID: -7232521027535748977, guid: 515e10304545c144b96c699bf70ce44c, type: 3}
-    text: Atrapado
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
+      m_TableEntryReference:
+        m_KeyId: 19122408646881280
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
