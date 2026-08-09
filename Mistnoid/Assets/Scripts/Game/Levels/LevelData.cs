@@ -6,8 +6,9 @@ public class LevelData : ScriptableObject
 {
     public int width = 12;
     public int height = 8;
-    public List<LevelBlock> blocks = new List<LevelBlock>();
 
+    public List<LevelBlock> blocks = new List<LevelBlock>();
+    public List<Vector2Int> enemyPositions = new List<Vector2Int>();
 }
 
 [System.Serializable]

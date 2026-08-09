@@ -17,3 +17,5 @@ MonoBehaviour:
   blocks:
   - position: {x: 0, y: 0}
     blockData: {fileID: 11400000, guid: 91d964aa410f84147b470812c4bf3c70, type: 2}
+  enemyPositions:
+  - {x: 2, y: 0}

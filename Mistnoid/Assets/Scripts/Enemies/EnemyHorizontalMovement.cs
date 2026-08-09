@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class EnemyHorizontalMovement : MonoBehaviour
 {
-    [SerializeField] private Transform leftPoint;
-    [SerializeField] private Transform rightPoint;
+    private float leftLimitX = -7.8f, rightLimitX = 4.4f;
     [SerializeField] private float speed = 2f;
 
     private bool movingRight = true;
@@ -25,20 +24,20 @@ public class EnemyHorizontalMovement : MonoBehaviour
 
         transform.position += Vector3.right * direction * speed * Time.deltaTime;
 
-        if (movingRight && transform.position.x >= rightPoint.position.x)
+        if (movingRight && transform.position.x >= rightLimitX)
         {
             transform.position = new Vector3(
-                rightPoint.position.x,
+                rightLimitX,
                 transform.position.y,
                 transform.position.z
             );
 
             ChangeDirection(false);
         }
-        else if (!movingRight && transform.position.x <= leftPoint.position.x)
+        else if (!movingRight && transform.position.x <= leftLimitX)
         {
             transform.position = new Vector3(
-                leftPoint.position.x,
+                leftLimitX,
                 transform.position.y,
                 transform.position.z
             );
@@ -50,7 +49,6 @@ public class EnemyHorizontalMovement : MonoBehaviour
     private void ChangeDirection(bool moveRight)
     {
         movingRight = moveRight;
-
         spriteRenderer.flipX = !moveRight;
     }
 }

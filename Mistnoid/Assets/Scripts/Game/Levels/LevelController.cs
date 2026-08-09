@@ -6,6 +6,9 @@ public class LevelController : MonoBehaviour
 
     [SerializeField] private LevelData[] levelData;
     [SerializeField] private GameObject blockPrefab;
+    [SerializeField] private GameObject enemyPrefab;
+
+    private Transform currentEnemiesParent;
     private float blockSpacingX = 0.85f, blockSpacingY = 0.45f;
 
     private int remainingBlocks;
@@ -45,8 +48,36 @@ public class LevelController : MonoBehaviour
             if (!block.blockData.indestructible)
                 remainingBlocks++;
         }
-
+        GenerateEnemies(level);
         Debug.Log("Bloques destruibles: " + remainingBlocks);
+    }
+    void GenerateEnemies(LevelData level)
+    {
+        // Eliminar enemigos del nivel anterior
+        if (currentEnemiesParent != null)
+            Destroy(currentEnemiesParent.gameObject);
+
+        // Crear nuevo contenedor
+        currentEnemiesParent = new GameObject(
+            "Enemies_Level_" + currentLevel
+        ).transform;
+
+        // Crear enemigos de este nivel
+        foreach (Vector2Int position in level.enemyPositions)
+        {
+            Vector3 worldPosition = new Vector3(
+                position.x * blockSpacingX,
+                position.y * blockSpacingY,
+                0
+            );
+
+            Instantiate(
+                enemyPrefab,
+                worldPosition,
+                Quaternion.identity,
+                currentEnemiesParent
+            );
+        }
     }
     void NextLevel()
     {
