@@ -6,7 +6,7 @@ public class LevelController : MonoBehaviour
 
     [SerializeField] private LevelData[] levelData;
     [SerializeField] private GameObject blockPrefab;
-    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject enemyPrefab, acidEnemyPrefab;
 
     private Transform currentEnemiesParent;
     private float blockSpacingX = 0.85f, blockSpacingY = 0.45f;
@@ -62,7 +62,7 @@ public class LevelController : MonoBehaviour
             "Enemies_Level_" + currentLevel
         ).transform;
 
-        // Crear enemigos de este nivel
+        // Enemies
         foreach (Vector2Int position in level.enemyPositions)
         {
             Vector3 worldPosition = new Vector3(
@@ -73,6 +73,21 @@ public class LevelController : MonoBehaviour
 
             Instantiate(
                 enemyPrefab,
+                worldPosition,
+                Quaternion.identity,
+                currentEnemiesParent
+            );
+        }
+        foreach (Vector2Int position in level.enemyAcidPositions)
+        {
+            Vector3 worldPosition = new Vector3(
+                position.x * blockSpacingX,
+                position.y * blockSpacingY,
+                0
+            );
+
+            Instantiate(
+                acidEnemyPrefab,
                 worldPosition,
                 Quaternion.identity,
                 currentEnemiesParent

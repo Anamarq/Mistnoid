@@ -9,6 +9,7 @@ public class LevelData : ScriptableObject
 
     public List<LevelBlock> blocks = new List<LevelBlock>();
     public List<Vector2Int> enemyPositions = new List<Vector2Int>();
+    public List<Vector2Int> enemyAcidPositions = new List<Vector2Int>();
 }
 
 [System.Serializable]
