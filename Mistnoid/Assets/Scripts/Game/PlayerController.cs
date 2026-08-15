@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance;
 
     private int initialGlobalLife = 2, actualGlobalLife; //Lifes. when player loses all the balls, he loses a life
-    private float initialPaleLife, actualPaleLife; //Is the life of the pale. pale loses life when an enemy hits the paddle
+    private int initialPaddleLives = 2, actualPaddleLives; //Is the life of the pale. pale loses life when an enemy hits the paddle
     private int typePale;
     private int typeBall;
     [SerializeField] private float moveSpeed = 10f;
@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         actualGlobalLife = GetInitialLives();
+        actualPaddleLives = GetInitialPaddleLives();
         isPlayerAlive = true;
         ApplyPaddleSize();
         PlayCanvas.Instance.UpdateLifes(actualGlobalLife);
@@ -103,6 +104,14 @@ public class PlayerController : MonoBehaviour
     {
         int baseLives = 2;
         int extra = UpgradeManager.Instance.GetLevel(UpgradeType.StartLives);
+        return baseLives + extra;
+    }
+
+    private int GetInitialPaddleLives()
+    {
+        int baseLives = 2;
+        int extra = UpgradeManager.Instance.GetLevel(UpgradeType.PaddleHealth);
+
         return baseLives + extra;
     }
 
@@ -250,6 +259,18 @@ public class PlayerController : MonoBehaviour
         }
         if (actualGlobalLife <= 0)
         {
+            GameOver();
+        }
+    }
+
+    public void LosePaddleLive()
+    {
+        if (!isPlayerAlive)
+            return;
+        actualPaddleLives--;
+        Debug.Log(" Vida restante: " + actualPaddleLives);
+        if (actualPaddleLives <= 0)
+        { 
             GameOver();
         }
     }
