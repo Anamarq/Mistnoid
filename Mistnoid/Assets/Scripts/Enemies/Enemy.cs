@@ -32,9 +32,8 @@ public class Enemy : MonoBehaviour
     private void TakeDamage()
     {
         currentHealth--;
-
+        AudioManager.Instance.PlayHitEnemy();
         StartCoroutine(HitFlash());
-
         if (currentHealth <= 0)
         {
             Die();

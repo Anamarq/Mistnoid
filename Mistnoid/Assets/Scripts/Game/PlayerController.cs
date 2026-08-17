@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 //using static ShopPanel;
 
 //Controller of the player (the paddle), paddle settings
@@ -46,6 +47,10 @@ public class PlayerController : MonoBehaviour
     private Coroutine shieldCoroutine;
     public bool IsBarActive = false;
 
+    [Header("Paddle Health")]
+    [SerializeField] private Slider paddleHealthBar;
+    [SerializeField] private float paddleHitFlashDuration = 0.05f;
+
 
 
     private void Awake()
@@ -75,9 +80,11 @@ public class PlayerController : MonoBehaviour
     {
         actualGlobalLife = GetInitialLives();
         actualPaddleLives = GetInitialPaddleLives();
+        Debug.Log(actualPaddleLives);
         isPlayerAlive = true;
         ApplyPaddleSize();
         PlayCanvas.Instance.UpdateLifes(actualGlobalLife);
+        UpdatePaddleHealthBar();
         playerLoseALive = false;
     }
 
@@ -115,6 +122,22 @@ public class PlayerController : MonoBehaviour
         return baseLives + extra;
     }
 
+    private void UpdatePaddleHealthBar()
+    {
+        paddleHealthBar.maxValue = initialPaddleLives;
+        paddleHealthBar.value = actualPaddleLives;
+    }
+    private IEnumerator PaddleHitFlash()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            sr.enabled = false;
+            yield return new WaitForSeconds(0.05f);
+
+            sr.enabled = true;
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
     void ApplyPaddleSize()
     {
         int level = UpgradeManager.Instance.GetLevel(UpgradeType.PaddleSize);
@@ -268,6 +291,9 @@ public class PlayerController : MonoBehaviour
         if (!isPlayerAlive)
             return;
         actualPaddleLives--;
+        UpdatePaddleHealthBar();
+        AudioManager.Instance.PlayHitPaddle();
+        StartCoroutine(PaddleHitFlash());
         Debug.Log(" Vida restante: " + actualPaddleLives);
         if (actualPaddleLives <= 0)
         { 

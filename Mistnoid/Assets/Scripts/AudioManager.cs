@@ -20,10 +20,10 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clips")]
     [SerializeField] private AudioClip musicMenu, musicGame, musicIntroGame;
 
-    [SerializeField] private AudioClip sfxButton, sfxButtonBack, sfxPage, sfxCloseBook, sfxSouls, sfxFragments, 
+    [SerializeField] private AudioClip sfxButton, sfxButtonBack, sfxPage, sfxCloseBook, sfxSouls, sfxFragments,
         sfxBlockBreak, sfxBlocklv2, sfxBlockMetal, sfxShoot, sfxPaddle, sfxBallHit, sfxAbility,
         sfxWin, sfxLose, sfxBarHit, sfxWrong, sfxClickDialogue,
-        sfxCat, sfxPhoenix, sfxFrog, sfxBirdWhite, sfxBirdBlack, sfxDragon, sfxNimboHappy, sfxNimboSad, sfxLife;
+        sfxCat, sfxPhoenix, sfxFrog, sfxBirdWhite, sfxBirdBlack, sfxDragon, sfxNimboHappy, sfxNimboSad, sfxLife, sfxHitMonster, sftHitPaddle;
 
     void Awake()
     {
@@ -259,6 +259,15 @@ public class AudioManager : MonoBehaviour
     public void PlayLife()
     {
         PlaySFX(sfxLife);
+    }
+
+    public void PlayHitEnemy()
+    {
+        PlaySFX(sfxHitMonster);
+    }
+    public void PlayHitPaddle()
+    {
+        PlaySFX(sftHitPaddle);
     }
     #endregion
 }
