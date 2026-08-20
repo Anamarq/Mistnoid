@@ -26,6 +26,7 @@ public class GameSceneController : MonoBehaviour
         PowerUpManager.Instance.Unlock(PowerUpType.Soul);
         PowerUpManager.Instance.Unlock(PowerUpType.ExpandPaddle);
         PowerUpManager.Instance.Unlock(PowerUpType.ShrinkPaddle);
+        PowerUpManager.Instance.Unlock(PowerUpType.Acid);
         //string[] dialogue =
         //{
         //    "¡Eh! Has venido ??",

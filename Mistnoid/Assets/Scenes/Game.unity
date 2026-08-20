@@ -5764,6 +5764,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f04f7a3d6db75ee4191256779c960b36, type: 2}
   - {fileID: 11400000, guid: 063bdbcf508281f4f8142ba04a9af8b8, type: 2}
   - {fileID: 11400000, guid: 140fb4095f47ff443bb43e600c0a3287, type: 2}
+  - {fileID: 11400000, guid: 6bf48eda8b83f88489734d2073992d5d, type: 2}
   powerUpPrefab: {fileID: 4089424634664613250, guid: 27033d083d3d37c42a1148c0d0c58327, type: 3}
 --- !u!4 &1890903179
 Transform:

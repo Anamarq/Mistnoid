@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelController : MonoBehaviour
@@ -7,12 +8,13 @@ public class LevelController : MonoBehaviour
     [SerializeField] private LevelData[] levelData;
     [SerializeField] private GameObject blockPrefab;
     [SerializeField] private GameObject enemyPrefab, acidEnemyPrefab;
-
     private Transform currentEnemiesParent;
+    private List<GameObject> enemyAcidBalls = new List<GameObject>();
+
     private float blockSpacingX = 0.85f, blockSpacingY = 0.45f;
 
-    private int remainingBlocks;
-    private int currentLevel = 0;
+    private int remainingBlocks, currentLevel = 0;
+
     void Awake()
     {
         Instance = this;
@@ -20,8 +22,9 @@ public class LevelController : MonoBehaviour
 
     void Start()
     {
-        if(levelData.Length > 0)
+        if (levelData.Length > 0)
             GenerateLevel(levelData[0]);
+
         RunTimer.Instance.StartRun();
         PlayCanvas.Instance.UpdatePhase(0);
         AbilityManager.Instance.ResetUses();
@@ -34,69 +37,58 @@ public class LevelController : MonoBehaviour
 
         foreach (var block in level.blocks)
         {
-            Vector3 pos = new Vector3(
-                block.position.x * blockSpacingX,
-                block.position.y * blockSpacingY,
-                0
-            );
-
-            GameObject obj = Instantiate(blockPrefab, pos, Quaternion.identity);
-
+            Vector3 pos = new Vector3(block.position.x * blockSpacingX,block.position.y * blockSpacingY,0);
+            GameObject obj = Instantiate(blockPrefab,pos,Quaternion.identity);
             Block blockComponent = obj.GetComponent<Block>();
             blockComponent.SetBlockData(block.blockData);
-
             if (!block.blockData.indestructible)
                 remainingBlocks++;
         }
+
         GenerateEnemies(level);
         Debug.Log("Bloques destruibles: " + remainingBlocks);
     }
+    #region Enemies 
     void GenerateEnemies(LevelData level)
     {
-        // Eliminar enemigos del nivel anterior
         if (currentEnemiesParent != null)
             Destroy(currentEnemiesParent.gameObject);
 
-        // Crear nuevo contenedor
-        currentEnemiesParent = new GameObject(
-            "Enemies_Level_" + currentLevel
-        ).transform;
-
-        // Enemies
+        currentEnemiesParent = new GameObject("Enemies_Level_" + currentLevel).transform;
+        // common enemies
         foreach (Vector2Int position in level.enemyPositions)
         {
-            Vector3 worldPosition = new Vector3(
-                position.x * blockSpacingX,
-                position.y * blockSpacingY,
-                0
-            );
-
-            Instantiate(
-                enemyPrefab,
-                worldPosition,
-                Quaternion.identity,
-                currentEnemiesParent
-            );
+            Vector3 worldPosition = new Vector3(position.x * blockSpacingX,position.y * blockSpacingY,0);
+            Instantiate(enemyPrefab,worldPosition,Quaternion.identity,currentEnemiesParent);
         }
+
+        // Acid enemies
         foreach (Vector2Int position in level.enemyAcidPositions)
         {
-            Vector3 worldPosition = new Vector3(
-                position.x * blockSpacingX,
-                position.y * blockSpacingY,
-                0
-            );
-
-            Instantiate(
-                acidEnemyPrefab,
-                worldPosition,
-                Quaternion.identity,
-                currentEnemiesParent
-            );
+            Vector3 worldPosition = new Vector3(position.x * blockSpacingX,position.y * blockSpacingY,0);
+            Instantiate(acidEnemyPrefab,worldPosition,Quaternion.identity,currentEnemiesParent);
         }
     }
+
+    public void RegisterEnemyAcidBall(GameObject acidBall)
+    {
+        enemyAcidBalls.Add(acidBall);
+    }
+
+    private void DestroyEnemyAcidBalls()
+    {
+        foreach (GameObject acidBall in enemyAcidBalls)
+        {
+            if (acidBall != null)
+                Destroy(acidBall);
+        }
+        enemyAcidBalls.Clear();
+    }
+    #endregion
     void NextLevel()
     {
         ++currentLevel;
+        DestroyEnemyAcidBalls();
         if (currentLevel < levelData.Length)
         {
             PlayCanvas.Instance.PanelLevel(true);
@@ -107,38 +99,40 @@ public class LevelController : MonoBehaviour
         else
             FinishGame();
     }
+
     void FinishGame()
     {
         ScoreManager.Instance.WinRun();
         RunTimer.Instance.StopRun();
         PlayerController.Instance.ResetPaddle();
     }
+
     void WinLevel()
     {
         Debug.Log("Nivel completado");
+
         PlayerController.Instance.ResetPaddle();
+
         PlayerPrefs.SetInt("Level_" + currentLevel, 1);
         PlayerPrefs.Save();
-        NextLevel();
-        GameManager.Instance.SetPause(true);
 
+        NextLevel();
+
+        GameManager.Instance.SetPause(true);
     }
 
     public void BlockDestroyed()
     {
-        
         remainingBlocks--;
         Debug.Log("remainingBlocks " + remainingBlocks);
         if (remainingBlocks <= 0)
-        {
             WinLevel();
-        }
-        if(currentLevel == 1 && remainingBlocks == 1)
+        if (currentLevel == 1 && remainingBlocks == 1)
         {
             Debug.Log("LEVEL %");
+
             ProgressFlags.Level5Reached = true;
             PlayerPrefs.Save();
         }
     }
-
 }

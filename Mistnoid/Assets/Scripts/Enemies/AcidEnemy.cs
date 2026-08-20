@@ -17,7 +17,6 @@ public class AcidEnemy : MonoBehaviour
     private void Update()
     {
         acidTimer -= Time.deltaTime;
-
         if (acidTimer <= 0f)
         {
             DropAcidBall();
@@ -29,7 +28,7 @@ public class AcidEnemy : MonoBehaviour
     {
         if (acidBallPrefab == null)
             return;
-
-        Instantiate(acidBallPrefab,acidSpawnPoint.position,Quaternion.identity);
+        GameObject acidBall = Instantiate(acidBallPrefab,acidSpawnPoint.position,Quaternion.identity);
+        LevelController.Instance.RegisterEnemyAcidBall(acidBall);
     }
 }

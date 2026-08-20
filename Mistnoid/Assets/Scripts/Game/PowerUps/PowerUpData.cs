@@ -26,5 +26,6 @@ public enum PowerUpType
     BarShield,
     Shot,
     Soul,
-    InvincibleBall
+    InvincibleBall,
+    Acid
 }

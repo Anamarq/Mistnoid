@@ -5,17 +5,32 @@ public class PowerUp : MonoBehaviour
     private PowerUpData data;
     private SpriteRenderer sr;
 
+    //For acid enemy
+    bool isAcid = false;
+    private Vector2 acidDirection;
+
     public void Init(PowerUpData powerUpData)
     {
         data = powerUpData;
         if (sr == null)
             sr = GetComponent<SpriteRenderer>();
         sr.sprite = data.sprite;
+
+        // If is acid
+        isAcid = data.type == PowerUpType.Acid;
+        if (isAcid)
+        {
+            Vector2 paddlePosition = PlayerController.Instance.transform.position;
+            acidDirection = (paddlePosition - (Vector2)transform.position).normalized;
+        }
     }
 
     void Update()
     {
-        transform.Translate(Vector2.down * data.fallSpeed * Time.deltaTime);
+        if (isAcid)
+            transform.Translate(acidDirection * data.fallSpeed * Time.deltaTime,Space.World);
+        else
+            transform.Translate(Vector2.down * data.fallSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -92,6 +107,9 @@ public class PowerUp : MonoBehaviour
             case PowerUpType.InvincibleBall:
                 AudioManager.Instance.PlayCat();
                 BallManager.Instance.ActivateInvincible(data.duration);
+                break;
+            case PowerUpType.Acid:
+                PlayerController.Instance.LosePaddleLive();
                 break;
             default:
                 break;
