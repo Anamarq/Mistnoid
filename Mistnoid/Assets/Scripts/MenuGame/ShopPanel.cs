@@ -156,7 +156,7 @@ public class ShopPanel : MonoBehaviour
     private void UpdateUpgradeUI(int index)
     {
         Upgrade u = upgrades[index];
-        u.textLevel.text = "Nivel " + u.level;
+        u.textLevel.text = u.level.ToString();
         u.textCost.text = GetCost(u).ToString();
 
         switch (u.type)

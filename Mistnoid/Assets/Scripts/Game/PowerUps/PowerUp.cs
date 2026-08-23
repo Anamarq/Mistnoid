@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PowerUp : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class PowerUp : MonoBehaviour
         {
             Vector2 paddlePosition = PlayerController.Instance.transform.position;
             acidDirection = (paddlePosition - (Vector2)transform.position).normalized;
+            float angle = Mathf.Atan2(acidDirection.y, acidDirection.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, angle -45f);
         }
     }
 

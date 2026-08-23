@@ -30,6 +30,50 @@ MonoBehaviour:
     m_Localized: Mystic book
     m_Metadata:
       m_Items: []
+  - m_Id: 26404687463165952
+    m_Localized: Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26406297958461440
+    m_Localized: Change ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26406513109479424
+    m_Localized: Change paddle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26407057412698112
+    m_Localized: 'Paddle customisation: Allows you to change the appearance of your
+      paddle or purchase new appearances in exchange for souls'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26407543616417792
+    m_Localized: 'Ball customisation: Allows you to change the appearance of your
+      ball or purchase new appearances in exchange for souls'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26407993665236992
+    m_Localized: 'Increasing lives: Increases the starting number of lives. You lose
+      a live every time you lose a ball.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26408582008647680
+    m_Localized: 'Health boost: Boosts the health of your paddle. You lose health
+      if your paddle is damaged.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26408844270088192
+    m_Localized: 'Power-up boost: permanently increases the chance of getting power-ups.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26409029628964864
+    m_Localized: 'Paddle enhancement: Permanently increases the length of the Paddle.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26410273105883136
+    m_Localized: Shop
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

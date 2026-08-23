@@ -45,9 +45,14 @@ public class DialogueManager : MonoBehaviour
         var line = lines[index];
 
         nameText.text = line.characterName;
-        portraitImage.sprite = line.characterSprite;
+        if (line.characterSprite != null)
+        {
+            portraitImage.sprite = line.characterSprite;
+            portraitImage.gameObject.SetActive(true);
+        }
+        else
+            portraitImage.gameObject.SetActive(false);
 
-        // ?? CLAVE: pedir texto localizado
         line.text.GetLocalizedStringAsync().Completed += handle =>
         {
             text.text = handle.Result;

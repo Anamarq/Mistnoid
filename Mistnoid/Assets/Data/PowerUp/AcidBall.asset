@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AcidBall
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpData
   powerUpName: AcidBall
-  sprite: {fileID: -1925364078006483703, guid: 8c7a4a61b064acc498be6869d5239552, type: 3}
+  sprite: {fileID: 21300000, guid: d510b620619216e438197b8c7c84ecd5, type: 3}
   fallSpeed: 5
   duration: 0
   weight: 90

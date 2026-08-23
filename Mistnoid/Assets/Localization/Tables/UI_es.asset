@@ -30,6 +30,51 @@ MonoBehaviour:
     m_Localized: "Libro m\xEDstico"
     m_Metadata:
       m_Items: []
+  - m_Id: 26404687463165952
+    m_Localized: Nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26406297958461440
+    m_Localized: Cambiar bola
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26406513109479424
+    m_Localized: Cambiar pala
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26407057412698112
+    m_Localized: 'Cambio de pala: Permite cambiar el aspecto de la pala o comprar
+      nuevos aspectos a cambio de almas'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26407543616417792
+    m_Localized: 'Cambio de bola: Permite cambiar el aspecto de la bola o comprar
+      nuevos aspectos a cambio de almas'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26407993665236992
+    m_Localized: "Mejora de vidas: Aumenta el n\xFAmero de vidas inicial. Se pierde
+      una vida al perder una bola."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26408582008647680
+    m_Localized: 'Mejora de salud: Mejora de salud de la pala. Se pierde salud si
+      hieren a tu pala.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26408844270088192
+    m_Localized: 'Mejora power ups: aumenta la probabilidad de power ups de forma
+      permanente.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26409029628964864
+    m_Localized: 'Mejora de la pala: Aumenta la longitud de la pala de forma permanente.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26410273105883136
+    m_Localized: Tienda de mejoras.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

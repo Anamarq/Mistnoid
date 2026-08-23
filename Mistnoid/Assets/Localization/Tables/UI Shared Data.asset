@@ -27,6 +27,46 @@ MonoBehaviour:
     m_Key: book
     m_Metadata:
       m_Items: []
+  - m_Id: 26404687463165952
+    m_Key: level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26406297958461440
+    m_Key: ChangeBall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26406513109479424
+    m_Key: ChangePaddle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26407057412698112
+    m_Key: HelpPaddle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26407543616417792
+    m_Key: HelpBall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26407993665236992
+    m_Key: ChangeLivesBall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26408582008647680
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26408844270088192
+    m_Key: ChangeProbPowerUp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26409029628964864
+    m_Key: ChangeLongPaddle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26410273105883136
+    m_Key: Shop
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
