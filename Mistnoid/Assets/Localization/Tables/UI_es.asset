@@ -75,6 +75,120 @@ MonoBehaviour:
     m_Localized: Tienda de mejoras.
     m_Metadata:
       m_Items: []
+  - m_Id: 26794772738191360
+    m_Localized: Nuevo juego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26795806881591296
+    m_Localized: Volver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26795979250708480
+    m_Localized: Logros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26796564238675968
+    m_Localized: "Estad\xEDsticas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26796849333907456
+    m_Localized: 'Almas:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26797301916086272
+    m_Localized: 'Esencia:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26797933121089536
+    m_Localized: 'Mejor tiempo:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26798254606102528
+    m_Localized: "Mejor puntuaci\xF3n: "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26799923272200192
+    m_Localized: Abrir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26800128004567040
+    m_Localized: 'Coste de pintar: 5'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26800418619502592
+    m_Localized: Pintar pieza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26800570574942208
+    m_Localized: "Coste de habilidad: \n20"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26801126840315904
+    m_Localized: Mejorar habilidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26801277248057344
+    m_Localized: 'Usos de habilidad:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26803753703550976
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26808083827503104
+    m_Localized: 'Fase:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26808409829781504
+    m_Localized: 'Tiempo:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26808668450566144
+    m_Localized: 'Puntos:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26809361718685696
+    m_Localized: 'Vidas:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26809748186050560
+    m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26809887667630080
+    m_Localized: "Volver al men\xFA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26810095050797056
+    m_Localized: 'GAME OVER
+
+
+
+      Puntos: {0}
+
+      Fragmentos de esencia: {1}
+
+      Almas:
+      {2}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26810811928653824
+    m_Localized: Nivel Completo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26810963439497216
+    m_Localized: Siguiente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26811797753671680
+    m_Localized: Pausa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26813648960073728
+    m_Localized: "LEVEL CLEAR\n\nPuntos: {0}\nTiempo: {1}\nBonus de tiempo: +{2}\n\nPuntuaci\xF3n
+      final: {3}\nFragmentos de esencia: {4}\nAlmas: {5}"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

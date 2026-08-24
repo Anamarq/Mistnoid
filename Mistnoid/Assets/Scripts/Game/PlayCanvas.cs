@@ -1,16 +1,16 @@
 using TMPro;
 using Unity.Burst.Intrinsics;
 using UnityEngine;
+using UnityEngine.Localization;
 
 //menu in game (pause, gameover, win)
 public class PlayCanvas : MonoBehaviour
 {
     public static PlayCanvas Instance;
     [SerializeField] private GameObject panelPause, panelGameOver, panelWin, panelLevel;
-    [SerializeField] private TextMeshProUGUI textPoints, textLifes, textSouls, textTimer, textWin, 
-        textGameOver, textPhase, textAbility;
+    [SerializeField] private TextMeshProUGUI textPoints, textLifes, textSouls, textTimer, textPhase, textAbility;
 
-
+    [SerializeField] private LocalizedString levelClearText, gameOverText;
 
     private void Awake()
     {
@@ -128,14 +128,19 @@ public class PlayCanvas : MonoBehaviour
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time % 60);
 
-        textWin.text =
-            "LEVEL CLEAR\n\n" +
-            "Puntos: " + baseScore + "\n" +
-            "Tiempo: " + $"{minutes:00}:{seconds:00}" + "\n" +
-            "Bonus de tiempo: +" + timeBonus + "\n\n" +
-            "Puntuacion final: " + finalScore + "\n" +
-            "Fragmentos de esencia: " + fragments + "\n" +
-            "Almas: " + souls;
+        string formattedTime = $"{minutes:00}:{seconds:00}";
+
+        levelClearText.Arguments = new object[]
+        {
+            baseScore,
+            formattedTime,
+            timeBonus,
+            finalScore,
+            fragments,
+            souls
+        };
+
+        levelClearText.GetLocalizedStringAsync().Completed += handle =>{textWin.text = handle.Result;};
 
         PanelWin(true);
         AudioManager.Instance.PlayWin();
@@ -143,11 +148,14 @@ public class PlayCanvas : MonoBehaviour
 
     public void ShowGameOver(int souls, int score, int fragments)
     {
-        textGameOver.text =
-            "GAME OVER\n\n" +
-            "Puntos: " + score + "\n" +
-            "Fragmentos de esencia: " + fragments +"\n" +
-            "Almas: " + souls;
+        gameOverText.Arguments = new object[]
+        {
+            score,
+            fragments,
+            souls
+        };
+
+        gameOverText.GetLocalizedStringAsync().Completed += handle =>{textGameOver.text = handle.Result;};
 
         PanelGameOver(true);
         AudioManager.Instance.PlayLose();

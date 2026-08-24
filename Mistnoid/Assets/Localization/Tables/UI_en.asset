@@ -74,6 +74,135 @@ MonoBehaviour:
     m_Localized: Shop
     m_Metadata:
       m_Items: []
+  - m_Id: 26794772738191360
+    m_Localized: New game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26795806881591296
+    m_Localized: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26795979250708480
+    m_Localized: Achivements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26796564238675968
+    m_Localized: Stats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26796849333907456
+    m_Localized: 'Souls:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26797301916086272
+    m_Localized: 'Essence:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26797933121089536
+    m_Localized: 'Best time:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26798254606102528
+    m_Localized: 'Best score:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26799923272200192
+    m_Localized: Open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26800128004567040
+    m_Localized: 'Painting cost: 5'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26800418619502592
+    m_Localized: Paint part
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26800570574942208
+    m_Localized: 'Skill cost:
+
+      20'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26801126840315904
+    m_Localized: Improve skill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26801277248057344
+    m_Localized: 'Uses the skill:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26803753703550976
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26808083827503104
+    m_Localized: 'Phase:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26808409829781504
+    m_Localized: 'Time:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26808668450566144
+    m_Localized: 'Points:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26809361718685696
+    m_Localized: 'Lives:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26809748186050560
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26809887667630080
+    m_Localized: Return to menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26810095050797056
+    m_Localized: 'GAME OVER
+
+
+      Score: {0}
+
+      Essence fragments: {1}
+
+      Souls:
+      {2}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26810811928653824
+    m_Localized: Level Complete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26810963439497216
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26811797753671680
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26813648960073728
+    m_Localized: 'LEVEL CLEAR
+
+
+      Points: {0}
+
+      Time: {1}
+
+      Time bonus:
+      +{2}
+
+
+      Final score: {3}
+
+      Essence fragments: {4}
+
+      Souls: {5}'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

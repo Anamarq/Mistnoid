@@ -19,16 +19,16 @@ public class CanvasMenuGame : MonoBehaviour
     {
         soulsText.text = ScoreManager.Instance.Souls.ToString();
         fragmentText.text = ScoreManager.Instance.Fragments.ToString();
-        pointTe.text = "Mejor puntuación: " + ScoreManager.Instance.HighScore.ToString();
+        pointTe.text = ScoreManager.Instance.HighScore.ToString();
         float _time = ScoreManager.Instance.BestTime;
         if (_time != float.MaxValue)
         {
             int minutes = Mathf.FloorToInt(_time / 60);
             int seconds = Mathf.FloorToInt(_time % 60);
-            timeText.text = "Mejor tiempo: " + $"{minutes:00}:{seconds:00}";
+            timeText.text = $"{minutes:00}:{seconds:00}";
         }
         else
-            timeText.text = "Mejor tiempo: -";
+            timeText.text = "-";
 
         AudioManager.Instance.PlayMenuMusic();
     }
@@ -46,7 +46,7 @@ public class CanvasMenuGame : MonoBehaviour
         float _time = ScoreManager.Instance.BestTime;
         int minutes = Mathf.FloorToInt(_time / 60);
         int seconds = Mathf.FloorToInt(_time % 60);
-        timeText.text = "Mejor tiempo: " + $"{minutes:00}:{seconds:00}";
+        timeText.text = $"{minutes:00}:{seconds:00}";
     }
     //MainPanel -> ButtonPlay
     public void LoadGame()
@@ -60,7 +60,6 @@ public class CanvasMenuGame : MonoBehaviour
         }
 
         GameManager.Instance.SetState(GameManager.StateMachine.Game);
-        Debug.Log("LoadGame");
     }
 
     //MainPanel -> ButtonMainMenu

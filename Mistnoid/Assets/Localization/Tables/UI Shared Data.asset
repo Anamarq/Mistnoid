@@ -67,6 +67,110 @@ MonoBehaviour:
     m_Key: Shop
     m_Metadata:
       m_Items: []
+  - m_Id: 26794772738191360
+    m_Key: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26795806881591296
+    m_Key: return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26795979250708480
+    m_Key: achivements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26796564238675968
+    m_Key: stats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26796849333907456
+    m_Key: souls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26797301916086272
+    m_Key: essence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26797933121089536
+    m_Key: BestTime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26798254606102528
+    m_Key: BestPoints
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26799923272200192
+    m_Key: open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26800128004567040
+    m_Key: paintingCost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26800418619502592
+    m_Key: paint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26800570574942208
+    m_Key: skillCost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26801126840315904
+    m_Key: skill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26801277248057344
+    m_Key: UsesSkill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26803753703550976
+    m_Key: close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26808083827503104
+    m_Key: phase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26808409829781504
+    m_Key: Time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26808668450566144
+    m_Key: Points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26809361718685696
+    m_Key: Lives
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26809748186050560
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26809887667630080
+    m_Key: ReturnMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26810095050797056
+    m_Key: gameOver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26810811928653824
+    m_Key: LevelComplete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26810963439497216
+    m_Key: next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26811797753671680
+    m_Key: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26813648960073728
+    m_Key: win
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
