@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04097bfcf9748ee4c9a35b491a0ce1c9, type: 3}
-  m_Name: BasicBlock
+  m_Name: Level2BlockRed
   m_EditorClassIdentifier: Assembly-CSharp::BlockData
-  blockName: Basic
-  maxHealth: 1
+  blockName: Lv2
+  maxHealth: 2
   indestructible: 0
-  points: 1
+  points: 2
   powerUpChance: 0.9
   sprite:
-  - {fileID: 1503016370545623098, guid: 0b61e3d787a73f5468b07b324e75b064, type: 3}
-  color: {r: 1, g: 1, b: 1, a: 1}
+  - {fileID: 5873095519613523341, guid: 56b5c31f334f1b04e877a5330c40d846, type: 3}
+  - {fileID: 8177140340806879141, guid: 56b5c31f334f1b04e877a5330c40d846, type: 3}

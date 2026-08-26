@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04097bfcf9748ee4c9a35b491a0ce1c9, type: 3}
+  m_Name: Level3BlockGreen
+  m_EditorClassIdentifier: Assembly-CSharp::BlockData
+  blockName: Lv3
+  maxHealth: 3
+  indestructible: 0
+  points: 2
+  powerUpChance: 0.9
+  sprite:
+  - {fileID: 7463937401379484644, guid: e4565939357bd3c4fa72ac75aecdfff5, type: 3}
+  - {fileID: 1481034397108682908, guid: e4565939357bd3c4fa72ac75aecdfff5, type: 3}
+  - {fileID: 2097967014197318609, guid: e4565939357bd3c4fa72ac75aecdfff5, type: 3}

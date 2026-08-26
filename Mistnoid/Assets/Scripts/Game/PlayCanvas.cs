@@ -8,7 +8,9 @@ public class PlayCanvas : MonoBehaviour
 {
     public static PlayCanvas Instance;
     [SerializeField] private GameObject panelPause, panelGameOver, panelWin, panelLevel;
-    [SerializeField] private TextMeshProUGUI textPoints, textLifes, textSouls, textTimer, textPhase, textAbility;
+    [SerializeField]
+    private TextMeshProUGUI textPoints, textLifes, textSouls, textTimer,
+        textPhase, textAbility, textWin, textGameOver;
 
     [SerializeField] private LocalizedString levelClearText, gameOverText;
 

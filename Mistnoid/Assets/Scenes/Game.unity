@@ -1360,10 +1360,10 @@ MonoBehaviour:
   textLifes: {fileID: 1371365092}
   textSouls: {fileID: 868460076}
   textTimer: {fileID: 833708385}
-  textWin: {fileID: 106948585}
-  textGameOver: {fileID: 1952515384}
   textPhase: {fileID: 1127696781}
   textAbility: {fileID: 37899765}
+  textWin: {fileID: 106948585}
+  textGameOver: {fileID: 1952515384}
   levelClearText:
     m_TableReference:
       m_TableCollectionName: GUID:7db0cd5f4adf81548b2fb2266488e370
@@ -3531,9 +3531,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelController
   levelData:
+  - {fileID: 11400000, guid: da1e90c3260737149a864bd39a6cee40, type: 2}
   - {fileID: 11400000, guid: fe63bd79d3659da4287449249ad02fd2, type: 2}
   - {fileID: 11400000, guid: d963d10ceab28284089f686edd456b2d, type: 2}
-  - {fileID: 11400000, guid: da1e90c3260737149a864bd39a6cee40, type: 2}
   blockPrefab: {fileID: 5194323587711061956, guid: dd247fdfac0ea7b4eb2ffa509a18e967, type: 3}
   enemyPrefab: {fileID: 4979876514766310461, guid: b4b6533148beff14da675fa791cf9827, type: 3}
   acidEnemyPrefab: {fileID: 4979876514766310461, guid: 1b1d851b53728a041a2d2dba9c5d80fd, type: 3}

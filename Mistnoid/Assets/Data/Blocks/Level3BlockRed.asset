@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04097bfcf9748ee4c9a35b491a0ce1c9, type: 3}
-  m_Name: Level3Block
+  m_Name: Level3BlockRed
   m_EditorClassIdentifier: Assembly-CSharp::BlockData
   blockName: Lv3
   maxHealth: 3
@@ -18,6 +18,6 @@ MonoBehaviour:
   points: 2
   powerUpChance: 0.9
   sprite:
-  - {fileID: 1503016370545623098, guid: 0b61e3d787a73f5468b07b324e75b064, type: 3}
-  - {fileID: 1489830567317918739, guid: 0b61e3d787a73f5468b07b324e75b064, type: 3}
-  - {fileID: 38433539612607256, guid: 0b61e3d787a73f5468b07b324e75b064, type: 3}
+  - {fileID: 5873095519613523341, guid: 56b5c31f334f1b04e877a5330c40d846, type: 3}
+  - {fileID: 8177140340806879141, guid: 56b5c31f334f1b04e877a5330c40d846, type: 3}
+  - {fileID: -2963037660990621337, guid: 56b5c31f334f1b04e877a5330c40d846, type: 3}
