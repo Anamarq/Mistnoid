@@ -6,6 +6,8 @@ public class LevelBuilder : MonoBehaviour
 {
     public LevelData levelData;
 
+    private float blockSpacingX = 0.85f, blockSpacingY = 0.45f;
+
     [ContextMenu("Save Level")]
     public void SaveLevel()
     {
@@ -17,17 +19,14 @@ public class LevelBuilder : MonoBehaviour
 
         Block[] blocks = FindObjectsByType<Block>(FindObjectsSortMode.None);
 
-        foreach (var b in blocks)
+        foreach (var block in blocks)
         {
-            Vector2Int gridPos = new Vector2Int(
-                Mathf.RoundToInt(b.transform.position.x),
-                Mathf.RoundToInt(b.transform.position.y)
-            );
+            Vector2Int gridPos = WorldToGrid(block.transform.position);
 
             levelData.blocks.Add(new LevelBlock
             {
                 position = gridPos,
-                blockData = b.GetBlockData()
+                blockData = block.GetBlockData()
             });
         }
 
@@ -37,37 +36,36 @@ public class LevelBuilder : MonoBehaviour
 
         foreach (var enemy in enemies)
         {
-            Vector2Int gridPos = new Vector2Int(
-                Mathf.RoundToInt(enemy.transform.position.x),
-                Mathf.RoundToInt(enemy.transform.position.y)
-            );
-
+            Vector2Int gridPos = WorldToGrid(enemy.transform.position);
             levelData.enemyPositions.Add(gridPos);
         }
 
-        // Acid enemies
+        // acid enemies
 
         AcidEnemy[] acidEnemies = FindObjectsByType<AcidEnemy>(FindObjectsSortMode.None);
 
         foreach (var acidEnemy in acidEnemies)
         {
-            Vector2Int gridPos = new Vector2Int(
-                Mathf.RoundToInt(acidEnemy.transform.position.x),
-                Mathf.RoundToInt(acidEnemy.transform.position.y)
-            );
-
+            Vector2Int gridPos = WorldToGrid(acidEnemy.transform.position);
             levelData.enemyAcidPositions.Add(gridPos);
         }
 
-        // save
         EditorUtility.SetDirty(levelData);
         AssetDatabase.SaveAssets();
 
         Debug.Log(
-            "Level saved! " +
-            blocks.Length + " bloques, " +
-            enemies.Length + " enemigos y " +
-            acidEnemies.Length + " enemigos de ácido."
+            $"Level saved! " +
+            $"Blocks: {blocks.Length}, " +
+            $"Enemies: {enemies.Length}, " +
+            $"Acid enemies: {acidEnemies.Length}"
+        );
+    }
+
+    private Vector2Int WorldToGrid(Vector3 worldPosition)
+    {
+        return new Vector2Int(
+            Mathf.RoundToInt(worldPosition.x / blockSpacingX),
+            Mathf.RoundToInt(worldPosition.y / blockSpacingY)
         );
     }
 }

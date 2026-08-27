@@ -176,7 +176,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8219566699378199167, guid: 8396ffd879ef27c419859d683d73fba1, type: 3}
+  m_Sprite: {fileID: -69259100975524709, guid: 8396ffd879ef27c419859d683d73fba1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -261,9 +261,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e20dc308b91acdf4fa9960df7d55ec91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallController
-  speed: 8
+  speed: 4
   offset: {x: 0, y: 0.5, z: 0}
-  scaleSpeed: 0.001
+  scaleSpeed: 0.05
   multiplier: 1
   multiplierIncrease: 1
   maxMultiplier: 5

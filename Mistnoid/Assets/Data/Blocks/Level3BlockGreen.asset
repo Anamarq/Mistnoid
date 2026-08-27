@@ -16,7 +16,7 @@ MonoBehaviour:
   maxHealth: 3
   indestructible: 0
   points: 2
-  powerUpChance: 0.9
+  powerUpChance: 0.2
   sprite:
   - {fileID: 7463937401379484644, guid: e4565939357bd3c4fa72ac75aecdfff5, type: 3}
   - {fileID: 1481034397108682908, guid: e4565939357bd3c4fa72ac75aecdfff5, type: 3}
