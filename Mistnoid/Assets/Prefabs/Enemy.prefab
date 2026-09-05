@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc3f32a0752a2345bc26077c86b21bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  maxHealth: 3
-  soulReward: 10
+  maxHealth: 1
+  soulReward: 100
   flashDuration: 0.05
 --- !u!114 &2585937521889375917
 MonoBehaviour:
@@ -157,6 +157,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd553f2b7765f64292cee31c53b43f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHorizontalMovement
-  leftPoint: {fileID: 0}
-  rightPoint: {fileID: 0}
   speed: 2

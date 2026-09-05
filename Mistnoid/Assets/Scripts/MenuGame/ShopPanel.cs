@@ -23,7 +23,7 @@ public class ShopPanel : MonoBehaviour
     //Dialogue first time
     const string SHOP_DIALOGUE_SHOWN = "ShopDialogueShown";
     const string PHOENIX_SHOP_DIALOGUE_SHOWN = "PhoenixShopDialogueShown";
-    [SerializeField] private DialogueData shopDialogue, phoenixShop;
+    [SerializeField] private DialogueData shopDialogue;
     void Start()
     {
         for (int i = 0; i < upgrades.Length; i++)
@@ -79,7 +79,6 @@ public class ShopPanel : MonoBehaviour
     {
         GameManager.Instance.IsDialogue = true;
 
-        DialogueManager.Instance.StartDialogue(phoenixShop);
         DialogueManager.Instance.OnDialogueEnd += OnPhoenixShopDialogueEnd;
 
         PlayerPrefs.SetInt(PHOENIX_SHOP_DIALOGUE_SHOWN, 1);
@@ -200,6 +199,7 @@ public class ShopPanel : MonoBehaviour
         if (!ballsPanelState)
         {
             _ballsPanel.SetActive(true);
+            _PaddlePanel.SetActive(false);
             ballsPanelState = true;
         }
         else
@@ -214,6 +214,7 @@ public class ShopPanel : MonoBehaviour
         if (!paddlePanelState)
         {
             _PaddlePanel.SetActive(true);
+            _ballsPanel.SetActive(false);
             paddlePanelState = true;
         }
         else
@@ -228,7 +229,7 @@ public enum UpgradeType
     PaddleSize,
     StartLives,
     PowerUpChance,
-    PaddleHealth // futuro
+    PaddleHealth
 }
 [System.Serializable]
 public class Upgrade

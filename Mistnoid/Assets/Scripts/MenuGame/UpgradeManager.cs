@@ -15,9 +15,12 @@ public class UpgradeManager : MonoBehaviour
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
 
+        
+    }
+    private void Start()
+    {
         LoadAll();
     }
-
     string GetKey(UpgradeType type)
     {
         return "Upgrade_" + type.ToString();

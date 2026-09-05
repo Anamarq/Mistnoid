@@ -557,6 +557,7 @@ MonoBehaviour:
   bottomShield: {fileID: 0}
   IsBarActive: 0
   paddleHealthBar: {fileID: 7478240614697456338}
+  paddleHitFlashDuration: 0.05
 --- !u!50 &1966573918917027018
 Rigidbody2D:
   serializedVersion: 5

@@ -79,8 +79,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         actualGlobalLife = GetInitialLives();
-        actualPaddleLives = GetInitialPaddleLives();
-        Debug.Log(actualPaddleLives);
+        initialPaddleLives = GetInitialPaddleLives();
+        actualPaddleLives = initialPaddleLives;
         isPlayerAlive = true;
         ApplyPaddleSize();
         PlayCanvas.Instance.UpdateLifes(actualGlobalLife);
@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviour
     {
         int baseLives = 2;
         int extra = UpgradeManager.Instance.GetLevel(UpgradeType.StartLives);
+        Debug.Log("HEALTH: " + extra);
         return baseLives + extra;
     }
 

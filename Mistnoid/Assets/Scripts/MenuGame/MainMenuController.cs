@@ -155,7 +155,6 @@ public class MainMenuController : MonoBehaviour
     //1 Intro
     void StartIntroDialogue()
     {
-        Debug.Log("Intro");
         DialogueManager.Instance.StartDialogue(introDialogue);
         DialogueManager.Instance.OnDialogueEnd += OnIntroEnd;
     }

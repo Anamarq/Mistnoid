@@ -212,7 +212,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
   - characterName: Ribbitra
-    characterSprite: {fileID: -7134224125491679639, guid: 1bae29dbaa2a64b4e84bfefe6dc6fb2b, type: 3}
+    characterSprite: {fileID: 2820143329777312509, guid: a18e27cb7fcb18a4dbef9b42a948feba, type: 3}
     text:
       m_TableReference:
         m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82

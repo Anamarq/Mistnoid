@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: 
-    characterSprite: {fileID: -4453784588268070965, guid: 78e409b8d92e59048b672d4ae7422da0, type: 3}
+    characterSprite: {fileID: 0}
     text:
       m_TableReference:
         m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
@@ -102,7 +102,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
   - characterName: 
-    characterSprite: {fileID: -4453784588268070965, guid: 78e409b8d92e59048b672d4ae7422da0, type: 3}
+    characterSprite: {fileID: 0}
     text:
       m_TableReference:
         m_TableCollectionName: GUID:dbcfa153334420642a74bbaaf4718f82
